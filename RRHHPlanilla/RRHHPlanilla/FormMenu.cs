@@ -138,5 +138,19 @@ namespace RRHHPlanilla
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
         }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+            var formTrabajadores = new Trabajadores();
+            formTrabajadores.MdiParent = this;
+            formTrabajadores.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            var prestamos = new Prestamos();
+            prestamos.MdiParent = this;
+            prestamos.Show();
+        }
     }
 }
