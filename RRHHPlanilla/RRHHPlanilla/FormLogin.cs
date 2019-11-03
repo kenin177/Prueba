@@ -13,6 +13,9 @@ namespace RRHHPlanilla
     public partial class FormLogin : Form
 
     {
+        public bool UsuarioAutenticado { get; set; }
+        public bool Cancelar { get; set; }
+
         public FormLogin()
         {
             InitializeComponent();
@@ -24,8 +27,9 @@ namespace RRHHPlanilla
             DialogResult result = MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (result == DialogResult.Yes)
             {
+                
                 Application.Exit();
-                //UsuarioAutenticado = true;
+                
             }
             if (result == DialogResult.No)
             {
@@ -43,6 +47,7 @@ namespace RRHHPlanilla
             if (usuario == "admin1" && contrasena == "12345" || 
                 usuario == "supervisor1" && contrasena == "1234")
             {
+               
                 this.Close();
             }
             else
@@ -72,7 +77,7 @@ namespace RRHHPlanilla
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (textBox1.Text == "0000")
-            {
+            {               
                 this.Close();
             }
         }

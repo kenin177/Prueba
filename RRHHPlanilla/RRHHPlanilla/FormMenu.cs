@@ -13,10 +13,13 @@ namespace RRHHPlanilla
     public partial class FormMenu : Form
     
     {
+
         int i = 47;
         int a = 150;
         int anchoa = 190;
         int anchoc = 65;
+        
+
         public FormMenu()
         {
             InitializeComponent();
@@ -27,21 +30,29 @@ namespace RRHHPlanilla
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
 
-            //if (formLogin.UsuarioAutenticado == formLogin.Cancelar)
-            //{
+            if (formLogin.UsuarioAutenticado == formLogin.Cancelar)
+            {
 
-            //}
+            }
+            else
+            {
+               
+               // this.WindowState = FormWindowState.Maximized;
+            }
+
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            Login();
-            this.WindowState = FormWindowState.Maximized;
-            
+            //this.WindowState = FormWindowState.Maximized;
+
+            //var frm = new FormMenu();
+            //frm.BackColor = Color.Black;
+
             panel1.Height = i;
             panel2.Height = i;
-            panel3.Height = i; 
-            
+            panel3.Height = i;
+
             tableLayoutPanel1.Width = anchoc;
 
             if (tableLayoutPanel1.Width == anchoc)
@@ -52,8 +63,15 @@ namespace RRHHPlanilla
             }
             else
             {
-                
+
             }
+
+            Login();
+
+            //if (l == false)
+            //{
+            //    this.WindowState = FormWindowState.Maximized;
+            //}
         }
 
         private void FormMenu_KeyDown(object sender, KeyEventArgs e)
@@ -113,6 +131,7 @@ namespace RRHHPlanilla
             button1.Text = "Mantenimiento";
             button4.Text = "Transacciones";
             button8.Text = "Reportes";
+            this.WindowState = FormWindowState.Maximized;
 
         }
 
@@ -219,48 +238,48 @@ namespace RRHHPlanilla
         {
             Login();
 
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
 
-            panel1.Height = i;
-            panel2.Height = i;
-            panel3.Height = i;
+            //panel1.Height = i;
+            //panel2.Height = i;
+            //panel3.Height = i;
 
-            tableLayoutPanel1.Width = anchoc;
+            //tableLayoutPanel1.Width = anchoc;
 
-            if (tableLayoutPanel1.Width == anchoc)
-            {
-                button1.Text = " ";
-                button4.Text = " ";
-                button8.Text = " ";
-            }
-            else
-            {
+            //if (tableLayoutPanel1.Width == anchoc)
+            //{
+            //    button1.Text = " ";
+            //    button4.Text = " ";
+            //    button8.Text = " ";
+            //}
+            //else
+            //{
 
-            }
+            //}
         }
 
         private void cerrarSesionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Login();
 
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
 
-            panel1.Height = i;
-            panel2.Height = i;
-            panel3.Height = i;
+            //panel1.Height = i;
+            //panel2.Height = i;
+            //panel3.Height = i;
 
-            tableLayoutPanel1.Width = anchoc;
+            //tableLayoutPanel1.Width = anchoc;
 
-            if (tableLayoutPanel1.Width == anchoc)
-            {
-                button1.Text = " ";
-                button4.Text = " ";
-                button8.Text = " ";
-            }
-            else
-            {
+            //if (tableLayoutPanel1.Width == anchoc)
+            //{
+            //    button1.Text = " ";
+            //    button4.Text = " ";
+            //    button8.Text = " ";
+            //}
+            //else
+            //{
 
-            }
+            //}
         }
     }
 }
