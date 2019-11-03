@@ -11,11 +11,13 @@ using System.Windows.Forms;
 namespace RRHHPlanilla
 {
     public partial class FormLogin : Form
+
     {
         public FormLogin()
         {
             InitializeComponent();
-        }
+            
+    }
 
         private void button2_Click(object sender, EventArgs e)
         {         
@@ -23,6 +25,7 @@ namespace RRHHPlanilla
             if (result == DialogResult.Yes)
             {
                 Application.Exit();
+                //UsuarioAutenticado = true;
             }
             if (result == DialogResult.No)
             {
@@ -72,6 +75,11 @@ namespace RRHHPlanilla
             {
                 this.Close();
             }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

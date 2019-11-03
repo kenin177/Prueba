@@ -104,6 +104,33 @@
   <ItemGroup>
     <None Include="Resources\3d-secure-2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo rh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\additional-horizontal-menu-browser-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipo-de-trabajadores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flecha redimensionada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaccion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analitica.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
