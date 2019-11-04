@@ -77,7 +77,7 @@ namespace RRHHPlanilla
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (textBox1.Text == "0000")
-            {               
+            {
                 this.Close();
             }
         }

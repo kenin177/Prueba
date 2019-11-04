@@ -18,7 +18,10 @@ namespace RRHHPlanilla
         int a = 150;
         int anchoa = 190;
         int anchoc = 65;
-        
+        string ruta = @"C:\Users\Kenin\Desktop\Prueba Proyecto L3\RRHHPlanilla\RRHHPlanilla\Resources\ICONO.gif";
+        string ruta2 = @"C:\Users\Kenin\Desktop\Prueba Proyecto L3\RRHHPlanilla\RRHHPlanilla\Resources\X.gif";
+
+
 
         public FormMenu()
         {
@@ -55,6 +58,10 @@ namespace RRHHPlanilla
 
             tableLayoutPanel1.Width = anchoc;
 
+            pictureBox1.Image = Image.FromFile(ruta);
+
+            
+
             if (tableLayoutPanel1.Width == anchoc)
             {
                 button1.Text = " ";
@@ -83,15 +90,20 @@ namespace RRHHPlanilla
         private void button2_Click(object sender, EventArgs e)
         {
             //abrirformhija(new Prestamos());
-            var formTrabajadores = new Trabajadores();
-            formTrabajadores.MdiParent = this;
-            formTrabajadores.Show();
+
+            var prestamos = new Prestamos();
+            prestamos.MdiParent = this;
+            prestamos.Show();
+
         }
 
-        //private void abrirformhija(object formhija)
+        //private void abrirformhija(Form formhija)
         //{
         //    if (this.panel5.Controls.Count > 0) this.panel5.Controls.RemoveAt(0);
         //    Form fh = formhija as Form;
+
+        //    //var fh = new Prestamos();
+
         //    fh.TopLevel = false;
         //    fh.Dock = DockStyle.None;
 
@@ -102,11 +114,11 @@ namespace RRHHPlanilla
         //}
         private void button3_Click(object sender, EventArgs e)
         {
-            //abrirformhija(new Prestamos());
+            //abrirformhija(new Trabajadores());
+            var formTrabajadores = new Trabajadores();
+            formTrabajadores.MdiParent = this;
+            formTrabajadores.Show();
 
-            var prestamos = new Prestamos();
-            prestamos.MdiParent = this;
-            prestamos.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -280,6 +292,16 @@ namespace RRHHPlanilla
             //{
 
             //}
+        }
+
+        private void pictureBox1_MouseEnter_1(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Image.FromFile(ruta2);
+        }
+
+        private void pictureBox1_MouseLeave_1(object sender, EventArgs e)
+        {
+           pictureBox1.Image = Image.FromFile(ruta);
         }
     }
 }
