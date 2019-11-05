@@ -29,50 +29,124 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.cerrarSesionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.controlDePagoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeCatorceavoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeLiquidacionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeAreaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStrip2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // toolStrip2
+            // 
+            this.toolStrip2.BackColor = System.Drawing.Color.White;
+            this.toolStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStrip2.GripMargin = new System.Windows.Forms.Padding(0);
+            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton2,
+            this.toolStripButton1,
+            this.toolStripDropDownButton3});
+            this.toolStrip2.Location = new System.Drawing.Point(192, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(1178, 25);
+            this.toolStrip2.TabIndex = 12;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripDropDownButton2.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cerrarSesionToolStripMenuItem1});
+            this.toolStripButton1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(64, 22);
+            this.toolStripButton1.Text = "Comun";
+            // 
+            // cerrarSesionToolStripMenuItem1
+            // 
+            this.cerrarSesionToolStripMenuItem1.Name = "cerrarSesionToolStripMenuItem1";
+            this.cerrarSesionToolStripMenuItem1.Size = new System.Drawing.Size(164, 22);
+            this.cerrarSesionToolStripMenuItem1.Text = "Cerrar Sesion";
+            // 
+            // toolStripDropDownButton3
+            // 
+            this.toolStripDropDownButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripDropDownButton3.BackColor = System.Drawing.Color.White;
+            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator1,
+            this.cerrarSesionToolStripMenuItem});
+            this.toolStripDropDownButton3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
+            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(113, 22);
+            this.toolStripDropDownButton3.Text = "Administrador";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(161, 6);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkRed;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.BackgroundImage = global::RRHHPlanilla.Properties.Resources.WhatsApp_Image_2019_11_04_at_10_16_06_PM__1_;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 0);
@@ -97,6 +171,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -116,6 +191,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Recursos\r\nHumanos";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::RRHHPlanilla.Properties.Resources.logo_rh;
+            this.pictureBox2.Location = new System.Drawing.Point(-5, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(69, 68);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
@@ -133,7 +218,7 @@
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.Brown;
+            this.button9.BackColor = System.Drawing.Color.Transparent;
             this.button9.Dock = System.Windows.Forms.DockStyle.Top;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
@@ -150,7 +235,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Brown;
+            this.button6.BackColor = System.Drawing.Color.Transparent;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
@@ -167,7 +252,7 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Brown;
+            this.button7.BackColor = System.Drawing.Color.Transparent;
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
@@ -181,6 +266,27 @@
             this.button7.Text = "Reporte de Pagos";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button8.Image = global::RRHHPlanilla.Properties.Resources.analitica;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(0, 0);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(192, 46);
+            this.button8.TabIndex = 13;
+            this.button8.Text = "Reportes";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.MouseEnter += new System.EventHandler(this.button8_MouseEnter);
             // 
             // panel2
             // 
@@ -198,7 +304,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Brown;
+            this.button5.BackColor = System.Drawing.Color.Transparent;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
@@ -215,7 +321,7 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.Brown;
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
             this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -226,6 +332,81 @@
             this.toolStrip1.Size = new System.Drawing.Size(192, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripDropDownButton1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripDropDownButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.controlDePagoToolStripMenuItem1,
+            this.controlDeCatorceavoToolStripMenuItem1,
+            this.controlDeLiquidacionToolStripMenuItem1,
+            this.controlDeAreaToolStripMenuItem1});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.White;
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Brown;
+            this.toolStripDropDownButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(83, 25);
+            this.toolStripDropDownButton1.Text = "Controles";
+            this.toolStripDropDownButton1.MouseEnter += new System.EventHandler(this.toolStripDropDownButton1_MouseEnter);
+            // 
+            // controlDePagoToolStripMenuItem1
+            // 
+            this.controlDePagoToolStripMenuItem1.BackColor = System.Drawing.Color.White;
+            this.controlDePagoToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.controlDePagoToolStripMenuItem1.Name = "controlDePagoToolStripMenuItem1";
+            this.controlDePagoToolStripMenuItem1.Size = new System.Drawing.Size(222, 22);
+            this.controlDePagoToolStripMenuItem1.Text = "Control de Pago";
+            // 
+            // controlDeCatorceavoToolStripMenuItem1
+            // 
+            this.controlDeCatorceavoToolStripMenuItem1.BackColor = System.Drawing.Color.White;
+            this.controlDeCatorceavoToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.controlDeCatorceavoToolStripMenuItem1.Name = "controlDeCatorceavoToolStripMenuItem1";
+            this.controlDeCatorceavoToolStripMenuItem1.Size = new System.Drawing.Size(222, 22);
+            this.controlDeCatorceavoToolStripMenuItem1.Text = "Control de Catorceavo";
+            // 
+            // controlDeLiquidacionToolStripMenuItem1
+            // 
+            this.controlDeLiquidacionToolStripMenuItem1.BackColor = System.Drawing.Color.White;
+            this.controlDeLiquidacionToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.controlDeLiquidacionToolStripMenuItem1.Name = "controlDeLiquidacionToolStripMenuItem1";
+            this.controlDeLiquidacionToolStripMenuItem1.Size = new System.Drawing.Size(222, 22);
+            this.controlDeLiquidacionToolStripMenuItem1.Text = "Control de Liquidacion";
+            // 
+            // controlDeAreaToolStripMenuItem1
+            // 
+            this.controlDeAreaToolStripMenuItem1.BackColor = System.Drawing.Color.White;
+            this.controlDeAreaToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.controlDeAreaToolStripMenuItem1.Name = "controlDeAreaToolStripMenuItem1";
+            this.controlDeAreaToolStripMenuItem1.Size = new System.Drawing.Size(222, 22);
+            this.controlDeAreaToolStripMenuItem1.Text = "Control de Area";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Image = global::RRHHPlanilla.Properties.Resources.transaccion;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(192, 46);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Transacciones";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
             // 
             // panel1
             // 
@@ -243,14 +424,14 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Brown;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(0, 73);
+            this.button2.Location = new System.Drawing.Point(0, 77);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(192, 28);
             this.button2.TabIndex = 9;
@@ -261,7 +442,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Brown;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
@@ -270,195 +451,19 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Location = new System.Drawing.Point(0, 46);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 27);
+            this.button3.Size = new System.Drawing.Size(192, 31);
             this.button3.TabIndex = 11;
             this.button3.Text = "Trabajadores";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // toolStrip2
-            // 
-            this.toolStrip2.BackColor = System.Drawing.Color.DarkRed;
-            this.toolStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.toolStrip2.GripMargin = new System.Windows.Forms.Padding(0);
-            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton2,
-            this.toolStripButton1,
-            this.toolStripDropDownButton3});
-            this.toolStrip2.Location = new System.Drawing.Point(192, 0);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1178, 25);
-            this.toolStrip2.TabIndex = 12;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripDropDownButton2.BackColor = System.Drawing.Color.DarkRed;
-            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.BackColor = System.Drawing.Color.DarkRed;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cerrarSesionToolStripMenuItem1});
-            this.toolStripButton1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(64, 22);
-            this.toolStripButton1.Text = "Comun";
-            // 
-            // cerrarSesionToolStripMenuItem1
-            // 
-            this.cerrarSesionToolStripMenuItem1.Name = "cerrarSesionToolStripMenuItem1";
-            this.cerrarSesionToolStripMenuItem1.Size = new System.Drawing.Size(164, 22);
-            this.cerrarSesionToolStripMenuItem1.Text = "Cerrar Sesion";
-            // 
-            // toolStripDropDownButton3
-            // 
-            this.toolStripDropDownButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripDropDownButton3.BackColor = System.Drawing.Color.DarkRed;
-            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1,
-            this.cerrarSesionToolStripMenuItem});
-            this.toolStripDropDownButton3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(113, 22);
-            this.toolStripDropDownButton3.Text = "Administrador";
-            // 
-            // cerrarSesionToolStripMenuItem
-            // 
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::RRHHPlanilla.Properties.Resources.logo_rh;
-            this.pictureBox2.Location = new System.Drawing.Point(-5, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(69, 68);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Image = global::RRHHPlanilla.Properties.Resources.analitica;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(192, 46);
-            this.button8.TabIndex = 13;
-            this.button8.Text = "Reportes";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            this.button8.MouseEnter += new System.EventHandler(this.button8_MouseEnter);
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripDropDownButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.controlDePagoToolStripMenuItem1,
-            this.controlDeCatorceavoToolStripMenuItem1,
-            this.controlDeLiquidacionToolStripMenuItem1,
-            this.controlDeAreaToolStripMenuItem1});
-            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Brown;
-            this.toolStripDropDownButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(83, 25);
-            this.toolStripDropDownButton1.Text = "Controles";
-            this.toolStripDropDownButton1.MouseEnter += new System.EventHandler(this.toolStripDropDownButton1_MouseEnter);
-            // 
-            // controlDePagoToolStripMenuItem1
-            // 
-            this.controlDePagoToolStripMenuItem1.BackColor = System.Drawing.Color.Brown;
-            this.controlDePagoToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.controlDePagoToolStripMenuItem1.Name = "controlDePagoToolStripMenuItem1";
-            this.controlDePagoToolStripMenuItem1.Size = new System.Drawing.Size(222, 22);
-            this.controlDePagoToolStripMenuItem1.Text = "Control de Pago";
-            // 
-            // controlDeCatorceavoToolStripMenuItem1
-            // 
-            this.controlDeCatorceavoToolStripMenuItem1.BackColor = System.Drawing.Color.Brown;
-            this.controlDeCatorceavoToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.controlDeCatorceavoToolStripMenuItem1.Name = "controlDeCatorceavoToolStripMenuItem1";
-            this.controlDeCatorceavoToolStripMenuItem1.Size = new System.Drawing.Size(222, 22);
-            this.controlDeCatorceavoToolStripMenuItem1.Text = "Control de Catorceavo";
-            // 
-            // controlDeLiquidacionToolStripMenuItem1
-            // 
-            this.controlDeLiquidacionToolStripMenuItem1.BackColor = System.Drawing.Color.Brown;
-            this.controlDeLiquidacionToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.controlDeLiquidacionToolStripMenuItem1.Name = "controlDeLiquidacionToolStripMenuItem1";
-            this.controlDeLiquidacionToolStripMenuItem1.Size = new System.Drawing.Size(222, 22);
-            this.controlDeLiquidacionToolStripMenuItem1.Text = "Control de Liquidacion";
-            // 
-            // controlDeAreaToolStripMenuItem1
-            // 
-            this.controlDeAreaToolStripMenuItem1.BackColor = System.Drawing.Color.Brown;
-            this.controlDeAreaToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.controlDeAreaToolStripMenuItem1.Name = "controlDeAreaToolStripMenuItem1";
-            this.controlDeAreaToolStripMenuItem1.Size = new System.Drawing.Size(222, 22);
-            this.controlDeAreaToolStripMenuItem1.Text = "Control de Area";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Image = global::RRHHPlanilla.Properties.Resources.transaccion;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(192, 46);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Transacciones";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -476,6 +481,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox1.Image = global::RRHHPlanilla.Properties.Resources._0;
             this.pictureBox1.Location = new System.Drawing.Point(3, 723);
@@ -487,11 +493,6 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave_1);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(161, 6);
             // 
             // FormMenu
             // 
@@ -511,18 +512,18 @@
             this.Text = "Menú Principal";
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.FormMenu_Load);
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

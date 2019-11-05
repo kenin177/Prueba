@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AlphaBlendTextBox">
+      <HintPath>..\..\..\..\..\Pictures\Picosmos Capture\AlphaBlendTextBox\AlphaBlendTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -136,6 +139,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2019-11-04 at 10.16.06 PM %282%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2019-11-04 at 10.16.06 PM %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male-close-up-silhouette-with-tie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lllll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sin título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Listo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha lista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MARCO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoy si.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sin falta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GIFMaker.org_knNzun.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

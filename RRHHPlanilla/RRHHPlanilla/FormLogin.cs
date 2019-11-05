@@ -16,23 +16,26 @@ namespace RRHHPlanilla
         public bool UsuarioAutenticado { get; set; }
         public bool Cancelar { get; set; }
 
+        public bool u { get; set; }
+        public bool c { get; set; }
+
         public FormLogin()
         {
             InitializeComponent();
+        }
             
-    }
-
         private void button2_Click(object sender, EventArgs e)
         {         
             DialogResult result = MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (result == DialogResult.Yes)
             {
-                
-                Application.Exit();
-                
+                //UsuarioAutenticado = Cancelar;
+                Application.Exit();               
             }
+
             if (result == DialogResult.No)
             {
+
             }
         }
 
@@ -41,8 +44,8 @@ namespace RRHHPlanilla
             string usuario;
             string contrasena;
 
-            usuario = textBox1.Text;
-            contrasena = textBox2.Text;
+            usuario = alphaBlendTextBox1.Text;
+            contrasena = alphaBlendTextBox2.Text;
 
             if (usuario == "admin1" && contrasena == "12345" || 
                 usuario == "supervisor1" && contrasena == "1234")
@@ -58,7 +61,8 @@ namespace RRHHPlanilla
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
+            UsuarioAutenticado =! Cancelar;
+            c =! u;
         }
 
         private void FormLogin_KeyDown(object sender, KeyEventArgs e)
@@ -69,22 +73,13 @@ namespace RRHHPlanilla
             }
         }
 
-        private void FormLogin_KeyPress(object sender, KeyPressEventArgs e)
+        private void alphaBlendTextBox1_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "0000")
+            if (alphaBlendTextBox1.Text == "0000")
             {
+                c = u;
                 this.Close();
             }
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

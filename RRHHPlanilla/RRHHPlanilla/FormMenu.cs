@@ -18,8 +18,8 @@ namespace RRHHPlanilla
         int a = 150;
         int anchoa = 190;
         int anchoc = 65;
-        string ruta = @"C:\Users\Kenin\Desktop\Prueba Proyecto L3\RRHHPlanilla\RRHHPlanilla\Resources\ICONO.gif";
-        string ruta2 = @"C:\Users\Kenin\Desktop\Prueba Proyecto L3\RRHHPlanilla\RRHHPlanilla\Resources\X.gif";
+        string ruta = @"C:\Users\Kenin\Desktop\Prueba-master(1)\Prueba-master\RRHHPlanilla\RRHHPlanilla\Resources\ICONO.gif";
+        string ruta2 = @"C:\Users\Kenin\Desktop\Prueba-master(1)\Prueba-master\RRHHPlanilla\RRHHPlanilla\Resources\X.gif";
 
 
 
@@ -37,10 +37,10 @@ namespace RRHHPlanilla
             {
 
             }
-            else
+            if(formLogin.c == formLogin.u)
             {
                
-               // this.WindowState = FormWindowState.Maximized;
+               this.WindowState = FormWindowState.Maximized;
             }
 
         }
