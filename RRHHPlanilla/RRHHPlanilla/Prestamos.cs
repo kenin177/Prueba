@@ -21,5 +21,11 @@ namespace RRHHPlanilla
         {
             
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblhora.Text = DateTime.Now.ToString("h:mm:ss");
+            lblfecha.Text = DateTime.Now.ToShortDateString();
+        }
     }
 }

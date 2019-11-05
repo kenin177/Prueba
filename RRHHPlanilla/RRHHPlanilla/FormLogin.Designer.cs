@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,6 +40,10 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.alphaBlendTextBox2 = new ZBobb.AlphaBlendTextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblhora = new System.Windows.Forms.Label();
+            this.HoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.lblfecha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -73,7 +78,7 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(6, 11);
+            this.button2.Location = new System.Drawing.Point(10, 38);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(18, 28);
@@ -126,7 +131,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(84, 9);
+            this.label1.Location = new System.Drawing.Point(85, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 24);
             this.label1.TabIndex = 10;
@@ -136,7 +141,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::RRHHPlanilla.Properties.Resources.Sin_título;
-            this.pictureBox3.Location = new System.Drawing.Point(85, 47);
+            this.pictureBox3.Location = new System.Drawing.Point(86, 69);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(118, 92);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -172,7 +177,7 @@
             this.alphaBlendTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.alphaBlendTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphaBlendTextBox2.ForeColor = System.Drawing.Color.White;
-            this.alphaBlendTextBox2.Location = new System.Drawing.Point(50, 256);
+            this.alphaBlendTextBox2.Location = new System.Drawing.Point(50, 263);
             this.alphaBlendTextBox2.Name = "alphaBlendTextBox2";
             this.alphaBlendTextBox2.Size = new System.Drawing.Size(224, 17);
             this.alphaBlendTextBox2.TabIndex = 2;
@@ -180,6 +185,50 @@
             this.alphaBlendTextBox2.Text = "CONTRASEÑA";
             this.alphaBlendTextBox2.Enter += new System.EventHandler(this.alphaBlendTextBox2_Enter);
             this.alphaBlendTextBox2.Leave += new System.EventHandler(this.alphaBlendTextBox2_Leave);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(73, 424);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(149, 13);
+            this.linkLabel1.TabIndex = 14;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "¿Has olvidado tu contraseña?";
+            // 
+            // lblhora
+            // 
+            this.lblhora.AutoSize = true;
+            this.lblhora.BackColor = System.Drawing.Color.Transparent;
+            this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhora.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblhora.Location = new System.Drawing.Point(122, 0);
+            this.lblhora.Name = "lblhora";
+            this.lblhora.Size = new System.Drawing.Size(35, 13);
+            this.lblhora.TabIndex = 15;
+            this.lblhora.Text = "label2";
+            this.lblhora.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // HoraFecha
+            // 
+            this.HoraFecha.Enabled = true;
+            this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
+            // 
+            // lblfecha
+            // 
+            this.lblfecha.AutoSize = true;
+            this.lblfecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecha.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblfecha.Location = new System.Drawing.Point(115, 15);
+            this.lblfecha.Name = "lblfecha";
+            this.lblfecha.Size = new System.Drawing.Size(35, 13);
+            this.lblfecha.TabIndex = 16;
+            this.lblfecha.Text = "label3";
+            this.lblfecha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormLogin
             // 
@@ -190,6 +239,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(286, 563);
             this.ControlBox = false;
+            this.Controls.Add(this.lblfecha);
+            this.Controls.Add(this.lblhora);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.alphaBlendTextBox2);
             this.Controls.Add(this.alphaBlendTextBox1);
             this.Controls.Add(this.pictureBox5);
@@ -229,6 +281,10 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private ZBobb.AlphaBlendTextBox alphaBlendTextBox2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label lblhora;
+        private System.Windows.Forms.Timer HoraFecha;
+        private System.Windows.Forms.Label lblfecha;
     }
 }
 

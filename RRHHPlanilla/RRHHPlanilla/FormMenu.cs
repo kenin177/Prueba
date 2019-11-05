@@ -56,10 +56,7 @@ namespace RRHHPlanilla
             panel3.Height = i;
 
             tableLayoutPanel1.Width = anchoc;
-
             pictureBox1.Image = Image.FromFile(ruta);
-
-            
 
             if (tableLayoutPanel1.Width == anchoc)
             {
@@ -88,35 +85,35 @@ namespace RRHHPlanilla
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //abrirformhija(new Prestamos());
+            abrirformhija(new Prestamos());
 
-            var prestamos = new Prestamos();
-            prestamos.MdiParent = this;
-            prestamos.Show();
+            //var prestamos = new Prestamos();
+            //prestamos.MdiParent = this;
+            //prestamos.Show();
 
         }
 
-        //private void abrirformhija(Form formhija)
-        //{
-        //    if (this.panel5.Controls.Count > 0) this.panel5.Controls.RemoveAt(0);
-        //    Form fh = formhija as Form;
+        private void abrirformhija(Form formhija)
+        {
+            if (this.panel5.Controls.Count > 0) this.panel5.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
 
-        //    //var fh = new Prestamos();
+            //var fh = new Prestamos();
 
-        //    fh.TopLevel = false;
-        //    fh.Dock = DockStyle.None;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.None;
 
-        //    this.panel5.Controls.Add(fh);
-        //    this.panel5.Tag = fh;
-        //    //fh.MdiParent = this;
-        //    fh.Show();
-        //}
+            this.panel5.Controls.Add(fh);
+            this.panel5.Tag = fh;
+            //fh.MdiParent = this;
+            fh.Show();
+        }
         private void button3_Click(object sender, EventArgs e)
         {
-            //abrirformhija(new Trabajadores());
-            var formTrabajadores = new Trabajadores();
-            formTrabajadores.MdiParent = this;
-            formTrabajadores.Show();
+            abrirformhija(new Trabajadores());
+            //var formTrabajadores = new Trabajadores();
+            //formTrabajadores.MdiParent = this;
+            //formTrabajadores.Show();
 
         }
 
@@ -144,7 +141,6 @@ namespace RRHHPlanilla
             button4.Text = "Transacciones";
             button8.Text = "Reportes";
             this.WindowState = FormWindowState.Maximized;
-
         }
 
         private void panel5_MouseEnter(object sender, EventArgs e)
@@ -302,6 +298,17 @@ namespace RRHHPlanilla
         private void pictureBox1_MouseLeave_1(object sender, EventArgs e)
         {
            pictureBox1.Image = Image.FromFile(ruta);
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblhora.Text = DateTime.Now.ToString("h:mm:ss");
+            lblfecha.Text = DateTime.Now.ToShortDateString();
         }
     }
 }

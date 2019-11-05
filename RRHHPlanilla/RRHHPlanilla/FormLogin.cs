@@ -125,5 +125,11 @@ namespace RRHHPlanilla
                 alphaBlendTextBox2.UseSystemPasswordChar = false;
             }
         }
+
+        private void HoraFecha_Tick(object sender, EventArgs e)
+        {
+            lblhora.Text = DateTime.Now.ToString("h:mm:ss");
+            lblfecha.Text = DateTime.Now.ToShortDateString();
+        }
     }
 }
