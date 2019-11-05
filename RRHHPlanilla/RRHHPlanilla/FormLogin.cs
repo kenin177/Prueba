@@ -50,7 +50,7 @@ namespace RRHHPlanilla
             if (usuario == "admin1" && contrasena == "12345" || 
                 usuario == "supervisor1" && contrasena == "1234")
             {
-               
+                c = u;
                 this.Close();
             }
             else
@@ -75,9 +75,6 @@ namespace RRHHPlanilla
 
         private void alphaBlendTextBox1_TextChanged(object sender, EventArgs e)
         {
-
-            label1.Text = alphaBlendTextBox1.Text;
-
             if (alphaBlendTextBox1.Text == "0000")
             {               
                 c = u;
@@ -93,6 +90,40 @@ namespace RRHHPlanilla
         private void label2_Click(object sender, EventArgs e)
         {
             AsignarTextBox(alphaBlendTextBox1.Text);
+        }
+
+        private void alphaBlendTextBox1_Enter(object sender, EventArgs e)
+        {
+            if(alphaBlendTextBox1.Text == "USUARIO")
+            {
+                alphaBlendTextBox1.Text = "";
+            }
+        }
+
+        private void alphaBlendTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (alphaBlendTextBox1.Text == "")
+            {
+                alphaBlendTextBox1.Text = "USUARIO";
+            }
+        }
+
+        private void alphaBlendTextBox2_Enter(object sender, EventArgs e)
+        {
+            if (alphaBlendTextBox2.Text == "CONTRASEÑA")
+            {
+                alphaBlendTextBox2.Text = "";
+                alphaBlendTextBox2.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void alphaBlendTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (alphaBlendTextBox2.Text == "")
+            {
+                alphaBlendTextBox2.Text = "CONTRASEÑA";
+                alphaBlendTextBox2.UseSystemPasswordChar = false;
+            }
         }
     }
 }

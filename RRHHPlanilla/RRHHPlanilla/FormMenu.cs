@@ -38,8 +38,7 @@ namespace RRHHPlanilla
 
             }
             if(formLogin.c == formLogin.u)
-            {
-               
+            {              
                this.WindowState = FormWindowState.Maximized;
             }
 
@@ -125,15 +124,16 @@ namespace RRHHPlanilla
         {
             if (panel1.Height == i)
             {
-                panel1.Height = a;
+                panel1.Height = 62;
                 panel1.AutoSize = true;
-                panel2.Height = i;
-                panel3.Height = i;
+                //panel2.Height = i;
+                //panel3.Height = i;
             }
             else
             {
-                panel1.Height = i;
                 panel1.AutoSize = false;
+                panel1.Height = i;
+                //panel1.AutoSize = false;
             }
         }
 
@@ -173,10 +173,10 @@ namespace RRHHPlanilla
             
             if (panel2.Height == i)
             {
-                panel1.Height = i;
-                panel2.Height = a;
+                //panel1.Height = i;
+                panel2.Height = 43;
                 panel2.AutoSize = true;
-                panel3.Height = i;
+                //panel3.Height = i;
             }
             else
             {
@@ -194,9 +194,9 @@ namespace RRHHPlanilla
         {
             if (panel3.Height == i)
             {
-                panel1.Height = i;
-                panel2.Height = i;               
-                panel3.Height = a;
+                //panel1.Height = i;
+                //panel2.Height = i;               
+                panel3.Height = 84;
                 panel3.AutoSize = true;
             }
             else

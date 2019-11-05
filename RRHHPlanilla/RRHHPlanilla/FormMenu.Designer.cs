@@ -73,7 +73,8 @@
             // toolStrip2
             // 
             this.toolStrip2.BackColor = System.Drawing.Color.White;
-            this.toolStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStrip2.BackgroundImage = global::RRHHPlanilla.Properties.Resources.logins__5_;
+            this.toolStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.toolStrip2.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {

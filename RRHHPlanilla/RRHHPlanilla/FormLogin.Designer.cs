@@ -84,18 +84,19 @@
             // alphaBlendTextBox1
             // 
             this.alphaBlendTextBox1.BackAlpha = 10;
-            this.alphaBlendTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.alphaBlendTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.alphaBlendTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.alphaBlendTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphaBlendTextBox1.ForeColor = System.Drawing.Color.White;
-            this.alphaBlendTextBox1.Location = new System.Drawing.Point(47, 188);
-            this.alphaBlendTextBox1.Multiline = true;
+            this.alphaBlendTextBox1.Location = new System.Drawing.Point(50, 204);
             this.alphaBlendTextBox1.Name = "alphaBlendTextBox1";
-            this.alphaBlendTextBox1.Size = new System.Drawing.Size(227, 36);
+            this.alphaBlendTextBox1.Size = new System.Drawing.Size(224, 15);
             this.alphaBlendTextBox1.TabIndex = 1;
             this.alphaBlendTextBox1.Tag = "*";
-            this.alphaBlendTextBox1.Text = "\r\n   Usuario\r\n";
+            this.alphaBlendTextBox1.Text = "USUARIO";
             this.alphaBlendTextBox1.TextChanged += new System.EventHandler(this.alphaBlendTextBox1_TextChanged);
+            this.alphaBlendTextBox1.Enter += new System.EventHandler(this.alphaBlendTextBox1_Enter);
+            this.alphaBlendTextBox1.Leave += new System.EventHandler(this.alphaBlendTextBox1_Leave);
             // 
             // pictureBox1
             // 
@@ -167,17 +168,18 @@
             // alphaBlendTextBox2
             // 
             this.alphaBlendTextBox2.BackAlpha = 10;
-            this.alphaBlendTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.alphaBlendTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.alphaBlendTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.alphaBlendTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alphaBlendTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphaBlendTextBox2.ForeColor = System.Drawing.Color.White;
-            this.alphaBlendTextBox2.Location = new System.Drawing.Point(47, 244);
-            this.alphaBlendTextBox2.Multiline = true;
+            this.alphaBlendTextBox2.Location = new System.Drawing.Point(50, 256);
             this.alphaBlendTextBox2.Name = "alphaBlendTextBox2";
-            this.alphaBlendTextBox2.Size = new System.Drawing.Size(227, 36);
-            this.alphaBlendTextBox2.TabIndex = 14;
+            this.alphaBlendTextBox2.Size = new System.Drawing.Size(224, 17);
+            this.alphaBlendTextBox2.TabIndex = 2;
             this.alphaBlendTextBox2.Tag = "";
-            this.alphaBlendTextBox2.Text = "\r\n   Contraseña";
+            this.alphaBlendTextBox2.Text = "CONTRASEÑA";
+            this.alphaBlendTextBox2.Enter += new System.EventHandler(this.alphaBlendTextBox2_Enter);
+            this.alphaBlendTextBox2.Leave += new System.EventHandler(this.alphaBlendTextBox2_Leave);
             // 
             // FormLogin
             // 
