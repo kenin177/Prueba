@@ -75,11 +75,24 @@ namespace RRHHPlanilla
 
         private void alphaBlendTextBox1_TextChanged(object sender, EventArgs e)
         {
+
+            label1.Text = alphaBlendTextBox1.Text;
+
             if (alphaBlendTextBox1.Text == "0000")
-            {
+            {               
                 c = u;
                 this.Close();
             }
+        }
+
+        public void AsignarTextBox(string text)
+        {
+            alphaBlendTextBox1.Text = text;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            AsignarTextBox(alphaBlendTextBox1.Text);
         }
     }
 }

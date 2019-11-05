@@ -16,5 +16,10 @@ namespace RRHHPlanilla
         {
             InitializeComponent();
         }
+
+        private void Prestamos_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
