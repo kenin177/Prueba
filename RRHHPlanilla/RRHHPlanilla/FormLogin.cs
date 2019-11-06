@@ -45,7 +45,7 @@ namespace RRHHPlanilla
             string contrasena;
 
             usuario = alphaBlendTextBox1.Text;
-            contrasena = alphaBlendTextBox2.Text;
+            contrasena = alphaBlendTextBox3.Text;
 
             if (usuario == "admin1" && contrasena == "12345" || 
                 usuario == "supervisor1" && contrasena == "1234")
@@ -108,44 +108,54 @@ namespace RRHHPlanilla
             }
         }
 
-        private void alphaBlendTextBox2_Enter(object sender, EventArgs e)
-        {
-            if (alphaBlendTextBox2.Text == "CONTRASEÑA")
-            {
-                alphaBlendTextBox2.Text = "";
-                alphaBlendTextBox2.UseSystemPasswordChar = true;
-            }
-
-        }
-
-        private void alphaBlendTextBox2_Leave(object sender, EventArgs e)
-        {
-            if (alphaBlendTextBox2.Text == "")
-            {
-                alphaBlendTextBox2.Text = "CONTRASEÑA";
-                alphaBlendTextBox2.UseSystemPasswordChar = false;
-            }
-        }
-
         private void HoraFecha_Tick(object sender, EventArgs e)
         {
             lblhora.Text = DateTime.Now.ToString("h:mm:ss");
             lblfecha.Text = DateTime.Now.ToShortDateString();
         }
 
-        private void alphaBlendTextBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void alphaBlendTextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //DialogResult result = MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
         }
+
+
+        private void alphaBlendTextBox3_MouseEnter(object sender, EventArgs e)
+        {
+            if (alphaBlendTextBox3.Text == "CONTRASEÑA")
+            {
+                alphaBlendTextBox3.Text = "";
+                alphaBlendTextBox3.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void alphaBlendTextBox3_MouseLeave(object sender, EventArgs e)
+        {
+            //if (alphaBlendTextBox3.Text == "")
+            //{
+            //    alphaBlendTextBox3.Text = "CONTRASEÑA";
+            //    alphaBlendTextBox3.UseSystemPasswordChar = false;
+            //}
+        }
+
+        private void alphaBlendTextBox3_Enter(object sender, EventArgs e)
+        {
+            if (alphaBlendTextBox3.Text == "CONTRASEÑA")
+            {
+                alphaBlendTextBox3.Text = "";
+                alphaBlendTextBox3.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void alphaBlendTextBox3_Leave(object sender, EventArgs e)
+        {
+            if (alphaBlendTextBox3.Text == "")
+            {
+                alphaBlendTextBox3.Text = "CONTRASEÑA";
+                alphaBlendTextBox3.UseSystemPasswordChar = false;
+            }
+        }
+
     }
 }

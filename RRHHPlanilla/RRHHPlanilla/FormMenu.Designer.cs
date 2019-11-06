@@ -31,22 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblfecha = new System.Windows.Forms.Label();
+            this.lblhora = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblhora = new System.Windows.Forms.Label();
-            this.lblfecha = new System.Windows.Forms.Label();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.cerrarSesionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.picrehavi = new System.Windows.Forms.PictureBox();
+            this.picmaxi = new System.Windows.Forms.PictureBox();
+            this.picmini = new System.Windows.Forms.PictureBox();
+            this.piccerrar = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -72,10 +66,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picrehavi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picmaxi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picmini)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -88,15 +83,42 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.lblfecha);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.groupBox1);
-            this.panel5.Controls.Add(this.toolStrip2);
+            this.panel5.Controls.Add(this.lblhora);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(192, 40);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1178, 709);
             this.panel5.TabIndex = 14;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblfecha
+            // 
+            this.lblfecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.lblfecha.Location = new System.Drawing.Point(531, 270);
+            this.lblfecha.Name = "lblfecha";
+            this.lblfecha.Size = new System.Drawing.Size(516, 40);
+            this.lblfecha.TabIndex = 31;
+            this.lblfecha.Text = "Miercoles, 10  noviembre  2017";
+            // 
+            // lblhora
+            // 
+            this.lblhora.BackColor = System.Drawing.Color.Transparent;
+            this.lblhora.Font = new System.Drawing.Font("Century Gothic", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblhora.Location = new System.Drawing.Point(550, 152);
+            this.lblhora.Name = "lblhora";
+            this.lblhora.Size = new System.Drawing.Size(467, 129);
+            this.lblhora.TabIndex = 30;
+            this.lblhora.Text = "10:59:58";
             // 
             // panel6
             // 
@@ -118,158 +140,77 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "label2";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblhora);
-            this.groupBox1.Controls.Add(this.lblfecha);
-            this.groupBox1.Location = new System.Drawing.Point(90, 85);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 21;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Fecha y Hora";
-            // 
-            // lblhora
-            // 
-            this.lblhora.AutoSize = true;
-            this.lblhora.BackColor = System.Drawing.Color.Transparent;
-            this.lblhora.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhora.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblhora.Location = new System.Drawing.Point(77, 27);
-            this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(59, 19);
-            this.lblhora.TabIndex = 19;
-            this.lblhora.Text = "label2";
-            this.lblhora.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblfecha
-            // 
-            this.lblfecha.AutoSize = true;
-            this.lblfecha.BackColor = System.Drawing.Color.Transparent;
-            this.lblfecha.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblfecha.Location = new System.Drawing.Point(57, 49);
-            this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(59, 19);
-            this.lblfecha.TabIndex = 20;
-            this.lblfecha.Text = "label3";
-            this.lblfecha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.BackColor = System.Drawing.Color.White;
-            this.toolStrip2.BackgroundImage = global::RRHHPlanilla.Properties.Resources.logins__5_;
-            this.toolStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip2.GripMargin = new System.Windows.Forms.Padding(0);
-            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton2,
-            this.toolStripButton2,
-            this.toolStripButton1,
-            this.toolStripDropDownButton3});
-            this.toolStrip2.Location = new System.Drawing.Point(251, 225);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(264, 25);
-            this.toolStrip2.TabIndex = 12;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripDropDownButton2.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.ForeColor = System.Drawing.Color.GhostWhite;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(55, 22);
-            this.toolStripButton2.Text = "Usuario";
-            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cerrarSesionToolStripMenuItem1});
-            this.toolStripButton1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(64, 22);
-            this.toolStripButton1.Text = "Comun";
-            // 
-            // cerrarSesionToolStripMenuItem1
-            // 
-            this.cerrarSesionToolStripMenuItem1.Name = "cerrarSesionToolStripMenuItem1";
-            this.cerrarSesionToolStripMenuItem1.Size = new System.Drawing.Size(164, 22);
-            this.cerrarSesionToolStripMenuItem1.Text = "Cerrar Sesion";
-            // 
-            // toolStripDropDownButton3
-            // 
-            this.toolStripDropDownButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripDropDownButton3.BackColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1,
-            this.cerrarSesionToolStripMenuItem});
-            this.toolStripDropDownButton3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(113, 22);
-            this.toolStripDropDownButton3.Text = "Administrador";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(161, 6);
-            // 
-            // cerrarSesionToolStripMenuItem
-            // 
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // panel7
             // 
+            this.panel7.BackColor = System.Drawing.Color.Silver;
+            this.panel7.BackgroundImage = global::RRHHPlanilla.Properties.Resources.logins__5_;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.pictureBox3);
+            this.panel7.Controls.Add(this.picrehavi);
+            this.panel7.Controls.Add(this.picmaxi);
+            this.panel7.Controls.Add(this.picmini);
+            this.panel7.Controls.Add(this.piccerrar);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(192, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1178, 40);
             this.panel7.TabIndex = 21;
             // 
-            // pictureBox3
+            // picrehavi
             // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox3.Image = global::RRHHPlanilla.Properties.Resources.cancelar;
-            this.pictureBox3.Location = new System.Drawing.Point(1135, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(41, 38);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 22;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.picrehavi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picrehavi.BackColor = System.Drawing.Color.Transparent;
+            this.picrehavi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picrehavi.Image = global::RRHHPlanilla.Properties.Resources.res;
+            this.picrehavi.Location = new System.Drawing.Point(1102, 3);
+            this.picrehavi.Name = "picrehavi";
+            this.picrehavi.Size = new System.Drawing.Size(30, 30);
+            this.picrehavi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picrehavi.TabIndex = 25;
+            this.picrehavi.TabStop = false;
+            this.picrehavi.Click += new System.EventHandler(this.picrehavi_Click);
+            // 
+            // picmaxi
+            // 
+            this.picmaxi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picmaxi.BackColor = System.Drawing.Color.Transparent;
+            this.picmaxi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picmaxi.Image = global::RRHHPlanilla.Properties.Resources.maxi;
+            this.picmaxi.Location = new System.Drawing.Point(1102, 3);
+            this.picmaxi.Name = "picmaxi";
+            this.picmaxi.Size = new System.Drawing.Size(30, 30);
+            this.picmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picmaxi.TabIndex = 23;
+            this.picmaxi.TabStop = false;
+            this.picmaxi.Click += new System.EventHandler(this.picmaxi_Click);
+            // 
+            // picmini
+            // 
+            this.picmini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picmini.BackColor = System.Drawing.Color.Transparent;
+            this.picmini.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picmini.Image = global::RRHHPlanilla.Properties.Resources.minimazar;
+            this.picmini.Location = new System.Drawing.Point(1066, 2);
+            this.picmini.Name = "picmini";
+            this.picmini.Size = new System.Drawing.Size(30, 30);
+            this.picmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picmini.TabIndex = 24;
+            this.picmini.TabStop = false;
+            this.picmini.Click += new System.EventHandler(this.picmini_Click);
+            // 
+            // piccerrar
+            // 
+            this.piccerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.piccerrar.BackColor = System.Drawing.Color.Transparent;
+            this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.cerrar;
+            this.piccerrar.Location = new System.Drawing.Point(1138, 3);
+            this.piccerrar.Name = "piccerrar";
+            this.piccerrar.Size = new System.Drawing.Size(30, 30);
+            this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.piccerrar.TabIndex = 22;
+            this.piccerrar.TabStop = false;
+            this.piccerrar.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -301,7 +242,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Image = global::RRHHPlanilla.Properties.Resources._0;
+            this.pictureBox1.Image = global::RRHHPlanilla.Properties.Resources.ICONO;
             this.pictureBox1.Location = new System.Drawing.Point(3, 721);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(186, 25);
@@ -420,7 +361,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Image = global::RRHHPlanilla.Properties.Resources.analitica;
+            this.button8.Image = global::RRHHPlanilla.Properties.Resources.reportes;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.Location = new System.Drawing.Point(0, 0);
             this.button8.Name = "button8";
@@ -541,7 +482,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Image = global::RRHHPlanilla.Properties.Resources.transaccion;
+            this.button4.Image = global::RRHHPlanilla.Properties.Resources.pagos;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(0, 0);
             this.button4.Name = "button4";
@@ -613,7 +554,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Image = global::RRHHPlanilla.Properties.Resources.equipo_de_trabajadores1;
+            this.button1.Image = global::RRHHPlanilla.Properties.Resources.producto;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
@@ -647,15 +588,13 @@
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picrehavi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picmaxi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picmini)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -696,22 +635,16 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripButton1;
-        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
-        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox piccerrar;
+        private System.Windows.Forms.PictureBox picmini;
+        private System.Windows.Forms.PictureBox picmaxi;
+        private System.Windows.Forms.PictureBox picrehavi;
         private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.Label lblhora;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

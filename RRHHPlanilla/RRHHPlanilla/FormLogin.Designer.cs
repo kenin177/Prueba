@@ -39,11 +39,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.alphaBlendTextBox2 = new ZBobb.AlphaBlendTextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblhora = new System.Windows.Forms.Label();
             this.HoraFecha = new System.Windows.Forms.Timer(this.components);
             this.lblfecha = new System.Windows.Forms.Label();
+            this.alphaBlendTextBox3 = new ZBobb.AlphaBlendTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -91,7 +91,7 @@
             // 
             // alphaBlendTextBox1
             // 
-            this.alphaBlendTextBox1.BackAlpha = 10;
+            this.alphaBlendTextBox1.BackAlpha = 0;
             this.alphaBlendTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.alphaBlendTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.alphaBlendTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,23 +173,6 @@
             this.pictureBox5.TabIndex = 13;
             this.pictureBox5.TabStop = false;
             // 
-            // alphaBlendTextBox2
-            // 
-            this.alphaBlendTextBox2.BackAlpha = 10;
-            this.alphaBlendTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.alphaBlendTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.alphaBlendTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphaBlendTextBox2.ForeColor = System.Drawing.Color.White;
-            this.alphaBlendTextBox2.Location = new System.Drawing.Point(50, 263);
-            this.alphaBlendTextBox2.Name = "alphaBlendTextBox2";
-            this.alphaBlendTextBox2.Size = new System.Drawing.Size(224, 17);
-            this.alphaBlendTextBox2.TabIndex = 2;
-            this.alphaBlendTextBox2.Tag = "";
-            this.alphaBlendTextBox2.Text = "CONTRASEÑA";
-            this.alphaBlendTextBox2.TextChanged += new System.EventHandler(this.alphaBlendTextBox2_TextChanged);
-            this.alphaBlendTextBox2.Enter += new System.EventHandler(this.alphaBlendTextBox2_Enter);
-            this.alphaBlendTextBox2.Leave += new System.EventHandler(this.alphaBlendTextBox2_Leave);
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -235,6 +218,23 @@
             this.lblfecha.Text = "label3";
             this.lblfecha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // alphaBlendTextBox3
+            // 
+            this.alphaBlendTextBox3.BackAlpha = 0;
+            this.alphaBlendTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.alphaBlendTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.alphaBlendTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alphaBlendTextBox3.ForeColor = System.Drawing.Color.White;
+            this.alphaBlendTextBox3.Location = new System.Drawing.Point(50, 260);
+            this.alphaBlendTextBox3.Name = "alphaBlendTextBox3";
+            this.alphaBlendTextBox3.Size = new System.Drawing.Size(228, 17);
+            this.alphaBlendTextBox3.TabIndex = 2;
+            this.alphaBlendTextBox3.Text = "CONTRASEÑA";
+            this.alphaBlendTextBox3.Enter += new System.EventHandler(this.alphaBlendTextBox3_Enter);
+            this.alphaBlendTextBox3.Leave += new System.EventHandler(this.alphaBlendTextBox3_Leave);
+            this.alphaBlendTextBox3.MouseEnter += new System.EventHandler(this.alphaBlendTextBox3_MouseEnter);
+            this.alphaBlendTextBox3.MouseLeave += new System.EventHandler(this.alphaBlendTextBox3_MouseLeave);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,10 +244,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(286, 563);
             this.ControlBox = false;
+            this.Controls.Add(this.alphaBlendTextBox3);
             this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.lblhora);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.alphaBlendTextBox2);
             this.Controls.Add(this.alphaBlendTextBox1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -285,11 +285,11 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private ZBobb.AlphaBlendTextBox alphaBlendTextBox2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label lblhora;
         private System.Windows.Forms.Timer HoraFecha;
         private System.Windows.Forms.Label lblfecha;
+        private ZBobb.AlphaBlendTextBox alphaBlendTextBox3;
     }
 }
 

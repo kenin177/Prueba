@@ -15,11 +15,11 @@ namespace RRHHPlanilla
     {
 
         int i = 47;
-        int a = 150;
+        //int a = 150;
         int anchoa = 190;
         int anchoc = 65;
-        string ruta = @"C:\Users\Kenin\Desktop\Prueba-master(1)\Prueba-master\RRHHPlanilla\RRHHPlanilla\Resources\ICONO.gif";
-        string ruta2 = @"C:\Users\Kenin\Desktop\Prueba-master(1)\Prueba-master\RRHHPlanilla\RRHHPlanilla\Resources\X.gif";
+        //string ruta = @"C:\Users\Kenin\Desktop\Prueba-master(1)\Prueba-master\RRHHPlanilla\RRHHPlanilla\Resources\ICONO.gif";
+        //string ruta2 = @"C:\Users\Kenin\Desktop\Prueba-master(1)\Prueba-master\RRHHPlanilla\RRHHPlanilla\Resources\X.gif";
 
 
 
@@ -56,7 +56,8 @@ namespace RRHHPlanilla
             panel3.Height = i;
 
             tableLayoutPanel1.Width = anchoc;
-            pictureBox1.Image = Image.FromFile(ruta);
+            pictureBox1.Image = RRHHPlanilla.Properties.Resources.ICONO;
+            //pictureBox1.Image = Image.FromFile(ruta);
 
             if (tableLayoutPanel1.Width == anchoc)
             {
@@ -242,54 +243,6 @@ namespace RRHHPlanilla
             panel3.Height = i;
         }
 
-        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Login();
-
-            //this.WindowState = FormWindowState.Maximized;
-
-            //panel1.Height = i;
-            //panel2.Height = i;
-            //panel3.Height = i;
-
-            //tableLayoutPanel1.Width = anchoc;
-
-            //if (tableLayoutPanel1.Width == anchoc)
-            //{
-            //    button1.Text = " ";
-            //    button4.Text = " ";
-            //    button8.Text = " ";
-            //}
-            //else
-            //{
-
-            //}
-        }
-
-        private void cerrarSesionToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Login();
-
-            //this.WindowState = FormWindowState.Maximized;
-
-            //panel1.Height = i;
-            //panel2.Height = i;
-            //panel3.Height = i;
-
-            //tableLayoutPanel1.Width = anchoc;
-
-            //if (tableLayoutPanel1.Width == anchoc)
-            //{
-            //    button1.Text = " ";
-            //    button4.Text = " ";
-            //    button8.Text = " ";
-            //}
-            //else
-            //{
-
-            //}
-        }
-
         private void pictureBox1_MouseEnter_1(object sender, EventArgs e)
         {
             pictureBox1.Image = RRHHPlanilla.Properties.Resources.X;
@@ -299,7 +252,7 @@ namespace RRHHPlanilla
 
         private void pictureBox1_MouseLeave_1(object sender, EventArgs e)
         {
-            pictureBox1.Image = RRHHPlanilla.Properties.Resources._0;
+            pictureBox1.Image = RRHHPlanilla.Properties.Resources.ICONO;
             //pictureBox1.Image = Image.FromFile(ruta);
         }
 
@@ -311,7 +264,7 @@ namespace RRHHPlanilla
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblhora.Text = DateTime.Now.ToString("h:mm:ss");
-            lblfecha.Text = DateTime.Now.ToShortDateString();
+            lblfecha.Text = DateTime.Now.ToLongDateString();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -327,6 +280,25 @@ namespace RRHHPlanilla
             {
 
             }
+        }
+
+        private void picmaxi_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            picrehavi.Visible = true;
+            picmaxi.Visible = false;
+        }
+
+        private void picrehavi_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            picrehavi.Visible = false;
+            picmaxi.Visible = true;
+        }
+
+        private void picmini_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
