@@ -343,6 +343,16 @@ namespace RRHHPlanilla.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seeee {
+            get {
+                object obj = ResourceManager.GetObject("seeee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sin_falta {
             get {
                 object obj = ResourceManager.GetObject("sin falta", resourceCulture);

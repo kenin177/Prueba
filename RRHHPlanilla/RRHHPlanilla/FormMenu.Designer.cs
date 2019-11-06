@@ -31,12 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lblfecha = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.picrehavi = new System.Windows.Forms.PictureBox();
             this.picmaxi = new System.Windows.Forms.PictureBox();
             this.picmini = new System.Windows.Forms.PictureBox();
@@ -64,8 +62,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.lblfecha = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picrehavi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmaxi)).BeginInit();
@@ -83,46 +80,12 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(192, 40);
+            this.panel5.Location = new System.Drawing.Point(215, 40);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1178, 709);
+            this.panel5.Size = new System.Drawing.Size(1155, 709);
             this.panel5.TabIndex = 14;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // lblfecha
-            // 
-            this.lblfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblfecha.AutoSize = true;
-            this.lblfecha.BackColor = System.Drawing.Color.Transparent;
-            this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lblfecha.Location = new System.Drawing.Point(130, 14);
-            this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(308, 23);
-            this.lblfecha.TabIndex = 31;
-            this.lblfecha.Text = "Miercoles, 10  noviembre  2019";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel6.BackgroundImage = global::RRHHPlanilla.Properties.Resources.logins__5_;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(1021, 37);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(157, 100);
-            this.panel6.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
             // 
             // lblhora
             // 
@@ -131,7 +94,7 @@
             this.lblhora.BackColor = System.Drawing.Color.Transparent;
             this.lblhora.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhora.ForeColor = System.Drawing.Color.White;
-            this.lblhora.Location = new System.Drawing.Point(5, 6);
+            this.lblhora.Location = new System.Drawing.Point(2, 8);
             this.lblhora.Name = "lblhora";
             this.lblhora.Size = new System.Drawing.Size(119, 33);
             this.lblhora.TabIndex = 30;
@@ -148,6 +111,7 @@
             this.panel7.BackgroundImage = global::RRHHPlanilla.Properties.Resources.logins__5_;
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.checkBox1);
             this.panel7.Controls.Add(this.lblfecha);
             this.panel7.Controls.Add(this.picrehavi);
             this.panel7.Controls.Add(this.picmaxi);
@@ -155,10 +119,24 @@
             this.panel7.Controls.Add(this.picmini);
             this.panel7.Controls.Add(this.piccerrar);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(192, 0);
+            this.panel7.Location = new System.Drawing.Point(215, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1178, 40);
+            this.panel7.Size = new System.Drawing.Size(1155, 40);
             this.panel7.TabIndex = 21;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox1.Location = new System.Drawing.Point(-66, 12);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(71, 30);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Bloquear \r\nPanel";
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // picrehavi
             // 
@@ -166,9 +144,9 @@
             this.picrehavi.BackColor = System.Drawing.Color.Transparent;
             this.picrehavi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picrehavi.Image = global::RRHHPlanilla.Properties.Resources.res;
-            this.picrehavi.Location = new System.Drawing.Point(1102, 3);
+            this.picrehavi.Location = new System.Drawing.Point(1075, 6);
             this.picrehavi.Name = "picrehavi";
-            this.picrehavi.Size = new System.Drawing.Size(30, 30);
+            this.picrehavi.Size = new System.Drawing.Size(25, 25);
             this.picrehavi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picrehavi.TabIndex = 25;
             this.picrehavi.TabStop = false;
@@ -180,9 +158,9 @@
             this.picmaxi.BackColor = System.Drawing.Color.Transparent;
             this.picmaxi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picmaxi.Image = global::RRHHPlanilla.Properties.Resources.maxi;
-            this.picmaxi.Location = new System.Drawing.Point(1102, 3);
+            this.picmaxi.Location = new System.Drawing.Point(1075, 6);
             this.picmaxi.Name = "picmaxi";
-            this.picmaxi.Size = new System.Drawing.Size(30, 30);
+            this.picmaxi.Size = new System.Drawing.Size(25, 25);
             this.picmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picmaxi.TabIndex = 23;
             this.picmaxi.TabStop = false;
@@ -194,9 +172,9 @@
             this.picmini.BackColor = System.Drawing.Color.Transparent;
             this.picmini.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picmini.Image = global::RRHHPlanilla.Properties.Resources.minimazar;
-            this.picmini.Location = new System.Drawing.Point(1066, 2);
+            this.picmini.Location = new System.Drawing.Point(1033, 6);
             this.picmini.Name = "picmini";
-            this.picmini.Size = new System.Drawing.Size(30, 30);
+            this.picmini.Size = new System.Drawing.Size(25, 25);
             this.picmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picmini.TabIndex = 24;
             this.picmini.TabStop = false;
@@ -208,9 +186,9 @@
             this.piccerrar.BackColor = System.Drawing.Color.Transparent;
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.cerrar;
-            this.piccerrar.Location = new System.Drawing.Point(1138, 3);
+            this.piccerrar.Location = new System.Drawing.Point(1117, 6);
             this.piccerrar.Name = "piccerrar";
-            this.piccerrar.Size = new System.Drawing.Size(30, 30);
+            this.piccerrar.Size = new System.Drawing.Size(25, 25);
             this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.piccerrar.TabIndex = 22;
             this.piccerrar.TabStop = false;
@@ -238,7 +216,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(192, 749);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(215, 749);
             this.tableLayoutPanel1.TabIndex = 7;
             this.tableLayoutPanel1.MouseEnter += new System.EventHandler(this.tableLayoutPanel1_MouseEnter);
             // 
@@ -249,7 +227,7 @@
             this.pictureBox1.Image = global::RRHHPlanilla.Properties.Resources.ICONO;
             this.pictureBox1.Location = new System.Drawing.Point(3, 721);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 25);
+            this.pictureBox1.Size = new System.Drawing.Size(209, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -265,7 +243,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(186, 94);
+            this.panel4.Size = new System.Drawing.Size(209, 94);
             this.panel4.TabIndex = 8;
             // 
             // label1
@@ -303,7 +281,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.MinimumSize = new System.Drawing.Size(150, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(192, 150);
+            this.panel3.Size = new System.Drawing.Size(215, 150);
             this.panel3.TabIndex = 2;
             // 
             // button9
@@ -317,7 +295,7 @@
             this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button9.Location = new System.Drawing.Point(0, 101);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(192, 28);
+            this.button9.Size = new System.Drawing.Size(215, 28);
             this.button9.TabIndex = 15;
             this.button9.Text = "Reportes de Liquidacion";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -325,7 +303,6 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
@@ -334,7 +311,7 @@
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button6.Location = new System.Drawing.Point(0, 73);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(192, 28);
+            this.button6.Size = new System.Drawing.Size(215, 28);
             this.button6.TabIndex = 12;
             this.button6.Text = "Reporte de Voucher";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -342,7 +319,6 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
@@ -351,7 +327,7 @@
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button7.Location = new System.Drawing.Point(0, 46);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(192, 27);
+            this.button7.Size = new System.Drawing.Size(215, 27);
             this.button7.TabIndex = 14;
             this.button7.Text = "Reporte de Pagos";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -371,7 +347,7 @@
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.Location = new System.Drawing.Point(0, 0);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(192, 46);
+            this.button8.Size = new System.Drawing.Size(215, 46);
             this.button8.TabIndex = 13;
             this.button8.Text = "Reportes";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -390,7 +366,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.MinimumSize = new System.Drawing.Size(150, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(192, 150);
+            this.panel2.Size = new System.Drawing.Size(215, 150);
             this.panel2.TabIndex = 1;
             // 
             // button5
@@ -404,7 +380,7 @@
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button5.Location = new System.Drawing.Point(0, 71);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(192, 28);
+            this.button5.Size = new System.Drawing.Size(215, 28);
             this.button5.TabIndex = 12;
             this.button5.Text = "Voucher de Pago";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -420,7 +396,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 46);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(192, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(215, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -492,7 +468,7 @@
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(0, 0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(192, 46);
+            this.button4.Size = new System.Drawing.Size(215, 46);
             this.button4.TabIndex = 11;
             this.button4.Text = "Transacciones";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -511,12 +487,11 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.MinimumSize = new System.Drawing.Size(150, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(192, 150);
+            this.panel1.Size = new System.Drawing.Size(215, 150);
             this.panel1.TabIndex = 0;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
@@ -525,7 +500,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Location = new System.Drawing.Point(0, 77);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 28);
+            this.button2.Size = new System.Drawing.Size(215, 28);
             this.button2.TabIndex = 9;
             this.button2.Text = "Prestamos";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -534,7 +509,8 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::RRHHPlanilla.Properties.Resources.seeee;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
@@ -543,7 +519,7 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Location = new System.Drawing.Point(0, 46);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 31);
+            this.button3.Size = new System.Drawing.Size(215, 31);
             this.button3.TabIndex = 11;
             this.button3.Text = "Trabajadores";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -564,13 +540,26 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 46);
+            this.button1.Size = new System.Drawing.Size(215, 46);
             this.button1.TabIndex = 10;
             this.button1.Text = "Mantenimiento";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // lblfecha
+            // 
+            this.lblfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblfecha.AutoSize = true;
+            this.lblfecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.lblfecha.Location = new System.Drawing.Point(109, 16);
+            this.lblfecha.Name = "lblfecha";
+            this.lblfecha.Size = new System.Drawing.Size(308, 23);
+            this.lblfecha.TabIndex = 31;
+            this.lblfecha.Text = "Miercoles, 10  noviembre  2019";
             // 
             // FormMenu
             // 
@@ -593,9 +582,6 @@
             this.Text = "Menú Principal";
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.FormMenu_Load);
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picrehavi)).EndInit();
@@ -643,15 +629,14 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox piccerrar;
         private System.Windows.Forms.PictureBox picmini;
         private System.Windows.Forms.PictureBox picmaxi;
         private System.Windows.Forms.PictureBox picrehavi;
-        private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.Label lblhora;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label lblfecha;
     }
 }

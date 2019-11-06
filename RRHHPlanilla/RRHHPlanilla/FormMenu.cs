@@ -16,8 +16,9 @@ namespace RRHHPlanilla
 
         int i = 47;
         //int a = 150;
-        int anchoa = 190;
-        int anchoc = 65;
+        int anchoa = 215;
+        int anchoc = 70;
+        bool comprovacion = true;
         //string ruta = @"C:\Users\Kenin\Desktop\Prueba-master(1)\Prueba-master\RRHHPlanilla\RRHHPlanilla\Resources\ICONO.gif";
         //string ruta2 = @"C:\Users\Kenin\Desktop\Prueba-master(1)\Prueba-master\RRHHPlanilla\RRHHPlanilla\Resources\X.gif";
 
@@ -44,6 +45,18 @@ namespace RRHHPlanilla
 
         }
 
+        //FORM LOAD 
+        //FORM LOAD 
+        //FORM LOAD 
+        //FORM LOAD 
+        //FORM LOAD 
+        //FORM LOAD 
+        //FORM LOAD 
+        //FORM LOAD 
+        //FORM LOAD 
+        //FORM LOAD 
+        //FORM LOAD 
+        //FORM LOAD 
         private void FormMenu_Load(object sender, EventArgs e)
         {
             panel1.Height = i;
@@ -119,16 +132,24 @@ namespace RRHHPlanilla
                 panel1.AutoSize = false;
                 panel1.Height = i;
                 //panel1.AutoSize = false;
+                
             }
         }
 
         private void tableLayoutPanel1_MouseEnter(object sender, EventArgs e)
         {
-            tableLayoutPanel1.Width = anchoa;
-            button1.Text = "Mantenimiento";
-            button4.Text = "Transacciones";
-            button8.Text = "Reportes";
-            this.WindowState = FormWindowState.Maximized;
+            if (checkBox1.Checked == false)
+            {
+                tableLayoutPanel1.Width = anchoa;
+                button1.Text = "Mantenimiento";
+                button4.Text = "Transacciones";
+                button8.Text = "Reportes";
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                    
+            }
         }
 
         private void panel5_MouseEnter(object sender, EventArgs e)
@@ -191,26 +212,40 @@ namespace RRHHPlanilla
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            tableLayoutPanel1.Width = anchoa;
-            button1.Text = "Mantenimiento";
-            button4.Text = "Transacciones";
-            button8.Text = "Reportes";
+            if (checkBox1.Checked == false)
+            {
+                tableLayoutPanel1.Width = anchoa;
+                button1.Text = "Mantenimiento";
+                button4.Text = "Transacciones";
+                button8.Text = "Reportes";
+            }
+            else
+            {
+
+            }
         }
+            
 
         private void button8_MouseEnter(object sender, EventArgs e)
         {
-            tableLayoutPanel1.Width = anchoa;
-            button1.Text = "Mantenimiento";
-            button4.Text = "Transacciones";
-            button8.Text = "Reportes";
+            if (checkBox1.Checked == false)
+            {
+                tableLayoutPanel1.Width = anchoa;
+                button1.Text = "Mantenimiento";
+                button4.Text = "Transacciones";
+                button8.Text = "Reportes";
+            }
         }
 
         private void button4_MouseEnter(object sender, EventArgs e)
         {
-            tableLayoutPanel1.Width = anchoa;
-            button1.Text = "Mantenimiento";
-            button4.Text = "Transacciones";
-            button8.Text = "Reportes";
+            if (checkBox1.Checked == false)
+            {
+                tableLayoutPanel1.Width = anchoa;
+                button1.Text = "Mantenimiento";
+                button4.Text = "Transacciones";
+                button8.Text = "Reportes";
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
