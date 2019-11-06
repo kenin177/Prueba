@@ -292,12 +292,15 @@ namespace RRHHPlanilla
 
         private void pictureBox1_MouseEnter_1(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(ruta2);
+            pictureBox1.Image = RRHHPlanilla.Properties.Resources.X;
+
+            //pictureBox1.Image = Image.FromFile(ruta2);
         }
 
         private void pictureBox1_MouseLeave_1(object sender, EventArgs e)
         {
-           pictureBox1.Image = Image.FromFile(ruta);
+            pictureBox1.Image = RRHHPlanilla.Properties.Resources._0;
+            //pictureBox1.Image = Image.FromFile(ruta);
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)

@@ -131,5 +131,10 @@ namespace RRHHPlanilla
             lblhora.Text = DateTime.Now.ToString("h:mm:ss");
             lblfecha.Text = DateTime.Now.ToShortDateString();
         }
+
+        private void alphaBlendTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
