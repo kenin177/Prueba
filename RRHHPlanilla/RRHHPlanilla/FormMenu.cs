@@ -316,7 +316,17 @@ namespace RRHHPlanilla
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                //UsuarioAutenticado = Cancelar;
+                Application.Exit();
+            }
+
+            if (result == DialogResult.No)
+            {
+
+            }
         }
     }
 }

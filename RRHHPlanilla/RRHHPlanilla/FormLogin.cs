@@ -115,6 +115,7 @@ namespace RRHHPlanilla
                 alphaBlendTextBox2.Text = "";
                 alphaBlendTextBox2.UseSystemPasswordChar = true;
             }
+
         }
 
         private void alphaBlendTextBox2_Leave(object sender, EventArgs e)
@@ -135,6 +136,16 @@ namespace RRHHPlanilla
         private void alphaBlendTextBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void alphaBlendTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //DialogResult result = MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
         }
     }
 }
