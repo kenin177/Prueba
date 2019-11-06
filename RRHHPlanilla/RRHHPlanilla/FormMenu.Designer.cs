@@ -30,8 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblhora = new System.Windows.Forms.Label();
+            this.lblfecha = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.cerrarSesionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -60,14 +70,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblfecha = new System.Windows.Forms.Label();
-            this.lblhora = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -77,16 +84,108 @@
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.groupBox1);
+            this.panel5.Controls.Add(this.toolStrip2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(192, 40);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1178, 709);
+            this.panel5.TabIndex = 14;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblhora);
+            this.groupBox1.Controls.Add(this.lblfecha);
+            this.groupBox1.Location = new System.Drawing.Point(90, 85);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Fecha y Hora";
+            // 
+            // lblhora
+            // 
+            this.lblhora.AutoSize = true;
+            this.lblhora.BackColor = System.Drawing.Color.Transparent;
+            this.lblhora.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhora.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblhora.Location = new System.Drawing.Point(77, 27);
+            this.lblhora.Name = "lblhora";
+            this.lblhora.Size = new System.Drawing.Size(59, 19);
+            this.lblhora.TabIndex = 19;
+            this.lblhora.Text = "label2";
+            this.lblhora.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblfecha
+            // 
+            this.lblfecha.AutoSize = true;
+            this.lblfecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblfecha.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblfecha.Location = new System.Drawing.Point(57, 49);
+            this.lblfecha.Name = "lblfecha";
+            this.lblfecha.Size = new System.Drawing.Size(59, 19);
+            this.lblfecha.TabIndex = 20;
+            this.lblfecha.Text = "label3";
+            this.lblfecha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Location = new System.Drawing.Point(903, 221);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(157, 100);
+            this.panel6.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "label2";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.pictureBox3);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(192, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1178, 40);
+            this.panel7.TabIndex = 21;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox3.Image = global::RRHHPlanilla.Properties.Resources.cancelar;
+            this.pictureBox3.Location = new System.Drawing.Point(1133, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 22;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // toolStrip2
             // 
             this.toolStrip2.BackColor = System.Drawing.Color.White;
             this.toolStrip2.BackgroundImage = global::RRHHPlanilla.Properties.Resources.logins__5_;
             this.toolStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip2.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -94,9 +193,9 @@
             this.toolStripButton2,
             this.toolStripButton1,
             this.toolStripDropDownButton3});
-            this.toolStrip2.Location = new System.Drawing.Point(192, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(251, 225);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1178, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(264, 25);
             this.toolStrip2.TabIndex = 12;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -110,6 +209,19 @@
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 22);
             this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton2.ForeColor = System.Drawing.Color.GhostWhite;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(55, 22);
+            this.toolStripButton2.Text = "Usuario";
+            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // toolStripButton1
             // 
@@ -508,89 +620,6 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave_1);
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.groupBox1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(192, 25);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1178, 724);
-            this.panel5.TabIndex = 14;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.ForeColor = System.Drawing.Color.GhostWhite;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(55, 22);
-            this.toolStripButton2.Text = "Usuario";
-            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(1183, 25);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(157, 100);
-            this.panel6.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
-            // 
-            // lblfecha
-            // 
-            this.lblfecha.AutoSize = true;
-            this.lblfecha.BackColor = System.Drawing.Color.Transparent;
-            this.lblfecha.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblfecha.Location = new System.Drawing.Point(57, 49);
-            this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(59, 19);
-            this.lblfecha.TabIndex = 20;
-            this.lblfecha.Text = "label3";
-            this.lblfecha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblhora
-            // 
-            this.lblhora.AutoSize = true;
-            this.lblhora.BackColor = System.Drawing.Color.Transparent;
-            this.lblhora.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhora.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblhora.Location = new System.Drawing.Point(77, 27);
-            this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(59, 19);
-            this.lblhora.TabIndex = 19;
-            this.lblhora.Text = "label2";
-            this.lblhora.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblhora);
-            this.groupBox1.Controls.Add(this.lblfecha);
-            this.groupBox1.Location = new System.Drawing.Point(26, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 21;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Fecha y Hora";
-            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -600,10 +629,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.toolStrip2);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -611,6 +640,14 @@
             this.Text = "Menú Principal";
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.FormMenu_Load);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -624,13 +661,7 @@
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -674,5 +705,7 @@
         private System.Windows.Forms.Label lblhora;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
