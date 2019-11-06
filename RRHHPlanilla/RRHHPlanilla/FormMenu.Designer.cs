@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.panel5 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblfecha = new System.Windows.Forms.Label();
-            this.lblhora = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblhora = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
             this.picrehavi = new System.Windows.Forms.PictureBox();
             this.picmaxi = new System.Windows.Forms.PictureBox();
@@ -83,9 +83,7 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.lblfecha);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.lblhora);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(192, 40);
             this.panel5.Name = "panel5";
@@ -93,32 +91,18 @@
             this.panel5.TabIndex = 14;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // lblfecha
             // 
+            this.lblfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblfecha.AutoSize = true;
             this.lblfecha.BackColor = System.Drawing.Color.Transparent;
-            this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lblfecha.Location = new System.Drawing.Point(531, 270);
+            this.lblfecha.Location = new System.Drawing.Point(130, 14);
             this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(516, 40);
+            this.lblfecha.Size = new System.Drawing.Size(308, 23);
             this.lblfecha.TabIndex = 31;
-            this.lblfecha.Text = "Miercoles, 10  noviembre  2017";
-            // 
-            // lblhora
-            // 
-            this.lblhora.BackColor = System.Drawing.Color.Transparent;
-            this.lblhora.Font = new System.Drawing.Font("Century Gothic", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblhora.Location = new System.Drawing.Point(550, 152);
-            this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(467, 129);
-            this.lblhora.TabIndex = 30;
-            this.lblhora.Text = "10:59:58";
+            this.lblfecha.Text = "Miercoles, 10  noviembre  2019";
             // 
             // panel6
             // 
@@ -140,14 +124,34 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "label2";
             // 
+            // lblhora
+            // 
+            this.lblhora.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblhora.AutoSize = true;
+            this.lblhora.BackColor = System.Drawing.Color.Transparent;
+            this.lblhora.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhora.ForeColor = System.Drawing.Color.White;
+            this.lblhora.Location = new System.Drawing.Point(5, 6);
+            this.lblhora.Name = "lblhora";
+            this.lblhora.Size = new System.Drawing.Size(119, 33);
+            this.lblhora.TabIndex = 30;
+            this.lblhora.Text = "00:00:00";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Silver;
             this.panel7.BackgroundImage = global::RRHHPlanilla.Properties.Resources.logins__5_;
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.lblfecha);
             this.panel7.Controls.Add(this.picrehavi);
             this.panel7.Controls.Add(this.picmaxi);
+            this.panel7.Controls.Add(this.lblhora);
             this.panel7.Controls.Add(this.picmini);
             this.panel7.Controls.Add(this.piccerrar);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -267,6 +271,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(64, 18);
@@ -274,6 +279,7 @@
             this.label1.Size = new System.Drawing.Size(125, 58);
             this.label1.TabIndex = 0;
             this.label1.Text = "Recursos\r\nHumanos";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2
             // 
@@ -591,6 +597,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picrehavi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmaxi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmini)).EndInit();

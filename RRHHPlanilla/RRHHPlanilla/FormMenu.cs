@@ -46,17 +46,13 @@ namespace RRHHPlanilla
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            //this.WindowState = FormWindowState.Maximized;
-
-            //var frm = new FormMenu();
-            //frm.BackColor = Color.Black;
-
             panel1.Height = i;
             panel2.Height = i;
             panel3.Height = i;
 
             tableLayoutPanel1.Width = anchoc;
             pictureBox1.Image = RRHHPlanilla.Properties.Resources.ICONO;
+            label1_Click(null, e);
             //pictureBox1.Image = Image.FromFile(ruta);
 
             if (tableLayoutPanel1.Width == anchoc)
@@ -71,18 +67,12 @@ namespace RRHHPlanilla
             }
 
             Login();
-
-            //if (l == false)
-            //{
-            //    this.WindowState = FormWindowState.Maximized;
-            //}
         }
 
         private void FormMenu_KeyDown(object sender, KeyEventArgs e)
         {
 
         }
-
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -91,31 +81,28 @@ namespace RRHHPlanilla
             //var prestamos = new Prestamos();
             //prestamos.MdiParent = this;
             //prestamos.Show();
-
         }
 
         private void abrirformhija(Form formhija)
         {
-            if (this.panel5.Controls.Count > 0) this.panel5.Controls.RemoveAt(0);
+            if (this.panel5.Controls.Count > 0)
+                this.panel5.Controls.RemoveAt(0);
             Form fh = formhija as Form;
-
-            //var fh = new Prestamos();
-
             fh.TopLevel = false;
-            fh.Dock = DockStyle.None;
+            fh.Dock = DockStyle.Fill;
 
             this.panel5.Controls.Add(fh);
             this.panel5.Tag = fh;
             //fh.MdiParent = this;
             fh.Show();
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             abrirformhija(new Trabajadores());
             //var formTrabajadores = new Trabajadores();
             //formTrabajadores.MdiParent = this;
             //formTrabajadores.Show();
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -166,8 +153,7 @@ namespace RRHHPlanilla
         }
 
         private void button4_Click(object sender, EventArgs e)
-        {
-            
+        {         
             if (panel2.Height == i)
             {
                 //panel1.Height = i;
@@ -299,6 +285,11 @@ namespace RRHHPlanilla
         private void picmini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            abrirformhija(new FrmInicio());
         }
     }
 }
