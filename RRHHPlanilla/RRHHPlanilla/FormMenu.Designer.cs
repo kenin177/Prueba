@@ -138,8 +138,10 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel6.BackgroundImage = global::RRHHPlanilla.Properties.Resources.logins__5_;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(903, 221);
+            this.panel6.Location = new System.Drawing.Point(1021, 37);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(157, 100);
             this.panel6.TabIndex = 0;
@@ -160,7 +162,6 @@
             // 
             // panel7
             // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.pictureBox3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(192, 0);
@@ -172,9 +173,9 @@
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox3.Image = global::RRHHPlanilla.Properties.Resources.cancelar;
-            this.pictureBox3.Location = new System.Drawing.Point(1133, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(1137, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox3.Size = new System.Drawing.Size(41, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 22;
             this.pictureBox3.TabStop = false;
@@ -397,6 +398,7 @@
             // 
             this.button8.BackColor = System.Drawing.Color.Transparent;
             this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -517,6 +519,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -588,6 +591,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
