@@ -31,8 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.pnlmenu = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblfecha = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -66,9 +70,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.pnlmenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picrehavi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmaxi)).BeginInit();
@@ -82,12 +87,11 @@
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.pnlmenu);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(215, 40);
             this.panel5.Name = "panel5";
@@ -96,34 +100,83 @@
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseDown);
             // 
-            // panel6
+            // pnlmenu
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlmenu.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlmenu.Controls.Add(this.button10);
+            this.pnlmenu.Controls.Add(this.label2);
+            this.pnlmenu.Controls.Add(this.label1);
+            this.pnlmenu.Controls.Add(this.pictureBox3);
+            this.pnlmenu.Controls.Add(this.pictureBox4);
+            this.pnlmenu.Controls.Add(this.lblfecha);
+            this.pnlmenu.Controls.Add(this.lblhora);
+            this.pnlmenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlmenu.Location = new System.Drawing.Point(0, 604);
+            this.pnlmenu.Name = "pnlmenu";
+            this.pnlmenu.Size = new System.Drawing.Size(1155, 105);
+            this.pnlmenu.TabIndex = 9;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.SystemColors.GrayText;
+            this.button10.BackgroundImage = global::RRHHPlanilla.Properties.Resources.logins__5_;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button10.Location = new System.Drawing.Point(100, 80);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(165, 23);
+            this.button10.TabIndex = 1;
+            this.button10.Text = "Configuracion de Usuario";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Controls.Add(this.checkBox1);
-            this.panel6.Controls.Add(this.lblfecha);
-            this.panel6.Controls.Add(this.lblhora);
-            this.panel6.Location = new System.Drawing.Point(0, 603);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1155, 106);
-            this.panel6.TabIndex = 9;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(99, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 16);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Puesto";
             // 
-            // checkBox1
+            // label1
             // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox1.Location = new System.Drawing.Point(3, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(79, 30);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Bloquear \r\nPanel";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(99, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Usuario";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::RRHHPlanilla.Properties.Resources.male_close_up_silhouette_with_tie1;
+            this.pictureBox3.Location = new System.Drawing.Point(26, 31);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(68, 76);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::RRHHPlanilla.Properties.Resources.MENU;
+            this.pictureBox4.Location = new System.Drawing.Point(1118, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(38, 29);
+            this.pictureBox4.TabIndex = 34;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // lblfecha
             // 
@@ -133,7 +186,7 @@
             this.lblfecha.BackColor = System.Drawing.Color.Transparent;
             this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lblfecha.Location = new System.Drawing.Point(813, 83);
+            this.lblfecha.Location = new System.Drawing.Point(797, 83);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(308, 23);
             this.lblfecha.TabIndex = 33;
@@ -147,7 +200,7 @@
             this.lblhora.BackColor = System.Drawing.Color.Transparent;
             this.lblhora.Font = new System.Drawing.Font("Century Gothic", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhora.ForeColor = System.Drawing.Color.Black;
-            this.lblhora.Location = new System.Drawing.Point(839, 21);
+            this.lblhora.Location = new System.Drawing.Point(823, 21);
             this.lblhora.Name = "lblhora";
             this.lblhora.Size = new System.Drawing.Size(236, 65);
             this.lblhora.TabIndex = 32;
@@ -160,12 +213,10 @@
             // 
             // tmExpandirMenu
             // 
-            this.tmExpandirMenu.Enabled = true;
             this.tmExpandirMenu.Tick += new System.EventHandler(this.tmExpandirMenu_Tick);
             // 
             // tmContraerMenu
             // 
-            this.tmContraerMenu.Enabled = true;
             this.tmContraerMenu.Tick += new System.EventHandler(this.tmContraerMenu_Tick);
             // 
             // panel7
@@ -595,16 +646,6 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave_1);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::RRHHPlanilla.Properties.Resources.MENU;
-            this.pictureBox4.Location = new System.Drawing.Point(1114, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(38, 29);
-            this.pictureBox4.TabIndex = 34;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -628,8 +669,10 @@
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMenu_MouseDown);
             this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.pnlmenu.ResumeLayout(false);
+            this.pnlmenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picrehavi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmaxi)).EndInit();
@@ -646,7 +689,6 @@
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -682,13 +724,16 @@
         private System.Windows.Forms.PictureBox picmini;
         private System.Windows.Forms.PictureBox picmaxi;
         private System.Windows.Forms.PictureBox picrehavi;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Timer tmExpandirMenu;
         private System.Windows.Forms.Timer tmContraerMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.Label lblhora;
+        private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlmenu;
     }
 }

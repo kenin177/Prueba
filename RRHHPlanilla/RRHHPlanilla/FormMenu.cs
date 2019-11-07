@@ -95,8 +95,8 @@ namespace RRHHPlanilla
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            
 
+            
             panel1.Height = i;
             panel2.Height = i;
             panel3.Height = i;
@@ -237,39 +237,17 @@ namespace RRHHPlanilla
         #region MOUSE ENTER
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == false)
-            {
-                tableLayoutPanel1.Width = anchoa;
-                button1.Text = "Mantenimiento";
-                button4.Text = "Transacciones";
-                button8.Text = "Reportes";
-            }
-            else
-            {
 
-            }
         }
             
         private void button8_MouseEnter(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == false)
-            {
-                tableLayoutPanel1.Width = anchoa;
-                button1.Text = "Mantenimiento";
-                button4.Text = "Transacciones";
-                button8.Text = "Reportes";
-            }
+
         }
 
         private void button4_MouseEnter(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == false)
-            {
-                tableLayoutPanel1.Width = anchoa;
-                button1.Text = "Mantenimiento";
-                button4.Text = "Transacciones";
-                button8.Text = "Reportes";
-            }
+
         }
 
         #endregion
@@ -279,18 +257,18 @@ namespace RRHHPlanilla
         {
 
             //PANEL SIMPLE
-            if (checkBox1.Checked == false)
-            {
-                tableLayoutPanel1.Width = anchoa;
-                button1.Text = "Mantenimiento";
-                button4.Text = "Transacciones";
-                button8.Text = "Reportes";
-            }
+            //if (checkBox1.Checked == false)
+            //{
+            //    tableLayoutPanel1.Width = anchoa;
+            //    button1.Text = "Mantenimiento";
+            //    button4.Text = "Transacciones";
+            //    button8.Text = "Reportes";
+            //}
 
-            if (checkBox1.Checked == true)
-            {
+            //if (checkBox1.Checked == true)
+            //{
 
-            }
+            //}
 
             //PANEL ANIMADO
             //if (tableLayoutPanel1.Width == anchoa)
@@ -307,7 +285,7 @@ namespace RRHHPlanilla
         #region pICTURE BOXES
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == false)
+            if (tableLayoutPanel1.Width == anchoa)
             {
                 tableLayoutPanel1.Width = anchoc;
                 button1.Text = " ";
@@ -322,10 +300,18 @@ namespace RRHHPlanilla
                 panel2.Height = i;
                 panel3.Height = i;
             }
-            if (checkBox1.Checked == true)
+
+            else
             {
+                tableLayoutPanel1.Width = anchoa;
+                button1.Text = "Mantenimiento";
+                button4.Text = "Transacciones";
+                button8.Text = "Reportes";
+
             }
-            }
+        }
+
+            
 
         private void pictureBox1_MouseEnter_1(object sender, EventArgs e)
         {
@@ -410,32 +396,44 @@ namespace RRHHPlanilla
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if (panel6.Height == 106)
+            if (pnlmenu.Height == 105)
             {
                 this.tmContraerMenu.Start();
             }
-            else if (panel6.Height == 33)
+            else if (pnlmenu.Height == 35)
             {
                 this.tmExpandirMenu.Start();
             }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            //if (pnlmenu.Height == 195)
+            //{
+            //    pnlmenu.Height = 1;
+            //}
+            //else
+            //{
+            //    pnlmenu.Height = 195;
+            //}
         }
 
         #region TIMERS
 
         private void tmExpandirMenu_Tick(object sender, EventArgs e)
         {
-            if (panel6.Height >= 106)
+            if (pnlmenu.Height >= 105)
                 this.tmExpandirMenu.Stop();
             else
-                panel6.Height = panel6.Height + 5;
+                pnlmenu.Height = pnlmenu.Height + 5;
         }
 
         private void tmContraerMenu_Tick(object sender, EventArgs e)
         {
-            if (panel6.Height <= 33)
+            if (pnlmenu.Height <= 35)
                 this.tmContraerMenu.Stop();
             else
-                panel6.Height = panel6.Height - 5;
+                pnlmenu.Height = pnlmenu.Height - 5;
 
         }
 
