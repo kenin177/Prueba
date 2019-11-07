@@ -35,12 +35,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.lblfecha = new System.Windows.Forms.Label();
             this.picrehavi = new System.Windows.Forms.PictureBox();
             this.picmaxi = new System.Windows.Forms.PictureBox();
             this.picmini = new System.Windows.Forms.PictureBox();
             this.piccerrar = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -62,20 +62,20 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblfecha = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picrehavi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmaxi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -89,12 +89,11 @@
             // 
             // lblhora
             // 
-            this.lblhora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblhora.AutoSize = true;
             this.lblhora.BackColor = System.Drawing.Color.Transparent;
             this.lblhora.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhora.ForeColor = System.Drawing.Color.White;
-            this.lblhora.Location = new System.Drawing.Point(2, 8);
+            this.lblhora.Location = new System.Drawing.Point(337, 6);
             this.lblhora.Name = "lblhora";
             this.lblhora.Size = new System.Drawing.Size(119, 33);
             this.lblhora.TabIndex = 30;
@@ -126,17 +125,28 @@
             // 
             // checkBox1
             // 
-            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox1.Location = new System.Drawing.Point(-66, 12);
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkBox1.Location = new System.Drawing.Point(3, 11);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(71, 30);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Bloquear \r\nPanel";
             this.checkBox1.UseVisualStyleBackColor = false;
+            // 
+            // lblfecha
+            // 
+            this.lblfecha.AutoSize = true;
+            this.lblfecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.lblfecha.Location = new System.Drawing.Point(453, 16);
+            this.lblfecha.Name = "lblfecha";
+            this.lblfecha.Size = new System.Drawing.Size(308, 23);
+            this.lblfecha.TabIndex = 31;
+            this.lblfecha.Text = "Miercoles, 10  noviembre  2019";
             // 
             // picrehavi
             // 
@@ -200,40 +210,26 @@
             this.tableLayoutPanel1.BackgroundImage = global::RRHHPlanilla.Properties.Resources.WhatsApp_Image_2019_11_04_at_10_16_06_PM__1_;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(215, 749);
             this.tableLayoutPanel1.TabIndex = 7;
             this.tableLayoutPanel1.MouseEnter += new System.EventHandler(this.tableLayoutPanel1_MouseEnter);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Image = global::RRHHPlanilla.Properties.Resources.ICONO;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 721);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave_1);
             // 
             // panel4
             // 
@@ -548,18 +544,19 @@
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
             // 
-            // lblfecha
+            // pictureBox1
             // 
-            this.lblfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblfecha.AutoSize = true;
-            this.lblfecha.BackColor = System.Drawing.Color.Transparent;
-            this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lblfecha.Location = new System.Drawing.Point(109, 16);
-            this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(308, 23);
-            this.lblfecha.TabIndex = 31;
-            this.lblfecha.Text = "Miercoles, 10  noviembre  2019";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::RRHHPlanilla.Properties.Resources.ICONO;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 724);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(209, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave_1);
             // 
             // FormMenu
             // 
@@ -589,7 +586,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picmini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -599,6 +595,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

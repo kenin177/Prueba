@@ -144,9 +144,10 @@ namespace RRHHPlanilla
                 button1.Text = "Mantenimiento";
                 button4.Text = "Transacciones";
                 button8.Text = "Reportes";
-                this.WindowState = FormWindowState.Maximized;
+                
             }
-            else
+
+            if(checkBox1.Checked == true)
             {
                     
             }
@@ -250,19 +251,25 @@ namespace RRHHPlanilla
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            tableLayoutPanel1.Width = anchoc;
-            button1.Text = " ";
-            button4.Text = " ";
-            button8.Text = " ";
+            if (checkBox1.Checked == false)
+            {
+                tableLayoutPanel1.Width = anchoc;
+                button1.Text = " ";
+                button4.Text = " ";
+                button8.Text = " ";
 
-            panel1.AutoSize = false;
-            panel2.AutoSize = false;
-            panel3.AutoSize = false;
+                panel1.AutoSize = false;
+                panel2.AutoSize = false;
+                panel3.AutoSize = false;
 
-            panel1.Height = i;
-            panel2.Height = i;
-            panel3.Height = i;
-        }
+                panel1.Height = i;
+                panel2.Height = i;
+                panel3.Height = i;
+            }
+            if (checkBox1.Checked == true)
+            {
+            }
+            }
 
         private void pictureBox1_MouseEnter_1(object sender, EventArgs e)
         {
