@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace RRHHPlanilla
 {
@@ -26,6 +27,23 @@ namespace RRHHPlanilla
         {
             lblhora.Text = DateTime.Now.ToString("h:mm:ss");
             lblfecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (pnlLogin.Height == 195)
+            {
+                pnlLogin.Height = 30;
+            }
+            else
+            {
+                pnlLogin.Height = 195;
+            }
+        }
+
+        private void FrmInicio_Load(object sender, EventArgs e)
+        {
+            pnlLogin.Height = 30;
         }
     }
 }

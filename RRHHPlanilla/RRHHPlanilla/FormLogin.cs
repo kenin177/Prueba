@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace RRHHPlanilla
 {
@@ -23,7 +24,22 @@ namespace RRHHPlanilla
         {
             InitializeComponent();
         }
-            
+
+        #region Drag Form/ Mover Arrastrar Formulario
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        private void FormLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        #endregion
+
+        #region BOTONES   
         private void button2_Click(object sender, EventArgs e)
         {         
             DialogResult result = MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
@@ -38,7 +54,7 @@ namespace RRHHPlanilla
 
             }
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             string usuario;
@@ -58,19 +74,12 @@ namespace RRHHPlanilla
                 MessageBox.Show("Usuario o contraseña incorrecta");
             }
         }
+        #endregion
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
             UsuarioAutenticado =! Cancelar;
             c =! u;
-        }
-
-        private void FormLogin_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData==Keys.F1)
-            {
-                MessageBox.Show("funciono");
-            }
         }
 
         private void alphaBlendTextBox1_TextChanged(object sender, EventArgs e)
@@ -82,45 +91,19 @@ namespace RRHHPlanilla
             }
         }
 
-        public void AsignarTextBox(string text)
-        {
-            alphaBlendTextBox1.Text = text;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            AsignarTextBox(alphaBlendTextBox1.Text);
-        }
-
-        private void alphaBlendTextBox1_Enter(object sender, EventArgs e)
-        {
-            if(alphaBlendTextBox1.Text == "USUARIO")
-            {
-                alphaBlendTextBox1.Text = "";
-            }
-        }
-
-        private void alphaBlendTextBox1_Leave(object sender, EventArgs e)
-        {
-            if (alphaBlendTextBox1.Text == "")
-            {
-                alphaBlendTextBox1.Text = "USUARIO";
-            }
-        }
-
+        #region Hora y Fecha
         private void HoraFecha_Tick(object sender, EventArgs e)
         {
             lblhora.Text = DateTime.Now.ToString("h:mm:ss");
             lblfecha.Text = DateTime.Now.ToShortDateString();
         }
-
-
+        #endregion
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //DialogResult result = MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
         }
 
-
+        #region Eventos
         private void alphaBlendTextBox3_MouseEnter(object sender, EventArgs e)
         {
             if (alphaBlendTextBox3.Text == "CONTRASEÑA")
@@ -156,6 +139,29 @@ namespace RRHHPlanilla
                 alphaBlendTextBox3.UseSystemPasswordChar = false;
             }
         }
+
+        private void alphaBlendTextBox1_Enter(object sender, EventArgs e)
+        {
+            if (alphaBlendTextBox1.Text == "USUARIO")
+            {
+                alphaBlendTextBox1.Text = "";
+            }
+        }
+
+        private void alphaBlendTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (alphaBlendTextBox1.Text == "")
+            {
+                alphaBlendTextBox1.Text = "USUARIO";
+            }
+        }
+
+        #endregion
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
 
     }
 }

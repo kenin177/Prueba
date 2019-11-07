@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AlphaBlendTextBox">
-      <HintPath>..\..\..\..\..\Pictures\Picosmos Capture\AlphaBlendTextBox\AlphaBlendTextBox.dll</HintPath>
+    <Reference Include="AlphaBlendTextBox, Version=1.0.1270.35793, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AlphaBlendTextBox\AlphaBlendTextBox.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -220,6 +221,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\seeee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male-close-up-silhouette-with-tie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MENU.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
