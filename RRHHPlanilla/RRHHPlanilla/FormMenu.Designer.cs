@@ -70,7 +70,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel5.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pues2 = new System.Windows.Forms.Label();
+            this.usu2 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -91,11 +95,10 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.pnlmenu);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(215, 40);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1155, 709);
+            this.panel5.Size = new System.Drawing.Size(1155, 604);
             this.panel5.TabIndex = 14;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseDown);
@@ -103,6 +106,10 @@
             // pnlmenu
             // 
             this.pnlmenu.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlmenu.Controls.Add(this.pues2);
+            this.pnlmenu.Controls.Add(this.label3);
+            this.pnlmenu.Controls.Add(this.label4);
+            this.pnlmenu.Controls.Add(this.usu2);
             this.pnlmenu.Controls.Add(this.button10);
             this.pnlmenu.Controls.Add(this.label2);
             this.pnlmenu.Controls.Add(this.label1);
@@ -111,10 +118,11 @@
             this.pnlmenu.Controls.Add(this.lblfecha);
             this.pnlmenu.Controls.Add(this.lblhora);
             this.pnlmenu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlmenu.Location = new System.Drawing.Point(0, 604);
+            this.pnlmenu.Location = new System.Drawing.Point(215, 644);
             this.pnlmenu.Name = "pnlmenu";
             this.pnlmenu.Size = new System.Drawing.Size(1155, 105);
             this.pnlmenu.TabIndex = 9;
+            this.pnlmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlmenu_Paint);
             // 
             // button10
             // 
@@ -138,7 +146,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(99, 53);
+            this.label2.Location = new System.Drawing.Point(100, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 16);
             this.label2.TabIndex = 37;
@@ -151,7 +159,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 37);
+            this.label1.Location = new System.Drawing.Point(100, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 36;
@@ -186,7 +194,7 @@
             this.lblfecha.BackColor = System.Drawing.Color.Transparent;
             this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lblfecha.Location = new System.Drawing.Point(797, 83);
+            this.lblfecha.Location = new System.Drawing.Point(758, 83);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(308, 23);
             this.lblfecha.TabIndex = 33;
@@ -200,7 +208,7 @@
             this.lblhora.BackColor = System.Drawing.Color.Transparent;
             this.lblhora.Font = new System.Drawing.Font("Century Gothic", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhora.ForeColor = System.Drawing.Color.Black;
-            this.lblhora.Location = new System.Drawing.Point(823, 21);
+            this.lblhora.Location = new System.Drawing.Point(810, 21);
             this.lblhora.Name = "lblhora";
             this.lblhora.Size = new System.Drawing.Size(236, 65);
             this.lblhora.TabIndex = 32;
@@ -352,6 +360,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel3
             // 
@@ -646,6 +655,68 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave_1);
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.label3.Location = new System.Drawing.Point(413, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(308, 23);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Miercoles, 10  noviembre  2019";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(288, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 33);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "00:00:00";
+            // 
+            // pues2
+            // 
+            this.pues2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pues2.AutoSize = true;
+            this.pues2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pues2.Location = new System.Drawing.Point(35, 15);
+            this.pues2.Name = "pues2";
+            this.pues2.Size = new System.Drawing.Size(53, 16);
+            this.pues2.TabIndex = 39;
+            this.pues2.Text = "Puesto";
+            // 
+            // usu2
+            // 
+            this.usu2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.usu2.AutoSize = true;
+            this.usu2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usu2.Location = new System.Drawing.Point(35, 0);
+            this.usu2.Name = "usu2";
+            this.usu2.Size = new System.Drawing.Size(56, 16);
+            this.usu2.TabIndex = 38;
+            this.usu2.Text = "Usuario";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1370, 749);
+            this.flowLayoutPanel1.TabIndex = 23;
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -656,8 +727,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pnlmenu);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -668,7 +741,6 @@
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMenu_MouseDown);
-            this.panel5.ResumeLayout(false);
             this.pnlmenu.ResumeLayout(false);
             this.pnlmenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -735,5 +807,10 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlmenu;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label pues2;
+        private System.Windows.Forms.Label usu2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

@@ -96,14 +96,18 @@ namespace RRHHPlanilla
         private void FormMenu_Load(object sender, EventArgs e)
         {
 
-            
+            label3.Visible = false;
+            label4.Visible = false;
+            usu2.Visible = false;
+            pues2.Visible = false;
+
             panel1.Height = i;
             panel2.Height = i;
             panel3.Height = i;
 
             tableLayoutPanel1.Width = anchoc;
             pictureBox1.Image = RRHHPlanilla.Properties.Resources.ICONO;
-            //label1_Click(null, e);
+            label1_Click(null, e);
             //pictureBox1.Image = Image.FromFile(ruta);
 
             if (tableLayoutPanel1.Width == anchoc)
@@ -285,6 +289,7 @@ namespace RRHHPlanilla
         #region pICTURE BOXES
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
             if (tableLayoutPanel1.Width == anchoa)
             {
                 tableLayoutPanel1.Width = anchoc;
@@ -309,9 +314,10 @@ namespace RRHHPlanilla
                 button8.Text = "Reportes";
 
             }
+
         }
 
-            
+
 
         private void pictureBox1_MouseEnter_1(object sender, EventArgs e)
         {
@@ -331,12 +337,6 @@ namespace RRHHPlanilla
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lblhora.Text = DateTime.Now.ToString("h:mm:ss");
-            lblfecha.Text = DateTime.Now.ToLongDateString();
         }
 
         #region BOTONES DE CERRAR, MAX, MIN
@@ -367,6 +367,7 @@ namespace RRHHPlanilla
             ly = this.Location.Y;
             sw = this.Size.Width;
             sh = this.Size.Height;
+
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             picrehavi.Visible = true;
@@ -376,8 +377,8 @@ namespace RRHHPlanilla
         private void picrehavi_Click(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Normal;
-
-            this.Size = new Size(sw, sh);
+            
+            this.Size = new Size(1155, 604);
             this.Location = new Point(lx, ly);
             picrehavi.Visible = false;
             picmaxi.Visible = true;
@@ -402,7 +403,12 @@ namespace RRHHPlanilla
             }
             else if (pnlmenu.Height == 35)
             {
-                this.tmExpandirMenu.Start();
+                label3.Visible = false;
+                label4.Visible = false;
+
+                usu2.Visible = false;
+                pues2.Visible = false;
+                this.tmExpandirMenu.Start();               
             }
         }
 
@@ -418,25 +424,52 @@ namespace RRHHPlanilla
             //}
         }
 
+        private void pnlmenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         #region TIMERS
 
         private void tmExpandirMenu_Tick(object sender, EventArgs e)
         {
             if (pnlmenu.Height >= 105)
+            {
                 this.tmExpandirMenu.Stop();
+            }
             else
-                pnlmenu.Height = pnlmenu.Height + 5;
+                pnlmenu.Height = pnlmenu.Height + 10;
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void tmContraerMenu_Tick(object sender, EventArgs e)
         {
             if (pnlmenu.Height <= 35)
+            {
                 this.tmContraerMenu.Stop();
+                usu2.Visible = true;
+                pues2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+            }
             else
-                pnlmenu.Height = pnlmenu.Height - 5;
-
+                pnlmenu.Height = pnlmenu.Height - 10;
         }
 
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblhora.Text = DateTime.Now.ToString("h:mm:ss");
+            lblfecha.Text = DateTime.Now.ToLongDateString();
+
+            label4.Text = DateTime.Now.ToString("h:mm:ss");
+            label3.Text = DateTime.Now.ToLongDateString();
+        }
 
         #endregion
     }
