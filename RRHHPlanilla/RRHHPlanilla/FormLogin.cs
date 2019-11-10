@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using RRHH.BL;
 
 namespace RRHHPlanilla
 {
     public partial class FormLogin : Form
 
     {
+        SeguridadBL _seguridad;
+
         public bool UsuarioAutenticado { get; set; }
         public bool Cancelar { get; set; }
 
@@ -23,6 +26,8 @@ namespace RRHHPlanilla
         public FormLogin()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
         }
 
         #region Drag Form/ Mover Arrastrar Formulario
@@ -63,8 +68,9 @@ namespace RRHHPlanilla
             usuario = alphaBlendTextBox1.Text;
             contrasena = alphaBlendTextBox3.Text;
 
-            if (usuario == "admin1" && contrasena == "12345" || 
-                usuario == "supervisor1" && contrasena == "1234")
+            var resultado = _seguridad.Autorizar(usuario, contrasena);
+
+            if (resultado == true)
             {
                 c = u;
                 this.Close();
