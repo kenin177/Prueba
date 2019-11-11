@@ -489,15 +489,17 @@ namespace RRHHPlanilla
             pnlayuda.Width = 0;
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login();
+            this.Show();
+        }
+
+        private void button12_Click_1(object sender, EventArgs e)
         {
             FrmAcercaDe frm = new FrmAcercaDe();
             frm.ShowDialog();
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            Login();
         }
 
         private void tmContraerMenu_Tick(object sender, EventArgs e)
