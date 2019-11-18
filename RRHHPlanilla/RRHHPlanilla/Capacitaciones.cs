@@ -11,29 +11,36 @@ using System.Windows.Forms;
 
 namespace RRHHPlanilla
 {
-    public partial class Trabajadores : Form
+    public partial class Capacitaciones : Form
     {
-        TrabajadoresBL _trabajadores;
-
-        public Trabajadores()
+        CapacitacionesBL _capacitacionesBL;
+        public Capacitaciones()
         {
             InitializeComponent();
-            _trabajadores = new TrabajadoresBL();
-            listaTrabajadoresBindingSource.DataSource = 
-                _trabajadores.ObtenerTrabajador();
+
+            _capacitacionesBL = new CapacitacionesBL();
+            listaCapacitacionesBindingSource.DataSource = _capacitacionesBL.ObtenerCapacitacion();
+
         }
 
-        private void listaTrabajadoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void Capacitaciones_Load(object sender, EventArgs e)
         {
-            listaTrabajadoresBindingSource.EndEdit();
-            var trabajador = (Trabajador)listaTrabajadoresBindingSource.Current;
-            var resultado = _trabajadores.GuardarTrabajador(trabajador);
+
+        }
+
+        private void listaCapacitacionesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            listaCapacitacionesBindingSource.EndEdit();
+            var capacitacion = (Capacitacion)listaCapacitacionesBindingSource.Current;
+            var resultado = _capacitacionesBL.GuardarCapacitacion(capacitacion);
 
             if (resultado.Exitoso == true)
             {
-                listaTrabajadoresBindingSource.ResetBindings(false);
+                listaCapacitacionesBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
+                DialogResult resul = MessageBox.Show("Usuario Guardado", "Exitoso...!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
             else
             {
                 MessageBox.Show(resultado.Mensaje);
@@ -42,8 +49,9 @@ namespace RRHHPlanilla
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            _trabajadores.AgregarTrabajador();
-            listaTrabajadoresBindingSource.MoveLast();
+            listaCapacitacionesBindingNavigatorSaveItem.Enabled = true;
+            _capacitacionesBL.AgregarCapacitacion();
+            listaCapacitacionesBindingSource.MoveLast();
 
             DeshabilitarHabilitarBotones(false);
         }
@@ -63,36 +71,47 @@ namespace RRHHPlanilla
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
+            
             if (idTextBox.Text != "")
             {
-                DialogResult resulto = MessageBox.Show("¿Desea Eliminar el Registro?", "Eliminar", 
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (resulto == DialogResult.Yes)
+                var resultado = MessageBox.Show("Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
                 {
                     var id = Convert.ToInt32(idTextBox.Text);
                     Eliminar(id);
                 }
-            }
+             }
         }
 
         private void Eliminar(int id)
-        {
-            var resultado = _trabajadores.EliminarTrabajador(id);
+        { 
+            var resultado = _capacitacionesBL.EliminarCapacitacion(id);
 
             if (resultado == true)
             {
-                listaTrabajadoresBindingSource.ResetBindings(false);
+                listaCapacitacionesBindingSource.ResetBindings(false);
             }
             else
             {
-                MessageBox.Show("Ocurrio un error al eliminar un trabajador");
+                MessageBox.Show("Ocurrio un error al eliminar la capacidad");
             }
         }
 
         private void toolStripCancelar_Click(object sender, EventArgs e)
         {
+            _capacitacionesBL.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
-            Eliminar(0);
+           
+        }
+
+        private void listaCapacitacionesBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void piccerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
