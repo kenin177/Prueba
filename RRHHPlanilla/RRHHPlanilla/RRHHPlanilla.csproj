@@ -64,29 +64,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Anticipos.cs">
+    <Compile Include="Transacciones\RprtAnticipos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Anticipos.Designer.cs">
-      <DependentUpon>Anticipos.cs</DependentUpon>
+    <Compile Include="Transacciones\RprtAnticipos.Designer.cs">
+      <DependentUpon>RprtAnticipos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Busqueda.cs">
+    <Compile Include="Mantenimiento\Busqueda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busqueda.Designer.cs">
+    <Compile Include="Mantenimiento\Busqueda.Designer.cs">
       <DependentUpon>Busqueda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Capacitaciones.cs">
+    <Compile Include="Mantenimiento\Capacitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Capacitaciones.Designer.cs">
+    <Compile Include="Mantenimiento\Capacitaciones.Designer.cs">
       <DependentUpon>Capacitaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deducciones.cs">
+    <Compile Include="Transacciones\RprtDeducciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Deducciones.Designer.cs">
-      <DependentUpon>Deducciones.cs</DependentUpon>
+    <Compile Include="Transacciones\RprtDeducciones.Designer.cs">
+      <DependentUpon>RprtDeducciones.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -100,52 +100,58 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAcercaDe.cs">
+    <Compile Include="EXTRA\FrmAcercaDe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAcercaDe.Designer.cs">
+    <Compile Include="EXTRA\FrmAcercaDe.Designer.cs">
       <DependentUpon>FrmAcercaDe.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInicio.cs">
+    <Compile Include="EXTRA\FrmConfiUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInicio.Designer.cs">
+    <Compile Include="EXTRA\FrmConfiUsuario.Designer.cs">
+      <DependentUpon>FrmConfiUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXTRA\FrmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXTRA\FrmInicio.Designer.cs">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Planillas.cs">
+    <Compile Include="Transacciones\Planillas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Planillas.Designer.cs">
+    <Compile Include="Transacciones\Planillas.Designer.cs">
       <DependentUpon>Planillas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Prestaciones.cs">
+    <Compile Include="Transacciones\Prestaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Prestaciones.Designer.cs">
+    <Compile Include="Transacciones\Prestaciones.Designer.cs">
       <DependentUpon>Prestaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Empleados.cs">
+    <Compile Include="Mantenimiento\Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empleados.Designer.cs">
+    <Compile Include="Mantenimiento\Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vacaciones.cs">
+    <Compile Include="Transacciones\Vacaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vacaciones.Designer.cs">
+    <Compile Include="Transacciones\Vacaciones.Designer.cs">
       <DependentUpon>Vacaciones.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Busqueda.resx">
+    <EmbeddedResource Include="Mantenimiento\Busqueda.resx">
       <DependentUpon>Busqueda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Capacitaciones.resx">
+    <EmbeddedResource Include="Mantenimiento\Capacitaciones.resx">
       <DependentUpon>Capacitaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Deducciones.resx">
-      <DependentUpon>Deducciones.cs</DependentUpon>
+    <EmbeddedResource Include="Transacciones\RprtDeducciones.resx">
+      <DependentUpon>RprtDeducciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -153,16 +159,19 @@
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAcercaDe.resx">
+    <EmbeddedResource Include="EXTRA\FrmAcercaDe.resx">
       <DependentUpon>FrmAcercaDe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInicio.resx">
+    <EmbeddedResource Include="EXTRA\FrmConfiUsuario.resx">
+      <DependentUpon>FrmConfiUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXTRA\FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Planillas.resx">
+    <EmbeddedResource Include="Transacciones\Planillas.resx">
       <DependentUpon>Planillas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Prestaciones.resx">
+    <EmbeddedResource Include="Transacciones\Prestaciones.resx">
       <DependentUpon>Prestaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -175,10 +184,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Empleados.resx">
+    <EmbeddedResource Include="Mantenimiento\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vacaciones.resx">
+    <EmbeddedResource Include="Transacciones\Vacaciones.resx">
       <DependentUpon>Vacaciones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -325,6 +334,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kisspng-question-mark-royalty-free-illustration-vector-gra-preguntas-ms-frecuentes-psicologa-5c00b264119d82.1938272815435495400722.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reportes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

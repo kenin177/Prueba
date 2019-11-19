@@ -11,21 +11,38 @@ namespace RRHH.BL
     {
         protected override void Seed(Contexto contexto)
         {
+            #region PRIVILEGIO
+            var privi = new Privilegios();
+            privi.Descripcion = "Administrador";
+            contexto.Privilegio.Add(privi);
+
+            var privi1 = new Privilegios();
+            privi1.Descripcion = "Gerente";
+            contexto.Privilegio.Add(privi1);
+
+            var privi2 = new Privilegios();
+            privi2.Descripcion = "Supervisor";
+            contexto.Privilegio.Add(privi2);
+            #endregion
+
+            #region USUARIO
             var usuarioAdmin = new Usuario();
-            usuarioAdmin.Nombre = "admin";
+            usuarioAdmin.NombUsuario = "admin";
             usuarioAdmin.Contrasena = "123";
             contexto.Usuarios.Add(usuarioAdmin);
 
             var usuarioGerente = new Usuario();
-            usuarioGerente.Nombre = "Gerente";
+            usuarioGerente.NombUsuario = "gerente";
             usuarioGerente.Contrasena = "123";
             contexto.Usuarios.Add(usuarioGerente);
 
             var usuarioSuperv = new Usuario();
-            usuarioSuperv.Nombre = "super";
+            usuarioSuperv.NombUsuario = "super";
             usuarioSuperv.Contrasena = "123";
             contexto.Usuarios.Add(usuarioSuperv);
+            #endregion
 
+            #region CARGO
             var cargo1 = new Cargo();
             cargo1.Descripcion = "Gerente";
             contexto.Cargos.Add(cargo1);
@@ -41,6 +58,9 @@ namespace RRHH.BL
             var cargo4 = new Cargo();
             cargo4.Descripcion = "Mantenimeinto";
             contexto.Cargos.Add(cargo4);
+            #endregion
+
+            #region METODO PAGO
 
             var metodopago1 = new MetodoPago();
             metodopago1.Descripcion = "Mensual";
@@ -57,6 +77,9 @@ namespace RRHH.BL
             var metodopago4 = new MetodoPago();
             metodopago4.Descripcion = "Diario";
             contexto.MetodoPagos.Add(metodopago4);
+            #endregion
+
+            #region EGRESOS E INGRESOS
 
             var egresos1 = new Egreso();
             egresos1.Descripcion = "IHSS";
@@ -94,6 +117,10 @@ namespace RRHH.BL
             Ingresos2.Descripcion = "Horas Extras";
             contexto.Ingresos.Add(Ingresos2);
 
+            #endregion
+
+            #region JORNADA
+
             var jornada1 = new Jornada();
             jornada1.Descripcion = "Diurno";
             contexto.Jornadas.Add(jornada1);
@@ -105,7 +132,9 @@ namespace RRHH.BL
             var jornada3 = new Jornada();
             jornada3.Descripcion = "Mixto";
             contexto.Jornadas.Add(jornada3);
+            #endregion
 
+            #region ESTADO CIVIL
             var estado1 = new EstadoCivil();
             estado1.Descripcion = "Soltero";
             contexto.EstadoCiviles.Add(estado1);
@@ -121,6 +150,9 @@ namespace RRHH.BL
             var estado4 = new EstadoCivil();
             estado4.Descripcion = "Viudo";
             contexto.EstadoCiviles.Add(estado4);
+            #endregion
+            
+            #region TRABAJADORES
 
             var trabajador1 = new Trabajador();
             trabajador1.Nombre = "Kevin";
@@ -214,6 +246,9 @@ namespace RRHH.BL
             trabajador7.JornadaId = 2;
             contexto.Trabajadores.Add(trabajador7);
 
+            #endregion
+
+            #region CAPACITACION
             var capacitacion1 = new Capacitacion();
             capacitacion1.Tema = "Manejo de Conflictos";
             capacitacion1.Horas= "12";
@@ -255,6 +290,8 @@ namespace RRHH.BL
             capacitacion3.Presupuesto = "Membresia";
             capacitacion3.Status = "En Proceso";
             contexto.Capacitaciones.Add(capacitacion3);
+
+            #endregion
 
             base.Seed(contexto);
         }

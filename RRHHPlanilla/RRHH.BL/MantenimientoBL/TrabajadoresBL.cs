@@ -29,7 +29,7 @@ namespace RRHH.BL
         }
 
         public Resultado GuardarTrabajador(Trabajador trabajador)
-        {
+        {           
             var resultado = Validar(trabajador);
             if (resultado.Exitoso == false)
             {

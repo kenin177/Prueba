@@ -41,6 +41,7 @@ namespace RRHHPlanilla
 
         }
 
+        //GUARDAR
         private void listaTrabajadoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             listaTrabajadoresBindingSource.EndEdit();
@@ -69,6 +70,7 @@ namespace RRHHPlanilla
             }
         }
 
+        //AGREGAR
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             listaTrabajadoresBindingNavigatorSaveItem.Enabled = true;
@@ -77,6 +79,7 @@ namespace RRHHPlanilla
 
             DeshabilitarHabilitarBotones(false);
         }
+
 
         private void DeshabilitarHabilitarBotones(bool valor)
         {
@@ -91,6 +94,7 @@ namespace RRHHPlanilla
 
         }
 
+        //BORRAR
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             
@@ -106,6 +110,7 @@ namespace RRHHPlanilla
             }
         }
 
+        //ELIMINAR
         private void Eliminar(int id)
         {
             var resultado = _trabajadores.EliminarTrabajador(id);
@@ -120,15 +125,14 @@ namespace RRHHPlanilla
             }
         }
 
+        //CANCELAR CAMBIOS
         private void toolStripCancelar_Click(object sender, EventArgs e)
         {
             _trabajadores.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
             
         }
-
-      
-       
+     
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -165,6 +169,7 @@ namespace RRHHPlanilla
 
         }
 
+        //FOTO
         private void button1_Click(object sender, EventArgs e)
         {
             var trabajador = (Trabajador)listaTrabajadoresBindingSource.Current;
@@ -196,6 +201,11 @@ namespace RRHHPlanilla
         private void piccerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

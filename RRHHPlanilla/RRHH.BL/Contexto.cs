@@ -21,6 +21,7 @@ namespace RRHH.BL
             Database.SetInitializer(new DatosdeInicio());
         }
 
+        public DbSet<Privilegios> Privilegio { get; set; }
         public DbSet<Trabajador> Trabajadores { get; set; }
         public DbSet<Cargo> Cargos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }

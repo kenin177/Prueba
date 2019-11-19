@@ -70,12 +70,14 @@ namespace RRHHPlanilla
             }
             if(formLogin.c == formLogin.u)
             {
+
                 lx = this.Location.X;
                 ly = this.Location.Y;
                 sw = this.Size.Width;
                 sh = this.Size.Height;
                 this.Size = Screen.PrimaryScreen.WorkingArea.Size;
                 this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+                this.Show();
                 //this.WindowState = FormWindowState.Maximized;
             }
         }
@@ -357,11 +359,6 @@ namespace RRHHPlanilla
 
         #endregion
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         #region BOTONES DE CERRAR, MAX, MIN
 
         int lx, ly;
@@ -519,7 +516,7 @@ namespace RRHHPlanilla
         {
             this.Hide();
             Login();
-            this.Show();
+            
         }
 
         private void button12_Click_1(object sender, EventArgs e)
