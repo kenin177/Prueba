@@ -410,7 +410,7 @@
             // toolStripCancelar
             // 
             this.toolStripCancelar.Name = "toolStripCancelar";
-            this.toolStripCancelar.Size = new System.Drawing.Size(53, 24);
+            this.toolStripCancelar.Size = new System.Drawing.Size(53, 15);
             this.toolStripCancelar.Text = "Cancelar";
             this.toolStripCancelar.Visible = false;
             this.toolStripCancelar.Click += new System.EventHandler(this.toolStripCancelar_Click);
@@ -665,11 +665,11 @@
             this.piccerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.piccerrar.BackColor = System.Drawing.Color.Transparent;
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.cerrar;
-            this.piccerrar.Location = new System.Drawing.Point(1335, 3);
+            this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.cancelar;
+            this.piccerrar.Location = new System.Drawing.Point(1333, 1);
             this.piccerrar.Name = "piccerrar";
-            this.piccerrar.Size = new System.Drawing.Size(31, 26);
-            this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.piccerrar.Size = new System.Drawing.Size(35, 34);
+            this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.piccerrar.TabIndex = 26;
             this.piccerrar.TabStop = false;
             this.piccerrar.Click += new System.EventHandler(this.piccerrar_Click);
@@ -678,6 +678,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.piccerrar);
             this.Controls.Add(fechaLabel);

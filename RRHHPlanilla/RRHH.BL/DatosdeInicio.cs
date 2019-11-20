@@ -26,20 +26,52 @@ namespace RRHH.BL
             #endregion
 
             #region USUARIO
-            var usuarioAdmin = new Usuario();
-            usuarioAdmin.NombUsuario = "admin";
-            usuarioAdmin.Contrasena = "123";
-            contexto.Usuarios.Add(usuarioAdmin);
+            var usuario1 = new Usuario();
 
-            var usuarioGerente = new Usuario();
-            usuarioGerente.NombUsuario = "gerente";
-            usuarioGerente.Contrasena = "123";
-            contexto.Usuarios.Add(usuarioGerente);
+            //SEGURIDAD
+            usuario1.NombUsuario = "admin";
+            usuario1.Contrasena = "123";
+            contexto.Usuarios.Add(usuario1);
 
-            var usuarioSuperv = new Usuario();
-            usuarioSuperv.NombUsuario = "super";
-            usuarioSuperv.Contrasena = "123";
-            contexto.Usuarios.Add(usuarioSuperv);
+            usuario1.Nombre = "Kevin";
+            usuario1.Apellido = "Rivera";
+            usuario1.Correo = "prueba1234@gmail.com";
+            usuario1.edad = 22;
+            //usuario1.FechaInicio.ToString("04,22,2019");
+            usuario1.Cedula = 0512199700879;
+            usuario1.PrivilegioId = 1;
+
+
+            var usuario2 = new Usuario();
+
+            //SEGURIDAD
+            usuario2.NombUsuario = "gerente";
+            usuario2.Contrasena = "123";
+            contexto.Usuarios.Add(usuario2);
+
+            usuario2.Nombre = "Germas";
+            usuario2.Apellido = "No me Acuerdo";
+            usuario2.Correo = "prueba1234@gmail.com";
+            usuario2.edad = 21;
+            //usuario2.FechaInicio.ToString("04,22,2019");
+            usuario2.Cedula = 0512199700666;
+            usuario2.PrivilegioId = 2;
+
+
+            var usuario3 = new Usuario();
+
+            //SEGURIDAD
+            usuario3.NombUsuario = "super";
+            usuario3.Contrasena = "123";
+            contexto.Usuarios.Add(usuario3);
+
+            usuario3.Nombre = "Juan";
+            usuario3.Apellido = "Lo mismo";
+            usuario3.Correo = "prueba1234@gmail.com";
+            usuario3.edad = 22;
+            //usuario1.FechaInicio.ToString("04,22,2019");
+            usuario3.Cedula = 0512199700999;
+            usuario3.PrivilegioId = 3;
             #endregion
 
             #region CARGO
@@ -151,9 +183,9 @@ namespace RRHH.BL
             estado4.Descripcion = "Viudo";
             contexto.EstadoCiviles.Add(estado4);
             #endregion
-            
-          
 
+
+            #region EMPLEADOS
             var trabajador1 = new Trabajador();
             trabajador1.Nombre = "Kevin";
             trabajador1.Apellido = "Amaya";
@@ -245,8 +277,8 @@ namespace RRHH.BL
             trabajador7.MetodoPagoId = 1;
             trabajador7.JornadaId = 2;
             contexto.Trabajadores.Add(trabajador7);
-        
-            
+            #endregion
+
 
             #region CAPACITACION
             var capacitacion1 = new Capacitacion();

@@ -72,6 +72,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button23 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
@@ -79,13 +80,13 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button21 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
             this.pnlmenu.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -142,29 +143,30 @@
             // 
             this.pnlUsuario.AddControl = null;
             this.pnlUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.pnlUsuario.Controls.Add(this.button24);
             this.pnlUsuario.Controls.Add(this.button15);
             this.pnlUsuario.Controls.Add(this.button13);
             this.pnlUsuario.Controls.Add(this.button14);
-            this.pnlUsuario.Location = new System.Drawing.Point(183, 8);
+            this.pnlUsuario.Location = new System.Drawing.Point(183, 1);
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlUsuario.Size = new System.Drawing.Size(121, 103);
+            this.pnlUsuario.Size = new System.Drawing.Size(185, 119);
             this.pnlUsuario.TabIndex = 0;
             this.pnlUsuario.TipoDeSombra = MZControls.MZSombraPanel.ShadowsPanel.Central;
             // 
             // button15
             // 
             this.button15.AutoSize = true;
-            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button15.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button15.FlatAppearance.BorderSize = 0;
             this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button15.Location = new System.Drawing.Point(10, 66);
+            this.button15.Location = new System.Drawing.Point(10, 79);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(101, 28);
+            this.button15.Size = new System.Drawing.Size(165, 30);
             this.button15.TabIndex = 44;
             this.button15.Text = "Cerrar Sesión";
             this.button15.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -179,15 +181,16 @@
             this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button13.Location = new System.Drawing.Point(10, 38);
+            this.button13.Location = new System.Drawing.Point(10, 33);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(101, 28);
+            this.button13.Size = new System.Drawing.Size(165, 23);
             this.button13.TabIndex = 43;
-            this.button13.Text = "Configuración";
+            this.button13.Text = "Configuración de Usuarios";
             this.button13.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -197,11 +200,11 @@
             this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button14.Location = new System.Drawing.Point(10, 10);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(101, 28);
+            this.button14.Size = new System.Drawing.Size(165, 23);
             this.button14.TabIndex = 0;
             this.button14.Text = "Perfil";
             this.button14.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -270,7 +273,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button10.Location = new System.Drawing.Point(126, 79);
+            this.button10.Location = new System.Drawing.Point(139, 74);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(38, 23);
             this.button10.TabIndex = 1;
@@ -697,6 +700,24 @@
             this.panel2.Size = new System.Drawing.Size(215, 150);
             this.panel2.TabIndex = 1;
             // 
+            // button23
+            // 
+            this.button23.BackColor = System.Drawing.Color.Transparent;
+            this.button23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button23.FlatAppearance.BorderSize = 0;
+            this.button23.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button23.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button23.Location = new System.Drawing.Point(0, 200);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(215, 32);
+            this.button23.TabIndex = 18;
+            this.button23.Text = "MBTI";
+            this.button23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button23.UseVisualStyleBackColor = false;
+            // 
             // button22
             // 
             this.button22.BackColor = System.Drawing.Color.Transparent;
@@ -830,6 +851,23 @@
             this.panel1.Size = new System.Drawing.Size(215, 150);
             this.panel1.TabIndex = 0;
             // 
+            // button21
+            // 
+            this.button21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button21.FlatAppearance.BorderSize = 0;
+            this.button21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button21.Location = new System.Drawing.Point(0, 136);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(215, 32);
+            this.button21.TabIndex = 13;
+            this.button21.Text = "Reclutamiento";
+            this.button21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button21.UseVisualStyleBackColor = false;
+            // 
             // button16
             // 
             this.button16.BackColor = System.Drawing.Color.Transparent;
@@ -925,40 +963,24 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave_1);
             // 
-            // button21
+            // button24
             // 
-            this.button21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button21.FlatAppearance.BorderSize = 0;
-            this.button21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button21.Location = new System.Drawing.Point(0, 136);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(215, 32);
-            this.button21.TabIndex = 13;
-            this.button21.Text = "Reclutamiento";
-            this.button21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button21.UseVisualStyleBackColor = false;
-            // 
-            // button23
-            // 
-            this.button23.BackColor = System.Drawing.Color.Transparent;
-            this.button23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button23.FlatAppearance.BorderSize = 0;
-            this.button23.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button23.Location = new System.Drawing.Point(0, 200);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(215, 32);
-            this.button23.TabIndex = 18;
-            this.button23.Text = "MBTI";
-            this.button23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button23.UseVisualStyleBackColor = false;
+            this.button24.AutoSize = true;
+            this.button24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button24.FlatAppearance.BorderSize = 0;
+            this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button24.Location = new System.Drawing.Point(10, 56);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(165, 23);
+            this.button24.TabIndex = 45;
+            this.button24.Text = "Agregar Nuevo Usuario";
+            this.button24.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // FormMenu
             // 
@@ -1067,5 +1089,6 @@
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button24;
     }
 }

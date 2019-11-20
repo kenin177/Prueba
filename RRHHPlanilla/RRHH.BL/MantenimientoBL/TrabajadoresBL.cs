@@ -42,7 +42,6 @@ namespace RRHH.BL
             return resultado;
         }
 
-
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())
@@ -51,7 +50,6 @@ namespace RRHH.BL
                 item.Reload();
             }
         }
-
 
         public void AgregarTrabajador()
         {
@@ -163,7 +161,6 @@ namespace RRHH.BL
         public Jornada Jornada { get; set; }
         public int EstadoCivilId { get; set; }
         public EstadoCivil EstadoCivil { get; set; }
-
 
         public class Resultado
         {

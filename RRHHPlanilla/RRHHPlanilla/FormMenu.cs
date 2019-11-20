@@ -438,8 +438,8 @@ namespace RRHHPlanilla
         private void button10_Click(object sender, EventArgs e)
         {
             if (pnlUsuario.Width == 0)
-            {
-                pnlUsuario.Width = 121;
+            {             
+                pnlUsuario.Width = 185;
             }
             else
                 pnlUsuario.Width = 0;
@@ -574,7 +574,18 @@ namespace RRHHPlanilla
                 fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
                 abrirformhija(fm);
             }
-        
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            FrmConfirmarConf frm = new FrmConfirmarConf();
+            frm.ShowDialog();
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            FrmConfiUsuario frm = new FrmConfiUsuario();
+            frm.Show();
+        }
 
         private void tmContraerMenu_Tick(object sender, EventArgs e)
         {
