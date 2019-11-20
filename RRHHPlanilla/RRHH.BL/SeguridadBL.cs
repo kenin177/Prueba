@@ -29,75 +29,75 @@ namespace RRHH.BL
 
         #endregion
 
-        // GUARDAD
-        public Resultado3 GuardarUsuario(Usuario usuario)
-        {
-            var resultado = Validar(usuario);
+        //// GUARDAD
+        //public Resultado3 GuardarUsuario(Usuario usuario)
+        //{
+        //    var resultado = Validar(usuario);
 
-            if (resultado.Exitoso == false)
-            {
-                return resultado;
-            }
+        //    if (resultado.Exitoso == false)
+        //    {
+        //        return resultado;
+        //    }
 
-            _contexto.SaveChanges();
+        //    _contexto.SaveChanges();
 
-            resultado.Exitoso = true;
-            return resultado;
-        }
+        //    resultado.Exitoso = true;
+        //    return resultado;
+        //}
 
-        //CANCELAR CAMBIOS
-        public void CancelarCambios()
-        {
-            foreach (var item in _contexto.ChangeTracker.Entries())
-            {
-                item.State = EntityState.Unchanged;
-                item.Reload();
-            }
-        }
+        ////CANCELAR CAMBIOS
+        //public void CancelarCambios()
+        //{
+        //    foreach (var item in _contexto.ChangeTracker.Entries())
+        //    {
+        //        item.State = EntityState.Unchanged;
+        //        item.Reload();
+        //    }
+        //}
 
-        //AGREGAR
-        public void AgregarUsuario()
-        {
-            var nuevoUsuario = new Usuario();
-            ListaSeguridad.Add(nuevoUsuario);
-        }
+        ////AGREGAR
+        //public void AgregarUsuario()
+        //{
+        //    var nuevoUsuario = new Usuario();
+        //    ListaSeguridad.Add(nuevoUsuario);
+        //}
 
-        //ELIMINAR
-        public bool EliminarUsuario(int id)
-        {
-            foreach (var usuario in ListaSeguridad)
-            {
-                if (usuario.Id == id)
-                {
-                    ListaSeguridad.Remove(usuario);
-                    _contexto.SaveChanges();
+        ////ELIMINAR
+        //public bool EliminarUsuario(int id)
+        //{
+        //    foreach (var usuario in ListaSeguridad)
+        //    {
+        //        if (usuario.Id == id)
+        //        {
+        //            ListaSeguridad.Remove(usuario);
+        //            _contexto.SaveChanges();
 
-                    return true;
-                }
-            }
-            return false;
-        }
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
 
-        //VALIDACION
-        private Resultado3 Validar(Usuario usuario )
-        {
-            var resultado = new Resultado3();
-            resultado.Exitoso = true;
+        ////VALIDACION
+        //private Resultado3 Validar(Usuario usuario )
+        //{
+        //    var resultado = new Resultado3();
+        //    resultado.Exitoso = true;
 
-            if (string.IsNullOrEmpty(usuario.NombUsuario) == true)
-            {
-                resultado.Mensaje = "Ingrese un Nombre";
-                resultado.Exitoso = false;
-            }
+        //    if (string.IsNullOrEmpty(usuario.NombUsuario) == true)
+        //    {
+        //        resultado.Mensaje = "Ingrese un Nombre";
+        //        resultado.Exitoso = false;
+        //    }
 
-            if (string.IsNullOrEmpty(usuario.Contrasena) == true)
-            {
-                resultado.Exitoso = false;
-                resultado.Mensaje = "Ingrese una contraseña";
-            }
+        //    if (string.IsNullOrEmpty(usuario.Contrasena) == true)
+        //    {
+        //        resultado.Exitoso = false;
+        //        resultado.Mensaje = "Ingrese una contraseña";
+        //    }
 
-            return resultado;
-        }
+        //    return resultado;
+        //}
 
 
         #region Autorizacion
@@ -124,20 +124,23 @@ namespace RRHH.BL
     {
         public int Id { get; set; }
         
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Correo { get; set; }
-        public int edad { get; set; }
-        public string FechaInicio { get; set; }
-        public int Cedula { get; set; }
+        //public string Nombre { get; set; }
+        //public string Apellido { get; set; }
+        //public string Correo { get; set; }
+        //public int edad { get; set; }
+        //public string FechaInicio { get; set; }
+        //public int Cedula { get; set; }
 
         //SEGURIDAD
         public string NombUsuario { get; set; }
         public string Contrasena { get; set; }
-        public Privilegios TipoUsuario { get; set; }
+        //public int PrivilegioId { get; set; }
+        //public Privilegio Privilegio { get; set; }
 
-        public string contrasena1 { get; set; }
-        public string contrasena2 { get; set; }
+
+
+        //public string contrasena1 { get; set; }
+        //public string contrasena2 { get; set; }
     }
 
     public class Resultado3
@@ -146,9 +149,4 @@ namespace RRHH.BL
         public string Mensaje { get; set; }
     }
 
-    public class Privilegios
-    {
-        public string Id { get; set; }
-        public string Descripcion { get; set; }
-    }
 }

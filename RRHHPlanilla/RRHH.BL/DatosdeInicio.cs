@@ -12,17 +12,17 @@ namespace RRHH.BL
         protected override void Seed(Contexto contexto)
         {
             #region PRIVILEGIO
-            var privi = new Privilegios();
+            var privi = new Privilegio();
             privi.Descripcion = "Administrador";
-            contexto.Privilegio.Add(privi);
+            contexto.Privilegios.Add(privi);
 
-            var privi1 = new Privilegios();
+            var privi1 = new Privilegio();
             privi1.Descripcion = "Gerente";
-            contexto.Privilegio.Add(privi1);
+            contexto.Privilegios.Add(privi1);
 
-            var privi2 = new Privilegios();
+            var privi2 = new Privilegio();
             privi2.Descripcion = "Supervisor";
-            contexto.Privilegio.Add(privi2);
+            contexto.Privilegios.Add(privi2);
             #endregion
 
             #region USUARIO
@@ -152,7 +152,7 @@ namespace RRHH.BL
             contexto.EstadoCiviles.Add(estado4);
             #endregion
             
-            #region TRABAJADORES
+          
 
             var trabajador1 = new Trabajador();
             trabajador1.Nombre = "Kevin";
@@ -245,8 +245,8 @@ namespace RRHH.BL
             trabajador7.MetodoPagoId = 1;
             trabajador7.JornadaId = 2;
             contexto.Trabajadores.Add(trabajador7);
-
-            #endregion
+        
+            
 
             #region CAPACITACION
             var capacitacion1 = new Capacitacion();
