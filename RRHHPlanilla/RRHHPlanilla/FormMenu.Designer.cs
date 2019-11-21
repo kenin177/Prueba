@@ -207,6 +207,7 @@
             this.button14.Text = "Perfil";
             this.button14.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // pues2
             // 
@@ -513,7 +514,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.BackgroundImage = global::RRHHPlanilla.Properties.Resources.WhatsApp_Image_2019_11_04_at_10_16_06_PM__1_;
+            this.tableLayoutPanel1.BackgroundImage = global::RRHHPlanilla.Properties.Resources.HABER2;
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));

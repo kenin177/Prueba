@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RRHH.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,16 @@ namespace RRHHPlanilla
 {
     public partial class FrmConfiUsuario : Form
     {
+        SeguridadBL _seguridad;
         public FrmConfiUsuario()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
+            listaSeguridadBindingSource.DataSource = _seguridad.ObtenerUsuario();
         }
+
+        PerfilBL sql = new PerfilBL();
 
         #region Drag Form/ Mover Arrastrar Formulario
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -48,6 +55,19 @@ namespace RRHHPlanilla
             }
         }
 
+        private void FrmConfiUsuario_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void txtusuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

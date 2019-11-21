@@ -79,6 +79,9 @@ namespace RRHHPlanilla
                 this.Location = Screen.PrimaryScreen.WorkingArea.Location;
                 this.Show();
                 //this.WindowState = FormWindowState.Maximized;
+
+
+
             }
         }
 
@@ -584,6 +587,13 @@ namespace RRHHPlanilla
 
         private void button24_Click(object sender, EventArgs e)
         {
+            FrmConfiUsuario frm = new FrmConfiUsuario();
+            frm.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            pnlUsuario.Width = 0;
             FrmConfiUsuario frm = new FrmConfiUsuario();
             frm.Show();
         }

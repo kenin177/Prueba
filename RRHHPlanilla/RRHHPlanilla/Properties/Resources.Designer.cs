@@ -203,6 +203,16 @@ namespace RRHHPlanilla.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HABER2 {
+            get {
+                object obj = ResourceManager.GetObject("HABER2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hoy_si {
             get {
                 object obj = ResourceManager.GetObject("hoy si", resourceCulture);

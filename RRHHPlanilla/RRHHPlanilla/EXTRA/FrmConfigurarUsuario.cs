@@ -253,7 +253,7 @@ namespace RRHHPlanilla
         private void contrasenaTextBox_Leave(object sender, EventArgs e)
         {
             if (txtconfirmar.Visible == true && contrasenaTextBox.Text.Length <= 6
-                && contrasenaTextBox.ReadOnly == false)
+                && contrasenaTextBox.ReadOnly == false && txtnueva.Visible == true)
             {
                 lblcamb.Visible = true;
                 lblcamb.Text = "LA CONTRASEÑA TIENE QUE SER MAYOR A 6 CARACTERES";
@@ -317,7 +317,7 @@ namespace RRHHPlanilla
             }
 
             if (txtconfirmar.Visible == true && contrasenaTextBox.Text.Length <= 6 
-                && contrasenaTextBox.ReadOnly == false)
+                && contrasenaTextBox.ReadOnly == false && txtnueva.Visible == true)
             {
                 lblcamb.Visible = true;
                 lblcamb.Text = "LA CONTRASEÑA TIENE QUE SER MAYOR A 6 CARACTERES";
