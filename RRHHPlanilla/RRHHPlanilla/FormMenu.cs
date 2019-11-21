@@ -577,6 +577,7 @@ namespace RRHHPlanilla
 
         private void button13_Click(object sender, EventArgs e)
         {
+            pnlUsuario.Width = 0;
             FrmConfirmarConf frm = new FrmConfirmarConf();
             frm.ShowDialog();
         }

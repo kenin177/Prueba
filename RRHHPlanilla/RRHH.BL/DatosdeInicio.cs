@@ -184,7 +184,6 @@ namespace RRHH.BL
             contexto.EstadoCiviles.Add(estado4);
             #endregion
 
-
             #region EMPLEADOS
             var trabajador1 = new Trabajador();
             trabajador1.Nombre = "Kevin";
@@ -278,7 +277,6 @@ namespace RRHH.BL
             trabajador7.JornadaId = 2;
             contexto.Trabajadores.Add(trabajador7);
             #endregion
-
 
             #region CAPACITACION
             var capacitacion1 = new Capacitacion();

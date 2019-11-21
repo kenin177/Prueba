@@ -86,7 +86,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button24 = new System.Windows.Forms.Button();
             this.pnlmenu.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -143,28 +142,27 @@
             // 
             this.pnlUsuario.AddControl = null;
             this.pnlUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.pnlUsuario.Controls.Add(this.button24);
             this.pnlUsuario.Controls.Add(this.button15);
             this.pnlUsuario.Controls.Add(this.button13);
             this.pnlUsuario.Controls.Add(this.button14);
             this.pnlUsuario.Location = new System.Drawing.Point(183, 1);
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlUsuario.Size = new System.Drawing.Size(185, 119);
+            this.pnlUsuario.Size = new System.Drawing.Size(185, 105);
             this.pnlUsuario.TabIndex = 0;
             this.pnlUsuario.TipoDeSombra = MZControls.MZSombraPanel.ShadowsPanel.Central;
             // 
             // button15
             // 
             this.button15.AutoSize = true;
-            this.button15.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
             this.button15.FlatAppearance.BorderSize = 0;
             this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button15.Location = new System.Drawing.Point(10, 79);
+            this.button15.Location = new System.Drawing.Point(10, 64);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(165, 30);
             this.button15.TabIndex = 44;
@@ -183,9 +181,9 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button13.Location = new System.Drawing.Point(10, 33);
+            this.button13.Location = new System.Drawing.Point(10, 37);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(165, 23);
+            this.button13.Size = new System.Drawing.Size(165, 27);
             this.button13.TabIndex = 43;
             this.button13.Text = "Configuración de Usuarios";
             this.button13.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -204,7 +202,7 @@
             this.button14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button14.Location = new System.Drawing.Point(10, 10);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(165, 23);
+            this.button14.Size = new System.Drawing.Size(165, 27);
             this.button14.TabIndex = 0;
             this.button14.Text = "Perfil";
             this.button14.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -516,6 +514,7 @@
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.BackgroundImage = global::RRHHPlanilla.Properties.Resources.WhatsApp_Image_2019_11_04_at_10_16_06_PM__1_;
+            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 0);
@@ -963,25 +962,6 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave_1);
             // 
-            // button24
-            // 
-            this.button24.AutoSize = true;
-            this.button24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button24.FlatAppearance.BorderSize = 0;
-            this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button24.Location = new System.Drawing.Point(10, 56);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(165, 23);
-            this.button24.TabIndex = 45;
-            this.button24.Text = "Agregar Nuevo Usuario";
-            this.button24.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
-            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1089,6 +1069,5 @@
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button24;
     }
 }

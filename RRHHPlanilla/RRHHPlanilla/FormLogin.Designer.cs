@@ -233,6 +233,7 @@
             this.alphaBlendTextBox2.Tag = "";
             this.alphaBlendTextBox2.Text = "CONTRASEÑA";
             this.alphaBlendTextBox2.Enter += new System.EventHandler(this.alphaBlendTextBox2_Enter);
+            this.alphaBlendTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.alphaBlendTextBox2_KeyPress);
             this.alphaBlendTextBox2.Leave += new System.EventHandler(this.alphaBlendTextBox2_Leave);
             // 
             // FormLogin

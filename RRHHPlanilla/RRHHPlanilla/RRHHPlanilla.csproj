@@ -205,6 +205,7 @@
     <None Include="Properties\DataSources\RRHH.BL.EstadoCivilBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.JornadaBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.MetodoPagoBL.datasource" />
+    <None Include="Properties\DataSources\RRHH.BL.PrivilegiosBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.SeguridadBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.Trabajador.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.TrabajadoresBL.datasource" />
@@ -346,6 +347,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

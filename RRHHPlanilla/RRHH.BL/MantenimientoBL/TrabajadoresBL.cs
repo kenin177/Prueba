@@ -77,8 +77,9 @@ namespace RRHH.BL
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
-
+            
             if (string.IsNullOrEmpty(trabajador.Nombre) == true)
+
             {
                 resultado.Mensaje = "Ingrese el Nombre";
                 resultado.Exitoso = false;
@@ -140,7 +141,6 @@ namespace RRHH.BL
 
             return resultado;
         }
-
     }
 
     public class Trabajador

@@ -153,5 +153,28 @@ namespace RRHHPlanilla
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void alphaBlendTextBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                string usuario;
+                string contrasena;
+
+                usuario = alphaBlendTextBox1.Text;
+                contrasena = alphaBlendTextBox2.Text;
+
+                var resultado = _seguridad.Autorizar(usuario, contrasena);
+
+                if (resultado == true)
+                {
+                    c = u;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrecta");
+                }
+            }
+        }
     }
 }

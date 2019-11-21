@@ -129,8 +129,7 @@ namespace RRHHPlanilla
         private void toolStripCancelar_Click(object sender, EventArgs e)
         {
             _trabajadores.CancelarCambios();
-            DeshabilitarHabilitarBotones(true);
-            
+            DeshabilitarHabilitarBotones(true);       
         }
      
         private void button3_Click(object sender, EventArgs e)

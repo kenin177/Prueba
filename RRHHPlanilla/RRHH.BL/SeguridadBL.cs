@@ -21,7 +21,7 @@ namespace RRHH.BL
         }
         public BindingList<Usuario> ObtenerUsuario()
         {
-            _contexto.Trabajadores.Load();
+            _contexto.Usuarios.Load();
 
             ListaSeguridad = _contexto.Usuarios.Local.ToBindingList();
             return ListaSeguridad;
@@ -81,12 +81,49 @@ namespace RRHH.BL
         //VALIDACION
         private Resultado3 Validar(Usuario usuario )
         {
-            var resultado = new Resultado3();
+            var resultado = new Resultado3();           
             resultado.Exitoso = true;
 
-            if (string.IsNullOrEmpty(usuario.NombUsuario) == true)
+            //if(usuario.Contrasena.Length < 6)
+            //{
+            //    resultado.Mensaje = "La contraseña es menor a 6";
+            //    resultado.Exitoso = false;
+            //}
+
+            if (string.IsNullOrEmpty(usuario.Nombre) == true)
             {
                 resultado.Mensaje = "Ingrese un Nombre";
+                resultado.Exitoso = false;
+            }
+
+            if (string.IsNullOrEmpty(usuario.Apellido) == true)
+            {
+                resultado.Mensaje = "Ingrese un Apellido";
+                resultado.Exitoso = false;
+            }
+
+            if (string.IsNullOrEmpty(usuario.Correo) == true)
+            {
+                resultado.Mensaje = "Ingrese un Correo";
+                resultado.Exitoso = false;
+            }
+
+            if (usuario.edad <= 0)
+            {
+                resultado.Mensaje = "Ingrese una Edad";
+                resultado.Exitoso = false;
+            }
+
+            if (usuario.Cedula <= 0)
+            {
+                resultado.Mensaje = "Ingrese un numero de Cedula";
+                resultado.Exitoso = false;
+            }
+
+            //SEGURIDAD
+            if (string.IsNullOrEmpty(usuario.NombUsuario) == true)
+            {
+                resultado.Mensaje = "Ingrese un Nombre de Usuario";
                 resultado.Exitoso = false;
             }
 
@@ -96,9 +133,14 @@ namespace RRHH.BL
                 resultado.Mensaje = "Ingrese una contraseña";
             }
 
+            if (usuario.PrivilegioId <= 0)
+            {
+                resultado.Mensaje = "Seleccion un Privilegio";
+                resultado.Exitoso = false;
+            }
+
             return resultado;
         }
-
 
         #region Autorizacion
 
@@ -123,7 +165,7 @@ namespace RRHH.BL
     public class Usuario
     {
         public int Id { get; set; }
-
+        public byte[] Foto { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Correo { get; set; }
