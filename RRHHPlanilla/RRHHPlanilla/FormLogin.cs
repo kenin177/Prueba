@@ -70,9 +70,10 @@ namespace RRHHPlanilla
 
             var resultado = _seguridad.Autorizar(usuario, contrasena);
 
-            if (resultado == true)
+            if (resultado != null)
             {
                 c = u;
+                Program.usuario = resultado;
                 this.Close();
             }
             else
@@ -165,9 +166,11 @@ namespace RRHHPlanilla
 
                 var resultado = _seguridad.Autorizar(usuario, contrasena);
 
-                if (resultado == true)
+                if (resultado != null)
                 {
                     c = u;
+                    Program.usuario = resultado;
+
                     this.Close();
                 }
                 else

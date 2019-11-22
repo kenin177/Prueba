@@ -21,7 +21,9 @@ namespace RRHH.BL
         }
         public BindingList<Usuario> ObtenerUsuario()
         {
+            //_contexto.Usuarios.Include("Privilegio").Load();
             _contexto.Usuarios.Load();
+            //_contexto.Privilegios.Load();
 
             ListaSeguridad = _contexto.Usuarios.Local.ToBindingList();
             return ListaSeguridad;
@@ -144,19 +146,20 @@ namespace RRHH.BL
 
         #region Autorizacion
 
-        public bool Autorizar(string usuario, string contrasena)
+        public Usuario Autorizar(string usuario, string contrasena)
         {
             var usuarios = _contexto.Usuarios.ToList();
-
+            _contexto.Usuarios.Include("Privilegio").Load();
             foreach (var usuarioDB in usuarios)
             {
                 if (usuario == usuarioDB.NombUsuario && contrasena == usuarioDB.Contrasena)
                 {
-                    return true;
+                    return usuarioDB;
+                    
                 }
             }
 
-            return false;
+            return null;
         }
     }
 

@@ -64,6 +64,21 @@ namespace RRHHPlanilla
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
 
+            if (Program.usuario !=null)
+            {
+                label1.Text = Program.usuario.Nombre + " " + Program.usuario.Apellido;
+                label2.Text = Program.usuario.Privilegio.Descripcion;
+
+                usu2.Text = Program.usuario.Nombre + " " + Program.usuario.Apellido;
+                pues2.Text = Program.usuario.Privilegio.Descripcion;
+
+            }
+            else {
+                label1.Text = "Usuario";
+            }
+            
+
+
             if (formLogin.UsuarioAutenticado == formLogin.Cancelar)
             {
 

@@ -119,11 +119,11 @@
             // pnlmenu
             // 
             this.pnlmenu.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlmenu.Controls.Add(this.usu2);
             this.pnlmenu.Controls.Add(this.pnlUsuario);
             this.pnlmenu.Controls.Add(this.pues2);
             this.pnlmenu.Controls.Add(this.label3);
             this.pnlmenu.Controls.Add(this.label4);
-            this.pnlmenu.Controls.Add(this.usu2);
             this.pnlmenu.Controls.Add(this.button10);
             this.pnlmenu.Controls.Add(this.label2);
             this.pnlmenu.Controls.Add(this.label1);
@@ -216,7 +216,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pues2.AutoSize = true;
             this.pues2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pues2.Location = new System.Drawing.Point(35, 16);
+            this.pues2.Location = new System.Drawing.Point(5, 18);
             this.pues2.Name = "pues2";
             this.pues2.Size = new System.Drawing.Size(50, 14);
             this.pues2.TabIndex = 39;
@@ -257,7 +257,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.usu2.AutoSize = true;
             this.usu2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usu2.Location = new System.Drawing.Point(35, 0);
+            this.usu2.Location = new System.Drawing.Point(5, 2);
             this.usu2.Name = "usu2";
             this.usu2.Size = new System.Drawing.Size(52, 14);
             this.usu2.TabIndex = 38;
@@ -308,9 +308,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::RRHHPlanilla.Properties.Resources.male_close_up_silhouette_with_tie1;
-            this.pictureBox3.Location = new System.Drawing.Point(20, 34);
+            this.pictureBox3.Location = new System.Drawing.Point(6, 31);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(68, 71);
+            this.pictureBox3.Size = new System.Drawing.Size(85, 71);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 35;
             this.pictureBox3.TabStop = false;

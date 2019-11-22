@@ -103,16 +103,8 @@ namespace RRHHPlanilla
                     {
                         if (txtconfirmar.Text != "")
                         {
-                            contrasenaTextBox.Text = txtnueva.Text;
+                            contrasenaTextBox.Text = txtconfirmar.Text;
                         }
-
-                        contrasenaTextBox.ReadOnly = true;
-                        contrasenaTextBox.BackColor = Color.Silver;
-                        lblcamb.Visible = false;
-
-                        //txtnueva.Visible = true;
-                        txtconfirmar.Text = "";
-                        txtnueva.Text = "";
 
                         listaSeguridadBindingSource.EndEdit();
                         var usuario = (Usuario)listaSeguridadBindingSource.Current;
@@ -132,6 +124,18 @@ namespace RRHHPlanilla
                             listaSeguridadBindingSource.ResetBindings(false);
                             DeshabilitarHabilitarBotones(true);
                             DialogResult resul = MessageBox.Show("Usuario Guardado", "Exitoso...!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            contrasenaTextBox.ReadOnly = true;
+                            contrasenaTextBox.BackColor = Color.Silver;
+
+                            txtnueva.Visible = true;
+                            txtconfirmar.Text = "";
+                            txtnueva.Text = "";
+
+                            label4.Visible = true;
+                            lblcamb.Visible = false;
+                            lblcamb1.Visible = false;
+                            lblcamb2.Visible = false;
                         }
                         else
                         {
@@ -316,8 +320,8 @@ namespace RRHHPlanilla
                 lblcamb2.Text = "Las contraseñas no coinciden";
             }
 
-            if (txtconfirmar.Visible == true && contrasenaTextBox.Text.Length <= 6 
-                && contrasenaTextBox.ReadOnly == false && txtnueva.Visible == true)
+            if (contrasenaTextBox.Text.Length <= 6 && contrasenaTextBox.Text != ""
+                && contrasenaTextBox.ReadOnly == false && txtnueva.Visible == false)
             {
                 lblcamb.Visible = true;
                 lblcamb.Text = "LA CONTRASEÑA TIENE QUE SER MAYOR A 6 CARACTERES";
@@ -382,6 +386,11 @@ namespace RRHHPlanilla
         //CANCELAR CAMBIOS
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
+            lblcamb.Visible = false;
+            lblcamb1.Visible = false;
+            lblcamb2.Visible = false;
+            bindingNavigatorDeleteItem.Enabled = true;
+
             _seguridad.CancelarCambios();
             lblcamb.Visible = false;
 
