@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -57,7 +58,20 @@ namespace RRHHPlanilla
 
         private void FrmConfiUsuario_Load(object sender, EventArgs e)
         {
+            txtnombre.Text = Program.usuario.Nombre + " " + Program.usuario.Apellido;
+            textBox1.Text = Program.usuario.Privilegio.Descripcion;
 
+            txtnuevcont.Text = Program.usuario.Contrasena;
+            txtcorreo.Text = Program.usuario.Correo;
+           
+            
+            txtedad.Text = Program.usuario.edad.ToString();
+            txtcedula.Text = Program.usuario.Cedula.ToString();
+            txtusuario.Text = Program.usuario.NombUsuario;
+
+            MemoryStream ms = new MemoryStream(Program.usuario.Foto);
+            System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+            fotoPictureBox.Image = Image.FromStream(ms);
         }
 
         private void txtusuario_TextChanged(object sender, EventArgs e)

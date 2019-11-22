@@ -610,16 +610,16 @@ namespace RRHHPlanilla
             frm.ShowDialog();
         }
 
-        private void button24_Click(object sender, EventArgs e)
-        {
-            FrmConfiUsuario frm = new FrmConfiUsuario();
-            frm.Show();
-        }
+        //private void button24_Click(object sender, EventArgs e)
+        //{
+        //    FrmConfiUsuario frm = new FrmConfiUsuario();
+        //    frm.Show();
+        //}
 
         private void button14_Click(object sender, EventArgs e)
         {
             pnlUsuario.Width = 0;
-            FrmConfiUsuario frm = new FrmConfiUsuario();
+            FrmConfirmarConf frm = new FrmConfirmarConf();
             frm.Show();
         }
 
