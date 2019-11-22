@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace RRHHPlanilla
 {
@@ -59,10 +60,13 @@ namespace RRHHPlanilla
 
         #endregion
 
+
+
         private void Login()
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
+
 
             if (Program.usuario !=null)
             {
@@ -71,6 +75,10 @@ namespace RRHHPlanilla
 
                 usu2.Text = Program.usuario.Nombre + " " + Program.usuario.Apellido;
                 pues2.Text = Program.usuario.Privilegio.Descripcion;
+
+                MemoryStream ms = new MemoryStream(Program.usuario.Foto);
+                System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+                pictureBox3.Image = Image.FromStream(ms);
 
             }
             else {
@@ -439,11 +447,13 @@ namespace RRHHPlanilla
         {
             if (pnlmenu.Height == 105)
             {
+                pictureBox3.Visible = false;
                 pnlUsuario.Width = 0;
                 this.tmContraerMenu.Start();
             }
             else if (pnlmenu.Height == 35)
             {
+                pictureBox3.Visible = true;
                 label3.Visible = false;
                 label4.Visible = false;
 
