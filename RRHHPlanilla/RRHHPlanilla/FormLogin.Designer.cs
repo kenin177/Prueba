@@ -96,11 +96,11 @@
             this.alphaBlendTextBox1.BackAlpha = 0;
             this.alphaBlendTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.alphaBlendTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.alphaBlendTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alphaBlendTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphaBlendTextBox1.ForeColor = System.Drawing.Color.White;
-            this.alphaBlendTextBox1.Location = new System.Drawing.Point(50, 204);
+            this.alphaBlendTextBox1.Location = new System.Drawing.Point(50, 202);
             this.alphaBlendTextBox1.Name = "alphaBlendTextBox1";
-            this.alphaBlendTextBox1.Size = new System.Drawing.Size(224, 15);
+            this.alphaBlendTextBox1.Size = new System.Drawing.Size(224, 17);
             this.alphaBlendTextBox1.TabIndex = 1;
             this.alphaBlendTextBox1.Tag = "";
             this.alphaBlendTextBox1.Text = "USUARIO";
@@ -228,7 +228,7 @@
             this.alphaBlendTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.alphaBlendTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphaBlendTextBox2.ForeColor = System.Drawing.Color.White;
-            this.alphaBlendTextBox2.Location = new System.Drawing.Point(50, 264);
+            this.alphaBlendTextBox2.Location = new System.Drawing.Point(50, 262);
             this.alphaBlendTextBox2.Name = "alphaBlendTextBox2";
             this.alphaBlendTextBox2.Size = new System.Drawing.Size(224, 17);
             this.alphaBlendTextBox2.TabIndex = 2;
