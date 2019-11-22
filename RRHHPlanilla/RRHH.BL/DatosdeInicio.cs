@@ -37,6 +37,7 @@ namespace RRHH.BL
             usuario1.Apellido = "Rivera";
             usuario1.Correo = "prueba1234@gmail.com";
             usuario1.edad = 22;
+            //usuario1.Foto = RRHHPlanilla.Properties.Resources.ICONO;
             //usuario1.FechaInicio.ToString("04,22,2019");
             usuario1.Cedula = 0512199700879;
             usuario1.PrivilegioId = 1;
@@ -49,7 +50,7 @@ namespace RRHH.BL
             usuario2.Contrasena = "123";
             contexto.Usuarios.Add(usuario2);
 
-            usuario2.Nombre = "Germas";
+            usuario2.Nombre = "German";
             usuario2.Apellido = "No me Acuerdo";
             usuario2.Correo = "prueba1234@gmail.com";
             usuario2.edad = 21;

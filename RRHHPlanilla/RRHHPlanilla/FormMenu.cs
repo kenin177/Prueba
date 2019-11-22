@@ -80,10 +80,13 @@ namespace RRHHPlanilla
                 usu2.Text = Program.usuario.Nombre + " " + Program.usuario.Apellido;
                 pues2.Text = Program.usuario.Privilegio.Descripcion;
 
-                //MemoryStream ms = new MemoryStream(Program.usuario.Foto);
-                //System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
-                //pictureBox3.Image = Image.FromStream(ms);
-
+                if (Program.usuario.Foto != null)
+                {
+                    MemoryStream ms = new MemoryStream(Program.usuario.Foto);
+                    System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+                    pictureBox3.Image = Image.FromStream(ms);
+                }
+     
             }
             else {
                 label1.Text = "Usuario";

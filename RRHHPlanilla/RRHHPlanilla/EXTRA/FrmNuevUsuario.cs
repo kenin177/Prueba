@@ -69,9 +69,12 @@ namespace RRHHPlanilla
             txtcedula.Text = Program.usuario.Cedula.ToString();
             txtusuario.Text = Program.usuario.NombUsuario;
 
-            //MemoryStream ms = new MemoryStream(Program.usuario.Foto);
-            //System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
-            //fotoPictureBox.Image = Image.FromStream(ms);
+            if (Program.usuario.Foto != null)
+            {
+                MemoryStream ms = new MemoryStream(Program.usuario.Foto);
+                System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+                fotoPictureBox.Image = Image.FromStream(ms);
+            }
         }
 
         private void txtusuario_TextChanged(object sender, EventArgs e)
