@@ -24,7 +24,7 @@ namespace RRHHPlanilla
             listaSeguridadBindingSource.DataSource = _seguridad.ObtenerUsuario();
         }
 
-        PerfilBL sql = new PerfilBL();
+        
 
         #region Drag Form/ Mover Arrastrar Formulario
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -69,9 +69,9 @@ namespace RRHHPlanilla
             txtcedula.Text = Program.usuario.Cedula.ToString();
             txtusuario.Text = Program.usuario.NombUsuario;
 
-            MemoryStream ms = new MemoryStream(Program.usuario.Foto);
-            System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
-            fotoPictureBox.Image = Image.FromStream(ms);
+            //MemoryStream ms = new MemoryStream(Program.usuario.Foto);
+            //System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+            //fotoPictureBox.Image = Image.FromStream(ms);
         }
 
         private void txtusuario_TextChanged(object sender, EventArgs e)

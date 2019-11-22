@@ -58,7 +58,6 @@
     <Compile Include="IngresosBL.cs" />
     <Compile Include="MantenimientoBL\Listas para Trabajadores\JornadaBL.cs" />
     <Compile Include="MantenimientoBL\Listas para Trabajadores\MetodoPagoBL.cs" />
-    <Compile Include="PerfilBL.cs" />
     <Compile Include="PrivilegiosBL.cs" />
     <Compile Include="SeguridadBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

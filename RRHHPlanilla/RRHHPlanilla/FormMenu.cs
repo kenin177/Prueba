@@ -60,8 +60,12 @@ namespace RRHHPlanilla
 
         #endregion
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+            abrirformhija(new FrmInicio());
+        }
 
-
+        #region LOGIN
         private void Login()
         {
             var formLogin = new FormLogin();
@@ -76,9 +80,9 @@ namespace RRHHPlanilla
                 usu2.Text = Program.usuario.Nombre + " " + Program.usuario.Apellido;
                 pues2.Text = Program.usuario.Privilegio.Descripcion;
 
-                MemoryStream ms = new MemoryStream(Program.usuario.Foto);
-                System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
-                pictureBox3.Image = Image.FromStream(ms);
+                //MemoryStream ms = new MemoryStream(Program.usuario.Foto);
+                //System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+                //pictureBox3.Image = Image.FromStream(ms);
 
             }
             else {
@@ -107,7 +111,7 @@ namespace RRHHPlanilla
 
             }
         }
-
+        #endregion
         //FORM LOAD 
         //FORM LOAD 
         //FORM LOAD 
@@ -248,6 +252,8 @@ namespace RRHHPlanilla
 
         #endregion
 
+
+        //ABRIR FROMHIJA
         private void abrirformhija(Form formhija)
         {
             if (this.panel5.Controls.Count > 0)
@@ -262,6 +268,7 @@ namespace RRHHPlanilla
             fh.Show();
         }
 
+        #region NO SIRVE/AUN ASI NO BORRAR
         private void panel5_MouseEnter(object sender, EventArgs e)
         {
             //tableLayoutPanel1.Width = 65;
@@ -287,6 +294,7 @@ namespace RRHHPlanilla
         {
             //toolStripDropDownButton1.BackColor = Color.Brown;
         }
+        #endregion
 
         #region MOUSE ENTER
         private void button1_MouseEnter(object sender, EventArgs e)
@@ -337,6 +345,27 @@ namespace RRHHPlanilla
         }
 
         #region pICTURE BOXES
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (pnlmenu.Height == 105)
+            {
+                pictureBox3.Visible = false;
+                pnlUsuario.Width = 0;
+                this.tmContraerMenu.Start();
+            }
+            else if (pnlmenu.Height == 35)
+            {
+                pictureBox3.Visible = true;
+                label3.Visible = false;
+                label4.Visible = false;
+
+                usu2.Visible = false;
+                pues2.Visible = false;
+                this.tmExpandirMenu.Start();
+            }
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -387,6 +416,16 @@ namespace RRHHPlanilla
 
         #region BOTONES DE CERRAR, MAX, MIN
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (pnlUsuario.Width == 0)
+            {
+                pnlUsuario.Width = 185;
+            }
+            else
+                pnlUsuario.Width = 0;
+        }
+
         int lx, ly;
         int sw, sh;
 
@@ -435,50 +474,6 @@ namespace RRHHPlanilla
             this.WindowState = FormWindowState.Minimized;
         }
         #endregion
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            abrirformhija(new FrmInicio());
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            if (pnlmenu.Height == 105)
-            {
-                pictureBox3.Visible = false;
-                pnlUsuario.Width = 0;
-                this.tmContraerMenu.Start();
-            }
-            else if (pnlmenu.Height == 35)
-            {
-                pictureBox3.Visible = true;
-                label3.Visible = false;
-                label4.Visible = false;
-
-                usu2.Visible = false;
-                pues2.Visible = false;
-                this.tmExpandirMenu.Start();               
-            }
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            if (pnlUsuario.Width == 0)
-            {             
-                pnlUsuario.Width = 185;
-            }
-            else
-                pnlUsuario.Width = 0;
-            
-
-        }
-
-        private void pnlmenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         #region TIMERS
 
@@ -619,7 +614,7 @@ namespace RRHHPlanilla
         private void button14_Click(object sender, EventArgs e)
         {
             pnlUsuario.Width = 0;
-            FrmConfirmarConf frm = new FrmConfirmarConf();
+            FrmConfiUsuario frm = new FrmConfiUsuario();
             frm.Show();
         }
 
