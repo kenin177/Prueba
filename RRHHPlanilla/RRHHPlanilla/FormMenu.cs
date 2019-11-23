@@ -17,6 +17,7 @@ namespace RRHHPlanilla
     
     {
 
+        int time = 0;
         int i = 47;
         //int a = 150;
         int anchoa = 215;
@@ -32,6 +33,7 @@ namespace RRHHPlanilla
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
+
         }
 
         #region Drag Form/ Mover Arrastrar Formulario
@@ -91,8 +93,6 @@ namespace RRHHPlanilla
             else {
                 label1.Text = "Usuario";
             }
-            
-
 
             if (formLogin.UsuarioAutenticado == formLogin.Cancelar)
             {
@@ -110,8 +110,65 @@ namespace RRHHPlanilla
                 this.Show();
                 //this.WindowState = FormWindowState.Maximized;
 
+                if (Program.usuario.Privilegio.Descripcion == "Gerente")
+                {
+                    button23.Visible = false;
+                    button24.Visible = false;
+                    panel1.Visible = false;
+
+                    //USUARIO
+                    button13.Visible = false;
+                }
+
+                if (Program.usuario.Privilegio.Descripcion == "Supervisor")
+                {
+                    //Mantenimiento
+                    button16.Visible = false;
+                    button2.Visible = false;
+                    button3.Visible = false;
+
+                    //Transacciones
+                    button5.Visible = false;
+                    button17.Visible = false;
+                    button18.Visible = false;
+                    button19.Visible = false;
+                    button22.Visible = false;
+                    
+
+                    //REPORTE
+                    button7.Visible = false;
+                    button9.Visible = false;
 
 
+                    //USUARIO
+                    button13.Visible = false;
+                }
+
+                if (Program.usuario.Privilegio.Descripcion == "Administrador")
+                {
+                    button23.Visible = true;
+                    panel1.Visible = true;
+
+                    //Mantenimiento
+                    button16.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true;
+
+                    //Transacciones
+                    button5.Visible = true;
+                    button17.Visible = true;
+                    button18.Visible = true;
+                    button19.Visible = true;
+                    button22.Visible = true;
+                    button24.Visible = true;
+
+                    //REPORTE
+                    button7.Visible = true;
+                    button9.Visible = true;
+
+                    //USUARIO
+                    button13.Visible = true;
+                }
             }
         }
         #endregion
@@ -518,7 +575,6 @@ namespace RRHHPlanilla
                 button1.Text = "Mantenimiento";
                 button4.Text = "Transacciones";
                 button8.Text = "Reportes";
-
             }
         }
 
@@ -540,12 +596,12 @@ namespace RRHHPlanilla
 
         private void button15_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login();
-            
+            Application.Restart();
+            //this.Hide();
+            //Login();
         }
 
-        private void button12_Click_1(object sender, EventArgs e)
+    private void button12_Click_1(object sender, EventArgs e)
         {
             FrmAcercaDe frm = new FrmAcercaDe();
             frm.ShowDialog();
@@ -607,12 +663,6 @@ namespace RRHHPlanilla
             FrmConfirmarConf frm = new FrmConfirmarConf();
             frm.ShowDialog();
         }
-
-        //private void button24_Click(object sender, EventArgs e)
-        //{
-        //    FrmConfiUsuario frm = new FrmConfiUsuario();
-        //    frm.Show();
-        //}
 
         private void button14_Click(object sender, EventArgs e)
         {

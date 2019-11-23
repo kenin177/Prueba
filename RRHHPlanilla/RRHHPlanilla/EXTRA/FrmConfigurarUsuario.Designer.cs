@@ -63,7 +63,6 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.listaSeguridadBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.contrasenaTextBox = new System.Windows.Forms.TextBox();
@@ -84,6 +83,7 @@
             this.listaSeguridadDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaSeguridadBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaPrivilegiosBindingSource)).BeginInit();
@@ -260,7 +260,7 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(818, 124);
+            this.groupBox2.Location = new System.Drawing.Point(862, 107);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -340,7 +340,7 @@
             this.listaSeguridadBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaSeguridadBindingNavigator.Name = "listaSeguridadBindingNavigator";
             this.listaSeguridadBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaSeguridadBindingNavigator.Size = new System.Drawing.Size(339, 25);
+            this.listaSeguridadBindingNavigator.Size = new System.Drawing.Size(343, 25);
             this.listaSeguridadBindingNavigator.TabIndex = 76;
             this.listaSeguridadBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -445,13 +445,6 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(53, 22);
-            this.toolStripLabel1.Text = "Cancelar";
-            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // apellidoTextBox
             // 
@@ -648,6 +641,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 50;
             // 
             // dataGridViewTextBoxColumn7
@@ -655,6 +649,17 @@
             this.dataGridViewTextBoxColumn7.DataPropertyName = "NombUsuario";
             this.dataGridViewTextBoxColumn7.HeaderText = "Usuario";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
+            this.toolStripLabel1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(57, 22);
+            this.toolStripLabel1.Text = "Cancelar";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // FrmConfirmarConf
             // 
@@ -766,10 +771,10 @@
         private System.Windows.Forms.LinkLabel lblcamb2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.PictureBox fotoPictureBox;
         private System.Windows.Forms.DataGridView listaSeguridadDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.ToolStripButton toolStripLabel1;
     }
 }

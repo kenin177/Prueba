@@ -80,6 +80,7 @@ namespace RRHHPlanilla
         //GUARDAR
         private void listaSeguridadBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
+           
 
             if (txtnueva.Text != txtconfirmar.Text && contrasenaTextBox.ReadOnly == true 
                 || contrasenaTextBox.Text != txtconfirmar.Text 
@@ -128,6 +129,7 @@ namespace RRHHPlanilla
                             contrasenaTextBox.ReadOnly = true;
                             contrasenaTextBox.BackColor = Color.Silver;
 
+                            nombUsuarioTextBox.Focus();
                             txtnueva.Visible = true;
                             txtconfirmar.Text = "";
                             txtnueva.Text = "";
@@ -136,6 +138,8 @@ namespace RRHHPlanilla
                             lblcamb.Visible = false;
                             lblcamb1.Visible = false;
                             lblcamb2.Visible = false;
+
+                            
                         }
                         else
                         {
@@ -150,12 +154,14 @@ namespace RRHHPlanilla
         #region  BORRAR
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
+
             if (idTextBox.Text != "")
             {
                 DialogResult resulto = MessageBox.Show("¿Desea Eliminar el Registro?", "Eliminar",
                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resulto == DialogResult.Yes)
                 {
+                    nombUsuarioTextBox.Focus();
                     var id = Convert.ToInt32(idTextBox.Text);
                     Eliminar(id);
                 }
@@ -210,6 +216,7 @@ namespace RRHHPlanilla
         //AGREGAR
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
+            nombUsuarioTextBox.Focus();
             txtnueva.Visible = false;
             label4.Visible = false;
             lblcamb1.Visible = false;
@@ -386,6 +393,8 @@ namespace RRHHPlanilla
         //CANCELAR CAMBIOS
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
+            nombUsuarioTextBox.Focus();
+
             lblcamb.Visible = false;
             lblcamb1.Visible = false;
             lblcamb2.Visible = false;
@@ -402,7 +411,7 @@ namespace RRHHPlanilla
             {
                 txtnueva.Visible = true;
             }
-            
+
             txtconfirmar.Text = "";
             txtnueva.Text = "";
 

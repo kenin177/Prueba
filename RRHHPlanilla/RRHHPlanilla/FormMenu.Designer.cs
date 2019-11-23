@@ -86,6 +86,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button24 = new System.Windows.Forms.Button();
             this.pnlmenu.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -583,11 +584,11 @@
             this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.button8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 387);
+            this.panel3.Location = new System.Drawing.Point(0, 535);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.MinimumSize = new System.Drawing.Size(150, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(215, 150);
+            this.panel3.Size = new System.Drawing.Size(215, 54);
             this.panel3.TabIndex = 2;
             // 
             // button20
@@ -602,7 +603,7 @@
             this.button20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button20.Location = new System.Drawing.Point(0, 129);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(215, 28);
+            this.button20.Size = new System.Drawing.Size(215, 10);
             this.button20.TabIndex = 16;
             this.button20.Text = "Reporte de Anticipo";
             this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -685,6 +686,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.button24);
             this.panel2.Controls.Add(this.button23);
             this.panel2.Controls.Add(this.button22);
             this.panel2.Controls.Add(this.button19);
@@ -693,11 +695,11 @@
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 237);
+            this.panel2.Location = new System.Drawing.Point(0, 263);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.MinimumSize = new System.Drawing.Size(150, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(215, 150);
+            this.panel2.Size = new System.Drawing.Size(215, 272);
             this.panel2.TabIndex = 1;
             // 
             // button23
@@ -848,7 +850,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.MinimumSize = new System.Drawing.Size(150, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 150);
+            this.panel1.Size = new System.Drawing.Size(215, 176);
             this.panel1.TabIndex = 0;
             // 
             // button21
@@ -963,6 +965,24 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave_1);
             // 
+            // button24
+            // 
+            this.button24.BackColor = System.Drawing.Color.Transparent;
+            this.button24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button24.FlatAppearance.BorderSize = 0;
+            this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button24.Location = new System.Drawing.Point(0, 232);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(215, 32);
+            this.button24.TabIndex = 19;
+            this.button24.Text = "Evaluacion de Personal";
+            this.button24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button24.UseVisualStyleBackColor = false;
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1070,5 +1090,6 @@
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button24;
     }
 }
