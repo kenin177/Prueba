@@ -19,10 +19,14 @@ namespace RRHHPlanilla
         JornadaBL _jornadaBL;
         EstadoCivilBL _estadocivilBL;
         MetodoPagoBL _metodopagoBL;
-        
+        SexoBL _sexoBL;
+
         public Empleados()
         {
             InitializeComponent();
+
+            _sexoBL = new SexoBL();
+            listaSexosBindingSource.DataSource = _sexoBL.ObtenerSexos();
 
             _trabajadores = new TrabajadoresBL();
             listaTrabajadoresBindingSource.DataSource = _trabajadores.ObtenerTrabajador();

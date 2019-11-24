@@ -62,7 +62,6 @@
             this.edadTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.sexoTextBox = new System.Windows.Forms.TextBox();
             this.sueldoTextBox = new System.Windows.Forms.TextBox();
             this.cargoIdComboBox = new System.Windows.Forms.ComboBox();
             this.listaCargosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -73,12 +72,14 @@
             this.estadoCivilIdComboBox = new System.Windows.Forms.ComboBox();
             this.listaEstadoCivilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.piccerrar = new System.Windows.Forms.PictureBox();
+            this.listaSexosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             apellidoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             edadLabel = new System.Windows.Forms.Label();
@@ -101,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaSexosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // apellidoLabel
@@ -118,7 +120,7 @@
             // 
             direccionLabel.AutoSize = true;
             direccionLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionLabel.Location = new System.Drawing.Point(16, 192);
+            direccionLabel.Location = new System.Drawing.Point(15, 197);
             direccionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(75, 17);
@@ -173,7 +175,7 @@
             // 
             sueldoLabel.AutoSize = true;
             sueldoLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sueldoLabel.Location = new System.Drawing.Point(36, 169);
+            sueldoLabel.Location = new System.Drawing.Point(35, 174);
             sueldoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             sueldoLabel.Name = "sueldoLabel";
             sueldoLabel.Size = new System.Drawing.Size(60, 17);
@@ -217,7 +219,7 @@
             // 
             estadoCivilIdLabel.AutoSize = true;
             estadoCivilIdLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            estadoCivilIdLabel.Location = new System.Drawing.Point(9, 227);
+            estadoCivilIdLabel.Location = new System.Drawing.Point(8, 232);
             estadoCivilIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             estadoCivilIdLabel.Name = "estadoCivilIdLabel";
             estadoCivilIdLabel.Size = new System.Drawing.Size(87, 17);
@@ -391,16 +393,16 @@
             this.apellidoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(192, 20);
-            this.apellidoTextBox.TabIndex = 20;
+            this.apellidoTextBox.TabIndex = 2;
             // 
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(118, 196);
+            this.direccionTextBox.Location = new System.Drawing.Point(117, 201);
             this.direccionTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(192, 20);
-            this.direccionTextBox.TabIndex = 22;
+            this.direccionTextBox.TabIndex = 6;
             // 
             // edadTextBox
             // 
@@ -409,7 +411,7 @@
             this.edadTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.edadTextBox.Name = "edadTextBox";
             this.edadTextBox.Size = new System.Drawing.Size(76, 20);
-            this.edadTextBox.TabIndex = 24;
+            this.edadTextBox.TabIndex = 3;
             // 
             // idTextBox
             // 
@@ -428,25 +430,16 @@
             this.nombreTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(192, 20);
-            this.nombreTextBox.TabIndex = 30;
-            // 
-            // sexoTextBox
-            // 
-            this.sexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Sexo", true));
-            this.sexoTextBox.Location = new System.Drawing.Point(118, 146);
-            this.sexoTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.sexoTextBox.Name = "sexoTextBox";
-            this.sexoTextBox.Size = new System.Drawing.Size(192, 20);
-            this.sexoTextBox.TabIndex = 32;
+            this.nombreTextBox.TabIndex = 1;
             // 
             // sueldoTextBox
             // 
             this.sueldoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Sueldo", true));
-            this.sueldoTextBox.Location = new System.Drawing.Point(118, 169);
+            this.sueldoTextBox.Location = new System.Drawing.Point(117, 174);
             this.sueldoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.sueldoTextBox.Name = "sueldoTextBox";
             this.sueldoTextBox.Size = new System.Drawing.Size(192, 20);
-            this.sueldoTextBox.TabIndex = 34;
+            this.sueldoTextBox.TabIndex = 5;
             // 
             // cargoIdComboBox
             // 
@@ -459,7 +452,7 @@
             this.cargoIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.cargoIdComboBox.Name = "cargoIdComboBox";
             this.cargoIdComboBox.Size = new System.Drawing.Size(130, 21);
-            this.cargoIdComboBox.TabIndex = 35;
+            this.cargoIdComboBox.TabIndex = 8;
             this.cargoIdComboBox.ValueMember = "Id";
             // 
             // listaCargosBindingSource
@@ -477,7 +470,7 @@
             this.metodoPagoIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.metodoPagoIdComboBox.Name = "metodoPagoIdComboBox";
             this.metodoPagoIdComboBox.Size = new System.Drawing.Size(130, 21);
-            this.metodoPagoIdComboBox.TabIndex = 36;
+            this.metodoPagoIdComboBox.TabIndex = 9;
             this.metodoPagoIdComboBox.ValueMember = "Id";
             // 
             // listaMetodoPagosBindingSource
@@ -495,7 +488,7 @@
             this.jornadaIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.jornadaIdComboBox.Name = "jornadaIdComboBox";
             this.jornadaIdComboBox.Size = new System.Drawing.Size(130, 21);
-            this.jornadaIdComboBox.TabIndex = 37;
+            this.jornadaIdComboBox.TabIndex = 10;
             this.jornadaIdComboBox.ValueMember = "Id";
             // 
             // listaJornadasBindingSource
@@ -509,11 +502,11 @@
             this.estadoCivilIdComboBox.DisplayMember = "Descripcion";
             this.estadoCivilIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.estadoCivilIdComboBox.FormattingEnabled = true;
-            this.estadoCivilIdComboBox.Location = new System.Drawing.Point(118, 228);
+            this.estadoCivilIdComboBox.Location = new System.Drawing.Point(117, 233);
             this.estadoCivilIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.estadoCivilIdComboBox.Name = "estadoCivilIdComboBox";
             this.estadoCivilIdComboBox.Size = new System.Drawing.Size(192, 21);
-            this.estadoCivilIdComboBox.TabIndex = 38;
+            this.estadoCivilIdComboBox.TabIndex = 7;
             this.estadoCivilIdComboBox.ValueMember = "Id";
             // 
             // listaEstadoCivilesBindingSource
@@ -522,12 +515,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(edadLabel);
             this.groupBox1.Controls.Add(this.estadoCivilIdComboBox);
             this.groupBox1.Controls.Add(estadoCivilIdLabel);
             this.groupBox1.Controls.Add(this.sueldoTextBox);
             this.groupBox1.Controls.Add(sueldoLabel);
-            this.groupBox1.Controls.Add(this.sexoTextBox);
             this.groupBox1.Controls.Add(sexoLabel);
             this.groupBox1.Controls.Add(this.nombreTextBox);
             this.groupBox1.Controls.Add(nombreLabel);
@@ -547,6 +540,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaTrabajadoresBindingSource, "SexoId", true));
+            this.comboBox1.DataSource = this.listaSexosBindingSource;
+            this.comboBox1.DisplayMember = "Descripcion";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(118, 146);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 38;
+            this.comboBox1.ValueMember = "Id";
             // 
             // fotoPictureBox
             // 
@@ -613,7 +619,7 @@
             this.piccerrar.BackColor = System.Drawing.Color.Transparent;
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.close;
-            this.piccerrar.Location = new System.Drawing.Point(794, 0);
+            this.piccerrar.Location = new System.Drawing.Point(814, 0);
             this.piccerrar.Name = "piccerrar";
             this.piccerrar.Size = new System.Drawing.Size(33, 34);
             this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -621,13 +627,17 @@
             this.piccerrar.TabStop = false;
             this.piccerrar.Click += new System.EventHandler(this.piccerrar_Click);
             // 
+            // listaSexosBindingSource
+            // 
+            this.listaSexosBindingSource.DataSource = typeof(RRHH.BL.Sexo);
+            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(827, 439);
+            this.ClientSize = new System.Drawing.Size(847, 458);
             this.Controls.Add(this.piccerrar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -652,6 +662,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaSexosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -678,7 +689,6 @@
         private System.Windows.Forms.TextBox edadTextBox;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox nombreTextBox;
-        private System.Windows.Forms.TextBox sexoTextBox;
         private System.Windows.Forms.TextBox sueldoTextBox;
         private System.Windows.Forms.BindingSource listaCargosBindingSource;
         private System.Windows.Forms.ComboBox cargoIdComboBox;
@@ -697,5 +707,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox piccerrar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource listaSexosBindingSource;
     }
 }

@@ -207,6 +207,7 @@
     <None Include="Properties\DataSources\RRHH.BL.MetodoPagoBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.PrivilegiosBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\RRHH.BL.SexoBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.Trabajador.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.TrabajadoresBL.datasource" />
     <None Include="Properties\Settings.settings">

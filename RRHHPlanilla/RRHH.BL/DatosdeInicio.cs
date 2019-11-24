@@ -11,6 +11,19 @@ namespace RRHH.BL
     {
         protected override void Seed(Contexto contexto)
         {
+            #region SEXO
+
+            var sexo1 = new Sexo();
+            sexo1.Descripcion = "Masculino";
+
+            var sexo2 = new Sexo();
+            sexo2.Descripcion = "Femenino";
+
+            var sexo3 = new Sexo();
+            sexo3.Descripcion = "Otro..";
+
+            #endregion
+
             #region PRIVILEGIO
             var privi = new Privilegio();
             privi.Descripcion = "Administrador";
@@ -192,7 +205,7 @@ namespace RRHH.BL
             trabajador1.Nombre = "Kevin";
             trabajador1.Apellido = "Amaya";
             trabajador1.Edad = 21;
-            trabajador1.Sexo = "Masculino";
+            trabajador1.Sexo = sexo1;
             trabajador1.Sueldo = 25000;
             trabajador1.Direccion = "Unah vs";
             trabajador1.EstadoCivilId = 2;
@@ -205,7 +218,7 @@ namespace RRHH.BL
             trabajador2.Nombre = "German";
             trabajador2.Apellido = "Mendoza";
             trabajador2.Edad = 21;
-            trabajador2.Sexo = "Masculino";
+            trabajador2.Sexo = sexo1;
             trabajador2.Sueldo = 25000;
             trabajador2.Direccion = "Unah vs";
             trabajador2.EstadoCivilId = 1;
@@ -218,7 +231,7 @@ namespace RRHH.BL
             trabajador3.Nombre = "Juan";
             trabajador3.Apellido = "Alvarado";
             trabajador3.Edad = 24;
-            trabajador3.Sexo = "Masculino";
+            trabajador3.Sexo = sexo1;
             trabajador3.Sueldo = 25000;
             trabajador3.Direccion = "Unah vs";
             trabajador3.EstadoCivilId = 1;
@@ -231,7 +244,7 @@ namespace RRHH.BL
             trabajador4.Nombre = "Luis";
             trabajador4.Apellido = "Lopez";
             trabajador4.Edad = 45;
-            trabajador4.Sexo = "Masculino";
+            trabajador4.Sexo = sexo1;
             trabajador4.Sueldo = 25000;
             trabajador4.Direccion = "Unah vs";
             trabajador4.EstadoCivilId = 1;
@@ -244,7 +257,7 @@ namespace RRHH.BL
             trabajador5.Nombre = "Ariana";
             trabajador5.Apellido = "Mendoza";
             trabajador5.Edad = 26;
-            trabajador5.Sexo = "Femenino";
+            trabajador5.Sexo = sexo2;
             trabajador5.Sueldo = 15000;
             trabajador5.Direccion = "Unah vs";
             trabajador5.EstadoCivilId = 1;
@@ -257,7 +270,7 @@ namespace RRHH.BL
             trabajador6.Nombre = "Maria";
             trabajador6.Apellido = "Alvarez";
             trabajador6.Edad = 27;
-            trabajador6.Sexo = "Femenino";
+            trabajador6.Sexo = sexo2;
             trabajador6.Sueldo = 12000;
             trabajador6.Direccion = "Unah vs";
             trabajador6.EstadoCivilId = 1;
@@ -271,7 +284,7 @@ namespace RRHH.BL
             trabajador7.Nombre = "Doris";
             trabajador7.Apellido = "Perez";
             trabajador7.Edad = 26;
-            trabajador7.Sexo = "Femenino";
+            trabajador7.Sexo = sexo3;
             trabajador7.Sueldo = 9800;
             trabajador7.Direccion = "Unah vs";
             trabajador7.EstadoCivilId = 1;

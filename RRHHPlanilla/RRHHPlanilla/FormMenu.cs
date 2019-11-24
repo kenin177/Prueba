@@ -17,7 +17,7 @@ namespace RRHHPlanilla
     
     {
 
-        int time = 0;
+        
         int i = 47;
         //int a = 150;
         int anchoa = 215;

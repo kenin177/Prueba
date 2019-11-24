@@ -43,13 +43,33 @@
             System.Windows.Forms.Label temaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Capacitaciones));
             this.listaCapacitacionesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.listaCapacitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.listaCapacitacionesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripCancelar = new System.Windows.Forms.ToolStripLabel();
             this.listaCapacitacionesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaTextBox = new System.Windows.Forms.TextBox();
             this.horarioTextBox = new System.Windows.Forms.TextBox();
             this.horasTextBox = new System.Windows.Forms.TextBox();
@@ -63,26 +83,6 @@
             this.statusTextBox = new System.Windows.Forms.TextBox();
             this.temaTextBox = new System.Windows.Forms.TextBox();
             this.piccerrar = new System.Windows.Forms.PictureBox();
-            this.listaCapacitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.listaCapacitacionesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             fechaLabel = new System.Windows.Forms.Label();
             horarioLabel = new System.Windows.Forms.Label();
             horasLabel = new System.Windows.Forms.Label();
@@ -97,9 +97,9 @@
             temaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaCapacitacionesBindingNavigator)).BeginInit();
             this.listaCapacitacionesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaCapacitacionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaCapacitacionesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaCapacitacionesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // fechaLabel
@@ -307,12 +307,36 @@
             this.listaCapacitacionesBindingNavigator.Text = "bindingNavigator1";
             this.listaCapacitacionesBindingNavigator.RefreshItems += new System.EventHandler(this.listaCapacitacionesBindingNavigator_RefreshItems);
             // 
+            // listaCapacitacionesBindingSource
+            // 
+            this.listaCapacitacionesBindingSource.DataSource = typeof(RRHH.BL.Capacitacion);
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 24);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 24);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
@@ -333,10 +357,62 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 24);
+            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 24);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 24);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 24);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
+            // listaCapacitacionesBindingNavigatorSaveItem
+            // 
+            this.listaCapacitacionesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.listaCapacitacionesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaCapacitacionesBindingNavigatorSaveItem.Image")));
+            this.listaCapacitacionesBindingNavigatorSaveItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.listaCapacitacionesBindingNavigatorSaveItem.Name = "listaCapacitacionesBindingNavigatorSaveItem";
+            this.listaCapacitacionesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 24);
+            this.listaCapacitacionesBindingNavigatorSaveItem.Text = "Guardar datos";
+            this.listaCapacitacionesBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaCapacitacionesBindingNavigatorSaveItem_Click);
             // 
             // toolStripCancelar
             // 
@@ -373,169 +449,6 @@
             this.listaCapacitacionesDataGridView.RowTemplate.Height = 24;
             this.listaCapacitacionesDataGridView.Size = new System.Drawing.Size(1250, 289);
             this.listaCapacitacionesDataGridView.TabIndex = 1;
-            // 
-            // fechaTextBox
-            // 
-            this.fechaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fechaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Fecha", true));
-            this.fechaTextBox.Location = new System.Drawing.Point(191, 277);
-            this.fechaTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.fechaTextBox.Name = "fechaTextBox";
-            this.fechaTextBox.Size = new System.Drawing.Size(390, 24);
-            this.fechaTextBox.TabIndex = 3;
-            // 
-            // horarioTextBox
-            // 
-            this.horarioTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.horarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Horario", true));
-            this.horarioTextBox.Location = new System.Drawing.Point(191, 314);
-            this.horarioTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.horarioTextBox.Name = "horarioTextBox";
-            this.horarioTextBox.Size = new System.Drawing.Size(390, 24);
-            this.horarioTextBox.TabIndex = 5;
-            // 
-            // horasTextBox
-            // 
-            this.horasTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.horasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Horas", true));
-            this.horasTextBox.Location = new System.Drawing.Point(191, 160);
-            this.horasTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.horasTextBox.Name = "horasTextBox";
-            this.horasTextBox.Size = new System.Drawing.Size(390, 24);
-            this.horasTextBox.TabIndex = 7;
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Id", true));
-            this.idTextBox.Enabled = false;
-            this.idTextBox.Location = new System.Drawing.Point(191, 85);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(390, 24);
-            this.idTextBox.TabIndex = 9;
-            // 
-            // lugarTextBox
-            // 
-            this.lugarTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lugarTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Lugar", true));
-            this.lugarTextBox.Location = new System.Drawing.Point(833, 163);
-            this.lugarTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.lugarTextBox.Name = "lugarTextBox";
-            this.lugarTextBox.Size = new System.Drawing.Size(353, 24);
-            this.lugarTextBox.TabIndex = 11;
-            // 
-            // modalidadTextBox
-            // 
-            this.modalidadTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.modalidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Modalidad", true));
-            this.modalidadTextBox.Location = new System.Drawing.Point(833, 81);
-            this.modalidadTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.modalidadTextBox.Name = "modalidadTextBox";
-            this.modalidadTextBox.Size = new System.Drawing.Size(353, 24);
-            this.modalidadTextBox.TabIndex = 13;
-            // 
-            // personalTextBox
-            // 
-            this.personalTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.personalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Personal", true));
-            this.personalTextBox.Location = new System.Drawing.Point(191, 234);
-            this.personalTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.personalTextBox.Name = "personalTextBox";
-            this.personalTextBox.Size = new System.Drawing.Size(390, 24);
-            this.personalTextBox.TabIndex = 15;
-            // 
-            // poblacionTextBox
-            // 
-            this.poblacionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.poblacionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Poblacion", true));
-            this.poblacionTextBox.Location = new System.Drawing.Point(191, 197);
-            this.poblacionTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.poblacionTextBox.Name = "poblacionTextBox";
-            this.poblacionTextBox.Size = new System.Drawing.Size(390, 24);
-            this.poblacionTextBox.TabIndex = 17;
-            // 
-            // presupuestoTextBox
-            // 
-            this.presupuestoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.presupuestoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Presupuesto", true));
-            this.presupuestoTextBox.Location = new System.Drawing.Point(833, 199);
-            this.presupuestoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.presupuestoTextBox.Name = "presupuestoTextBox";
-            this.presupuestoTextBox.Size = new System.Drawing.Size(353, 24);
-            this.presupuestoTextBox.TabIndex = 19;
-            // 
-            // proveedorTextBox
-            // 
-            this.proveedorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.proveedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Proveedor", true));
-            this.proveedorTextBox.Location = new System.Drawing.Point(833, 125);
-            this.proveedorTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.proveedorTextBox.Name = "proveedorTextBox";
-            this.proveedorTextBox.Size = new System.Drawing.Size(353, 24);
-            this.proveedorTextBox.TabIndex = 21;
-            // 
-            // statusTextBox
-            // 
-            this.statusTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.statusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Status", true));
-            this.statusTextBox.Location = new System.Drawing.Point(833, 236);
-            this.statusTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.statusTextBox.Name = "statusTextBox";
-            this.statusTextBox.Size = new System.Drawing.Size(353, 24);
-            this.statusTextBox.TabIndex = 23;
-            // 
-            // temaTextBox
-            // 
-            this.temaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.temaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Tema", true));
-            this.temaTextBox.Location = new System.Drawing.Point(191, 122);
-            this.temaTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.temaTextBox.Name = "temaTextBox";
-            this.temaTextBox.Size = new System.Drawing.Size(390, 24);
-            this.temaTextBox.TabIndex = 25;
-            // 
-            // piccerrar
-            // 
-            this.piccerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.piccerrar.BackColor = System.Drawing.Color.Transparent;
-            this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.close;
-            this.piccerrar.Location = new System.Drawing.Point(1331, 1);
-            this.piccerrar.Name = "piccerrar";
-            this.piccerrar.Size = new System.Drawing.Size(40, 36);
-            this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.piccerrar.TabIndex = 26;
-            this.piccerrar.TabStop = false;
-            this.piccerrar.Click += new System.EventHandler(this.piccerrar_Click);
-            // 
-            // listaCapacitacionesBindingSource
-            // 
-            this.listaCapacitacionesBindingSource.DataSource = typeof(RRHH.BL.Capacitacion);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -609,77 +522,164 @@
             this.dataGridViewTextBoxColumn12.HeaderText = "Status";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
-            // bindingNavigatorMoveFirstItem
+            // fechaTextBox
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 24);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
+            this.fechaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fechaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Fecha", true));
+            this.fechaTextBox.Location = new System.Drawing.Point(191, 277);
+            this.fechaTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.fechaTextBox.Name = "fechaTextBox";
+            this.fechaTextBox.Size = new System.Drawing.Size(390, 24);
+            this.fechaTextBox.TabIndex = 5;
             // 
-            // bindingNavigatorMovePreviousItem
+            // horarioTextBox
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 24);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            this.horarioTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.horarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Horario", true));
+            this.horarioTextBox.Location = new System.Drawing.Point(191, 314);
+            this.horarioTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.horarioTextBox.Name = "horarioTextBox";
+            this.horarioTextBox.Size = new System.Drawing.Size(390, 24);
+            this.horarioTextBox.TabIndex = 6;
             // 
-            // bindingNavigatorMoveNextItem
+            // horasTextBox
             // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
+            this.horasTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.horasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Horas", true));
+            this.horasTextBox.Location = new System.Drawing.Point(191, 160);
+            this.horasTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.horasTextBox.Name = "horasTextBox";
+            this.horasTextBox.Size = new System.Drawing.Size(390, 24);
+            this.horasTextBox.TabIndex = 2;
             // 
-            // bindingNavigatorMoveLastItem
+            // idTextBox
             // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            this.idTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Id", true));
+            this.idTextBox.Enabled = false;
+            this.idTextBox.Location = new System.Drawing.Point(191, 85);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(390, 24);
+            this.idTextBox.TabIndex = 9;
             // 
-            // bindingNavigatorAddNewItem
+            // lugarTextBox
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 24);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            this.lugarTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lugarTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Lugar", true));
+            this.lugarTextBox.Location = new System.Drawing.Point(833, 163);
+            this.lugarTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.lugarTextBox.Name = "lugarTextBox";
+            this.lugarTextBox.Size = new System.Drawing.Size(353, 24);
+            this.lugarTextBox.TabIndex = 9;
             // 
-            // bindingNavigatorDeleteItem
+            // modalidadTextBox
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 24);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            this.modalidadTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.modalidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Modalidad", true));
+            this.modalidadTextBox.Location = new System.Drawing.Point(833, 81);
+            this.modalidadTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.modalidadTextBox.Name = "modalidadTextBox";
+            this.modalidadTextBox.Size = new System.Drawing.Size(353, 24);
+            this.modalidadTextBox.TabIndex = 7;
             // 
-            // listaCapacitacionesBindingNavigatorSaveItem
+            // personalTextBox
             // 
-            this.listaCapacitacionesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listaCapacitacionesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaCapacitacionesBindingNavigatorSaveItem.Image")));
-            this.listaCapacitacionesBindingNavigatorSaveItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.listaCapacitacionesBindingNavigatorSaveItem.Name = "listaCapacitacionesBindingNavigatorSaveItem";
-            this.listaCapacitacionesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 24);
-            this.listaCapacitacionesBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.listaCapacitacionesBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaCapacitacionesBindingNavigatorSaveItem_Click);
+            this.personalTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.personalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Personal", true));
+            this.personalTextBox.Location = new System.Drawing.Point(191, 234);
+            this.personalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.personalTextBox.Name = "personalTextBox";
+            this.personalTextBox.Size = new System.Drawing.Size(390, 24);
+            this.personalTextBox.TabIndex = 4;
+            // 
+            // poblacionTextBox
+            // 
+            this.poblacionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.poblacionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Poblacion", true));
+            this.poblacionTextBox.Location = new System.Drawing.Point(191, 197);
+            this.poblacionTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.poblacionTextBox.Name = "poblacionTextBox";
+            this.poblacionTextBox.Size = new System.Drawing.Size(390, 24);
+            this.poblacionTextBox.TabIndex = 3;
+            // 
+            // presupuestoTextBox
+            // 
+            this.presupuestoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.presupuestoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Presupuesto", true));
+            this.presupuestoTextBox.Location = new System.Drawing.Point(833, 199);
+            this.presupuestoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.presupuestoTextBox.Name = "presupuestoTextBox";
+            this.presupuestoTextBox.Size = new System.Drawing.Size(353, 24);
+            this.presupuestoTextBox.TabIndex = 10;
+            // 
+            // proveedorTextBox
+            // 
+            this.proveedorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.proveedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Proveedor", true));
+            this.proveedorTextBox.Location = new System.Drawing.Point(833, 125);
+            this.proveedorTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.proveedorTextBox.Name = "proveedorTextBox";
+            this.proveedorTextBox.Size = new System.Drawing.Size(353, 24);
+            this.proveedorTextBox.TabIndex = 8;
+            // 
+            // statusTextBox
+            // 
+            this.statusTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.statusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Status", true));
+            this.statusTextBox.Location = new System.Drawing.Point(833, 236);
+            this.statusTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.Size = new System.Drawing.Size(353, 24);
+            this.statusTextBox.TabIndex = 11;
+            // 
+            // temaTextBox
+            // 
+            this.temaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.temaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCapacitacionesBindingSource, "Tema", true));
+            this.temaTextBox.Location = new System.Drawing.Point(191, 122);
+            this.temaTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.temaTextBox.Name = "temaTextBox";
+            this.temaTextBox.Size = new System.Drawing.Size(390, 24);
+            this.temaTextBox.TabIndex = 1;
+            // 
+            // piccerrar
+            // 
+            this.piccerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.piccerrar.BackColor = System.Drawing.Color.Transparent;
+            this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.close;
+            this.piccerrar.Location = new System.Drawing.Point(1331, 1);
+            this.piccerrar.Name = "piccerrar";
+            this.piccerrar.Size = new System.Drawing.Size(40, 36);
+            this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.piccerrar.TabIndex = 26;
+            this.piccerrar.TabStop = false;
+            this.piccerrar.Click += new System.EventHandler(this.piccerrar_Click);
             // 
             // Capacitaciones
             // 
@@ -724,9 +724,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaCapacitacionesBindingNavigator)).EndInit();
             this.listaCapacitacionesBindingNavigator.ResumeLayout(false);
             this.listaCapacitacionesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaCapacitacionesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaCapacitacionesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaCapacitacionesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

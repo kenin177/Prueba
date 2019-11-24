@@ -91,7 +91,7 @@ namespace RRHH.BL
                 resultado.Exitoso = false;
             }
 
-            if (string.IsNullOrEmpty(trabajador.Sexo) == true)
+            if (trabajador.SexoId <= 0)
             {
                 resultado.Mensaje = "Ingrese el Sexo";
                 resultado.Exitoso = false;
@@ -149,7 +149,8 @@ namespace RRHH.BL
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public string Sexo { get; set; }
+        public int SexoId { get; set; }
+        public Sexo Sexo { get; set; }
         public int Edad { get; set; }
         public string Direccion { get; set; }
         public double Sueldo { get; set; }
