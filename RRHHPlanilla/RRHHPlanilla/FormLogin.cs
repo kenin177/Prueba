@@ -126,6 +126,7 @@ namespace RRHHPlanilla
             if (alphaBlendTextBox1.Text == "")
             {
                 alphaBlendTextBox1.Text = "USUARIO";
+                
             }
         }
 
@@ -177,6 +178,24 @@ namespace RRHHPlanilla
                 {
                     MessageBox.Show("Usuario o contraseña incorrecta");
                 }
+            }
+        }
+
+        private void alphaBlendTextBox2_MouseEnter(object sender, EventArgs e)
+        {
+            if (alphaBlendTextBox2.Text == "CONTRASEÑA")
+            {
+                alphaBlendTextBox2.Text = "";
+                alphaBlendTextBox2.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void alphaBlendTextBox2_MouseLeave(object sender, EventArgs e)
+        {
+            if (alphaBlendTextBox2.Text == "")
+            {
+                alphaBlendTextBox2.Text = "CONTRASEÑA";
+                alphaBlendTextBox2.UseSystemPasswordChar = false;
             }
         }
     }

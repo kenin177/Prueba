@@ -40,6 +40,8 @@
             System.Windows.Forms.Label metodoPagoIdLabel;
             System.Windows.Forms.Label jornadaIdLabel;
             System.Windows.Forms.Label estadoCivilIdLabel;
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
             this.listaTrabajadoresBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listaTrabajadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -72,14 +74,16 @@
             this.estadoCivilIdComboBox = new System.Windows.Forms.ComboBox();
             this.listaEstadoCivilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.fechaInicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listaSexosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.piccerrar = new System.Windows.Forms.PictureBox();
-            this.listaSexosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             apellidoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             edadLabel = new System.Windows.Forms.Label();
@@ -91,6 +95,8 @@
             metodoPagoIdLabel = new System.Windows.Forms.Label();
             jornadaIdLabel = new System.Windows.Forms.Label();
             estadoCivilIdLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaTrabajadoresBindingNavigator)).BeginInit();
             this.listaTrabajadoresBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaTrabajadoresBindingSource)).BeginInit();
@@ -99,17 +105,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaJornadasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaEstadoCivilesBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaSexosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaSexosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // apellidoLabel
             // 
             apellidoLabel.AutoSize = true;
             apellidoLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            apellidoLabel.Location = new System.Drawing.Point(31, 93);
+            apellidoLabel.Location = new System.Drawing.Point(54, 93);
             apellidoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             apellidoLabel.Name = "apellidoLabel";
             apellidoLabel.Size = new System.Drawing.Size(67, 17);
@@ -120,7 +126,7 @@
             // 
             direccionLabel.AutoSize = true;
             direccionLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionLabel.Location = new System.Drawing.Point(15, 197);
+            direccionLabel.Location = new System.Drawing.Point(38, 197);
             direccionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(75, 17);
@@ -131,7 +137,7 @@
             // 
             edadLabel.AutoSize = true;
             edadLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            edadLabel.Location = new System.Drawing.Point(48, 119);
+            edadLabel.Location = new System.Drawing.Point(71, 119);
             edadLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             edadLabel.Name = "edadLabel";
             edadLabel.Size = new System.Drawing.Size(48, 17);
@@ -142,7 +148,7 @@
             // 
             idLabel.AutoSize = true;
             idLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(68, 47);
+            idLabel.Location = new System.Drawing.Point(91, 47);
             idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(29, 17);
@@ -153,7 +159,7 @@
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(31, 71);
+            nombreLabel.Location = new System.Drawing.Point(54, 71);
             nombreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(69, 17);
@@ -164,7 +170,7 @@
             // 
             sexoLabel.AutoSize = true;
             sexoLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sexoLabel.Location = new System.Drawing.Point(48, 146);
+            sexoLabel.Location = new System.Drawing.Point(71, 146);
             sexoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             sexoLabel.Name = "sexoLabel";
             sexoLabel.Size = new System.Drawing.Size(47, 17);
@@ -175,7 +181,7 @@
             // 
             sueldoLabel.AutoSize = true;
             sueldoLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sueldoLabel.Location = new System.Drawing.Point(35, 174);
+            sueldoLabel.Location = new System.Drawing.Point(58, 174);
             sueldoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             sueldoLabel.Name = "sueldoLabel";
             sueldoLabel.Size = new System.Drawing.Size(60, 17);
@@ -219,12 +225,34 @@
             // 
             estadoCivilIdLabel.AutoSize = true;
             estadoCivilIdLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            estadoCivilIdLabel.Location = new System.Drawing.Point(8, 232);
+            estadoCivilIdLabel.Location = new System.Drawing.Point(21, 233);
             estadoCivilIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             estadoCivilIdLabel.Name = "estadoCivilIdLabel";
-            estadoCivilIdLabel.Size = new System.Drawing.Size(87, 17);
+            estadoCivilIdLabel.Size = new System.Drawing.Size(92, 17);
             estadoCivilIdLabel.TabIndex = 37;
-            estadoCivilIdLabel.Text = "Estado Civil";
+            estadoCivilIdLabel.Text = "Estado Civil:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(53, 268);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(60, 17);
+            label1.TabIndex = 41;
+            label1.Text = "Cedula:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(4, 297);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(116, 17);
+            label2.TabIndex = 42;
+            label2.Text = "Fecha de Inicio:";
             // 
             // listaTrabajadoresBindingNavigator
             // 
@@ -389,7 +417,7 @@
             // apellidoTextBox
             // 
             this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Apellido", true));
-            this.apellidoTextBox.Location = new System.Drawing.Point(118, 93);
+            this.apellidoTextBox.Location = new System.Drawing.Point(147, 93);
             this.apellidoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(192, 20);
@@ -398,7 +426,7 @@
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(117, 201);
+            this.direccionTextBox.Location = new System.Drawing.Point(146, 201);
             this.direccionTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(192, 20);
@@ -407,7 +435,7 @@
             // edadTextBox
             // 
             this.edadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Edad", true));
-            this.edadTextBox.Location = new System.Drawing.Point(118, 119);
+            this.edadTextBox.Location = new System.Drawing.Point(146, 116);
             this.edadTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.edadTextBox.Name = "edadTextBox";
             this.edadTextBox.Size = new System.Drawing.Size(76, 20);
@@ -417,7 +445,7 @@
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Id", true));
             this.idTextBox.Enabled = false;
-            this.idTextBox.Location = new System.Drawing.Point(118, 47);
+            this.idTextBox.Location = new System.Drawing.Point(147, 47);
             this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(192, 20);
@@ -426,7 +454,7 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(118, 71);
+            this.nombreTextBox.Location = new System.Drawing.Point(147, 71);
             this.nombreTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(192, 20);
@@ -435,7 +463,7 @@
             // sueldoTextBox
             // 
             this.sueldoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Sueldo", true));
-            this.sueldoTextBox.Location = new System.Drawing.Point(117, 174);
+            this.sueldoTextBox.Location = new System.Drawing.Point(146, 174);
             this.sueldoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.sueldoTextBox.Name = "sueldoTextBox";
             this.sueldoTextBox.Size = new System.Drawing.Size(192, 20);
@@ -452,7 +480,7 @@
             this.cargoIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.cargoIdComboBox.Name = "cargoIdComboBox";
             this.cargoIdComboBox.Size = new System.Drawing.Size(130, 21);
-            this.cargoIdComboBox.TabIndex = 8;
+            this.cargoIdComboBox.TabIndex = 10;
             this.cargoIdComboBox.ValueMember = "Id";
             // 
             // listaCargosBindingSource
@@ -470,7 +498,7 @@
             this.metodoPagoIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.metodoPagoIdComboBox.Name = "metodoPagoIdComboBox";
             this.metodoPagoIdComboBox.Size = new System.Drawing.Size(130, 21);
-            this.metodoPagoIdComboBox.TabIndex = 9;
+            this.metodoPagoIdComboBox.TabIndex = 11;
             this.metodoPagoIdComboBox.ValueMember = "Id";
             // 
             // listaMetodoPagosBindingSource
@@ -488,7 +516,7 @@
             this.jornadaIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.jornadaIdComboBox.Name = "jornadaIdComboBox";
             this.jornadaIdComboBox.Size = new System.Drawing.Size(130, 21);
-            this.jornadaIdComboBox.TabIndex = 10;
+            this.jornadaIdComboBox.TabIndex = 12;
             this.jornadaIdComboBox.ValueMember = "Id";
             // 
             // listaJornadasBindingSource
@@ -502,7 +530,7 @@
             this.estadoCivilIdComboBox.DisplayMember = "Descripcion";
             this.estadoCivilIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.estadoCivilIdComboBox.FormattingEnabled = true;
-            this.estadoCivilIdComboBox.Location = new System.Drawing.Point(117, 233);
+            this.estadoCivilIdComboBox.Location = new System.Drawing.Point(146, 233);
             this.estadoCivilIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.estadoCivilIdComboBox.Name = "estadoCivilIdComboBox";
             this.estadoCivilIdComboBox.Size = new System.Drawing.Size(192, 21);
@@ -515,6 +543,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(label2);
+            this.groupBox1.Controls.Add(label1);
+            this.groupBox1.Controls.Add(this.fechaInicioDateTimePicker);
+            this.groupBox1.Controls.Add(this.cedulaTextBox);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(edadLabel);
             this.groupBox1.Controls.Add(this.estadoCivilIdComboBox);
@@ -535,11 +567,28 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(360, 345);
+            this.groupBox1.Size = new System.Drawing.Size(413, 345);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // fechaInicioDateTimePicker
+            // 
+            this.fechaInicioDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaTrabajadoresBindingSource, "FechaInicio", true));
+            this.fechaInicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaInicioDateTimePicker.Location = new System.Drawing.Point(146, 297);
+            this.fechaInicioDateTimePicker.Name = "fechaInicioDateTimePicker";
+            this.fechaInicioDateTimePicker.Size = new System.Drawing.Size(192, 20);
+            this.fechaInicioDateTimePicker.TabIndex = 9;
+            // 
+            // cedulaTextBox
+            // 
+            this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Cedula", true));
+            this.cedulaTextBox.Location = new System.Drawing.Point(146, 268);
+            this.cedulaTextBox.Name = "cedulaTextBox";
+            this.cedulaTextBox.Size = new System.Drawing.Size(192, 20);
+            this.cedulaTextBox.TabIndex = 8;
             // 
             // comboBox1
             // 
@@ -548,11 +597,15 @@
             this.comboBox1.DisplayMember = "Descripcion";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 146);
+            this.comboBox1.Location = new System.Drawing.Point(147, 146);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 38;
             this.comboBox1.ValueMember = "Id";
+            // 
+            // listaSexosBindingSource
+            // 
+            this.listaSexosBindingSource.DataSource = typeof(RRHH.BL.Sexo);
             // 
             // fotoPictureBox
             // 
@@ -627,10 +680,6 @@
             this.piccerrar.TabStop = false;
             this.piccerrar.Click += new System.EventHandler(this.piccerrar_Click);
             // 
-            // listaSexosBindingSource
-            // 
-            this.listaSexosBindingSource.DataSource = typeof(RRHH.BL.Sexo);
-            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -658,11 +707,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaEstadoCivilesBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaSexosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaSexosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -709,5 +758,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource listaSexosBindingSource;
+        private System.Windows.Forms.DateTimePicker fechaInicioDateTimePicker;
+        private System.Windows.Forms.TextBox cedulaTextBox;
     }
 }

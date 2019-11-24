@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace RRHHPlanilla
 {
@@ -27,7 +28,29 @@ namespace RRHHPlanilla
             _privilegios = new PrivilegiosBL();
             listaPrivilegiosBindingSource.DataSource = _privilegios.ObtenerPrivilegios();
         }
-        
+
+        //VALIDACION DE CORREO
+        private Boolean ValidarEmail(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         #region Drag Form/ Mover Arrastrar Formulario
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -54,15 +77,21 @@ namespace RRHHPlanilla
 
             if (result == DialogResult.No)
             {
-
+                
             }
         }
+
+
 
         private void FrmConfirmarConf_Load(object sender, EventArgs e)
         {
             listaSeguridadBindingNavigatorSaveItem.Enabled = true;
             lblcamb.Visible = false;
+
         }
+            
+           
+                
 
         // DESHABILITACION
         private void DeshabilitarHabilitarBotones(bool valor)
@@ -80,75 +109,81 @@ namespace RRHHPlanilla
         //GUARDAR
         private void listaSeguridadBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-           
-
-            if (txtnueva.Text != txtconfirmar.Text && contrasenaTextBox.ReadOnly == true 
-                || contrasenaTextBox.Text != txtconfirmar.Text 
-                && contrasenaTextBox.ReadOnly == false)
-            {   
-                DialogResult resul = MessageBox.Show("Las contraseñas no coinciden", " ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                
-            }
-            else
+            if (ValidarEmail(correoTextBox.Text))
             {
-                if (txtconfirmar.Text.Length <= 6 && contrasenaTextBox.ReadOnly == true 
-                    || contrasenaTextBox.Text.Length <= 6 && contrasenaTextBox.ReadOnly == false)
+                if (txtnueva.Text != txtconfirmar.Text && contrasenaTextBox.ReadOnly == true
+                || contrasenaTextBox.Text != txtconfirmar.Text
+                && contrasenaTextBox.ReadOnly == false)
                 {
-                    DialogResult resul = MessageBox.Show(" LA CONTRASEÑA TIENE QUE SER MAYOR A "+"\n"+" 6 CARACTERES ", "", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    DialogResult resul = MessageBox.Show("Las contraseñas no coinciden", " ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                 }
                 else
                 {
-                    if (txtnueva.Text.Length > 6 && contrasenaTextBox.ReadOnly == true 
-                        || contrasenaTextBox.Text.Length > 6 && contrasenaTextBox.ReadOnly == false)
+                    if (txtconfirmar.Text.Length <= 6 && contrasenaTextBox.ReadOnly == true
+                        || contrasenaTextBox.Text.Length <= 6 && contrasenaTextBox.ReadOnly == false)
                     {
-                        if (txtconfirmar.Text != "")
+                        DialogResult resul = MessageBox.Show(" LA CONTRASEÑA TIENE QUE SER MAYOR A " + "\n" + " 6 CARACTERES ", "",
+                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        if (txtnueva.Text.Length > 6 && contrasenaTextBox.ReadOnly == true
+                            || contrasenaTextBox.Text.Length > 6 && contrasenaTextBox.ReadOnly == false)
                         {
-                            contrasenaTextBox.Text = txtconfirmar.Text;
-                        }
+                            if (txtconfirmar.Text != "")
+                            {
+                                contrasenaTextBox.Text = txtconfirmar.Text;
+                            }
 
-                        listaSeguridadBindingSource.EndEdit();
-                        var usuario = (Usuario)listaSeguridadBindingSource.Current;
+                            listaSeguridadBindingSource.EndEdit();
+                            var usuario = (Usuario)listaSeguridadBindingSource.Current;
 
-                        if (fotoPictureBox.Image != null)
-                        {
-                            usuario.Foto = Program.imageToByteArray(fotoPictureBox.Image);
-                        }
-                        else
-                        {
-                            usuario.Foto = null;
-                        }
-                        var resultado = _seguridad.GuardarUsuario(usuario);
+                            if (fotoPictureBox.Image != null)
+                            {
+                                usuario.Foto = Program.imageToByteArray(fotoPictureBox.Image);
+                            }
+                            else
+                            {
+                                usuario.Foto = null;
+                            }
+                            var resultado = _seguridad.GuardarUsuario(usuario);
 
-                        if (resultado.Exitoso == true)
-                        {
-                            listaSeguridadBindingSource.ResetBindings(false);
-                            DeshabilitarHabilitarBotones(true);
-                            DialogResult resul = MessageBox.Show("Usuario Guardado", "Exitoso...!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            if (resultado.Exitoso == true)
+                            {
+                                listaSeguridadBindingSource.ResetBindings(false);
+                                DeshabilitarHabilitarBotones(true);
+                                DialogResult resul = MessageBox.Show("Usuario Guardado", "Exitoso...!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                            contrasenaTextBox.ReadOnly = true;
-                            contrasenaTextBox.BackColor = Color.Silver;
+                                contrasenaTextBox.ReadOnly = true;
+                                contrasenaTextBox.BackColor = Color.Silver;
 
-                            nombUsuarioTextBox.Focus();
-                            txtnueva.Visible = true;
-                            txtconfirmar.Text = "";
-                            txtnueva.Text = "";
+                                nombUsuarioTextBox.Focus();
+                                txtnueva.Visible = true;
+                                txtconfirmar.Text = "";
+                                txtnueva.Text = "";
 
-                            label4.Visible = true;
-                            lblcamb.Visible = false;
-                            lblcamb1.Visible = false;
-                            lblcamb2.Visible = false;
-
-                            
-                        }
-                        else
-                        {
-                            MessageBox.Show(resultado.Mensaje);
+                                label4.Visible = true;
+                                lblcamb.Visible = false;
+                                lblcamb1.Visible = false;
+                                lblcamb2.Visible = false;
+                            }
+                            else
+                            {
+                                MessageBox.Show(resultado.Mensaje);
+                            }
                         }
                     }
-
                 }
             }
+            else
+            {
+                DialogResult resul = MessageBox.Show(" FORMATO DE CORREO INCORRECTO ", "",
+            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                correoTextBox.SelectAll();
+                correoTextBox.Focus();
+            }
+
         }
 
         #region  BORRAR
@@ -277,7 +312,7 @@ namespace RRHHPlanilla
 
         private void txtnueva_Leave(object sender, EventArgs e)
         {
-            if (txtnueva.Text.Length <= 6 && contrasenaTextBox.ReadOnly == true)
+            if (txtnueva.Text.Length <= 6 && contrasenaTextBox.ReadOnly == true && txtnueva.Text != "")
             {
                 lblcamb1.Visible = true;
                 lblcamb1.Text = "LA CONTRASEÑA TIENE QUE SER MAYOR A 6 CARACTERES";
@@ -290,7 +325,7 @@ namespace RRHHPlanilla
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (txtconfirmar.Text.Length <= 6)
+            if (txtconfirmar.Text.Length <= 6 && txtconfirmar.Text != "")
             {
                 lblcamb2.Visible = true;
                 lblcamb2.Text = "LA CONTRASEÑA TIENE QUE SER MAYOR A 6 CARACTERES";
@@ -414,7 +449,12 @@ namespace RRHHPlanilla
 
             txtconfirmar.Text = "";
             txtnueva.Text = "";
+            
 
+        }
+
+        private void fechaInicioDateTimePicker_Validating(object sender, CancelEventArgs e)
+        {
 
         }
     }

@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace RRHH.BL
 {
@@ -30,6 +31,8 @@ namespace RRHH.BL
         }
 
         #endregion
+
+
 
         // GUARDAD
         public Resultado3 GuardarUsuario(Usuario usuario)
@@ -108,8 +111,8 @@ namespace RRHH.BL
             {
                 resultado.Mensaje = "Ingrese un Correo";
                 resultado.Exitoso = false;
-            }
-
+            }      
+ 
             if (usuario.edad <= 0)
             {
                 resultado.Mensaje = "Ingrese una Edad";
@@ -173,7 +176,7 @@ namespace RRHH.BL
         public string Apellido { get; set; }
         public string Correo { get; set; }
         public int edad { get; set; }
-        //public DateTime FechaInicio { get; set; }
+        public DateTime FechaInicio { get; set; }
         public double Cedula { get; set; }
 
         //SEGURIDAD

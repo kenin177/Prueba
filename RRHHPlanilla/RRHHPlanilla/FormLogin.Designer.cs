@@ -237,6 +237,8 @@
             this.alphaBlendTextBox2.Enter += new System.EventHandler(this.alphaBlendTextBox2_Enter);
             this.alphaBlendTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.alphaBlendTextBox2_KeyPress);
             this.alphaBlendTextBox2.Leave += new System.EventHandler(this.alphaBlendTextBox2_Leave);
+            this.alphaBlendTextBox2.MouseEnter += new System.EventHandler(this.alphaBlendTextBox2_MouseEnter);
+            this.alphaBlendTextBox2.MouseLeave += new System.EventHandler(this.alphaBlendTextBox2_MouseLeave);
             // 
             // FormLogin
             // 

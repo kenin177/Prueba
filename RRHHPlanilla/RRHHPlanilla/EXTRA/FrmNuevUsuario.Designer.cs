@@ -48,6 +48,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listaSeguridadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fechaInicioTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,7 +64,7 @@
             this.lblhora.BackColor = System.Drawing.Color.Transparent;
             this.lblhora.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhora.ForeColor = System.Drawing.Color.Black;
-            this.lblhora.Location = new System.Drawing.Point(65, 43);
+            this.lblhora.Location = new System.Drawing.Point(84, 43);
             this.lblhora.Name = "lblhora";
             this.lblhora.Size = new System.Drawing.Size(331, 49);
             this.lblhora.TabIndex = 0;
@@ -140,7 +142,7 @@
             // 
             // txtusuario
             // 
-            this.txtusuario.Location = new System.Drawing.Point(176, 139);
+            this.txtusuario.Location = new System.Drawing.Point(188, 139);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.ReadOnly = true;
             this.txtusuario.Size = new System.Drawing.Size(182, 20);
@@ -149,7 +151,7 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(176, 170);
+            this.txtnombre.Location = new System.Drawing.Point(188, 170);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.ReadOnly = true;
             this.txtnombre.Size = new System.Drawing.Size(182, 20);
@@ -158,7 +160,7 @@
             // 
             // txtnuevcont
             // 
-            this.txtnuevcont.Location = new System.Drawing.Point(176, 204);
+            this.txtnuevcont.Location = new System.Drawing.Point(188, 204);
             this.txtnuevcont.Name = "txtnuevcont";
             this.txtnuevcont.ReadOnly = true;
             this.txtnuevcont.Size = new System.Drawing.Size(182, 20);
@@ -166,7 +168,7 @@
             // 
             // txtcorreo
             // 
-            this.txtcorreo.Location = new System.Drawing.Point(176, 235);
+            this.txtcorreo.Location = new System.Drawing.Point(188, 235);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.ReadOnly = true;
             this.txtcorreo.Size = new System.Drawing.Size(182, 20);
@@ -174,7 +176,7 @@
             // 
             // txtedad
             // 
-            this.txtedad.Location = new System.Drawing.Point(176, 267);
+            this.txtedad.Location = new System.Drawing.Point(188, 267);
             this.txtedad.Name = "txtedad";
             this.txtedad.ReadOnly = true;
             this.txtedad.Size = new System.Drawing.Size(182, 20);
@@ -182,7 +184,7 @@
             // 
             // txtcedula
             // 
-            this.txtcedula.Location = new System.Drawing.Point(176, 302);
+            this.txtcedula.Location = new System.Drawing.Point(188, 302);
             this.txtcedula.Name = "txtcedula";
             this.txtcedula.ReadOnly = true;
             this.txtcedula.Size = new System.Drawing.Size(182, 20);
@@ -215,7 +217,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(176, 332);
+            this.textBox1.Location = new System.Drawing.Point(188, 332);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(182, 20);
@@ -226,7 +228,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::RRHHPlanilla.Properties.Resources.salir;
-            this.pictureBox1.Location = new System.Drawing.Point(653, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(672, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -238,12 +240,33 @@
             // 
             this.listaSeguridadBindingSource.DataSource = typeof(RRHH.BL.Usuario);
             // 
+            // fechaInicioTextBox
+            // 
+            this.fechaInicioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaSeguridadBindingSource, "FechaInicio", true));
+            this.fechaInicioTextBox.Location = new System.Drawing.Point(188, 361);
+            this.fechaInicioTextBox.Name = "fechaInicioTextBox";
+            this.fechaInicioTextBox.ReadOnly = true;
+            this.fechaInicioTextBox.Size = new System.Drawing.Size(182, 20);
+            this.fechaInicioTextBox.TabIndex = 78;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(71, 360);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 18);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "Fecha de Inicio:";
+            // 
             // FrmConfiUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(688, 508);
+            this.ClientSize = new System.Drawing.Size(707, 508);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.fechaInicioTextBox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
@@ -297,5 +320,7 @@
         private System.Windows.Forms.BindingSource listaSeguridadBindingSource;
         private System.Windows.Forms.PictureBox fotoPictureBox;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox fechaInicioTextBox;
+        private System.Windows.Forms.Label label2;
     }
 }

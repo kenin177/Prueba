@@ -51,7 +51,7 @@ namespace RRHH.BL
             usuario1.Correo = "prueba1234@gmail.com";
             usuario1.edad = 22;
             usuario1.Foto = null;
-            //usuario1.FechaInicio.ToString("04,22,2019");
+            usuario1.FechaInicio = new DateTime(1997, 4, 29);
             usuario1.Cedula = 0512199700879;
             usuario1.PrivilegioId = 1;
 
@@ -68,7 +68,7 @@ namespace RRHH.BL
             usuario2.Correo = "prueba1234@gmail.com";
             usuario2.edad = 21;
             usuario2.Foto = null;
-            //usuario2.FechaInicio.ToString("04,22,2019");
+            usuario2.FechaInicio = new DateTime(1998, 10, 18);
             usuario2.Cedula = 0512199700666;
             usuario2.PrivilegioId = 2;
 
@@ -85,7 +85,7 @@ namespace RRHH.BL
             usuario3.Correo = "prueba1234@gmail.com";
             usuario3.edad = 22;
             usuario3.Foto = null;
-            //usuario1.FechaInicio.ToString("04,22,2019");
+            usuario3.FechaInicio = new DateTime(2002, 12, 9);
             usuario3.Cedula = 0512199700999;
             usuario3.PrivilegioId = 3;
             #endregion
@@ -212,6 +212,8 @@ namespace RRHH.BL
             trabajador1.CargoId = 1;
             trabajador1.MetodoPagoId = 1;
             trabajador1.JornadaId = 1;
+            trabajador1.FechaInicio = new DateTime(2002, 4, 21);
+            trabajador1.Cedula = 0512199700999;
             contexto.Trabajadores.Add(trabajador1);
 
             var trabajador2 = new Trabajador();
@@ -225,6 +227,8 @@ namespace RRHH.BL
             trabajador2.CargoId = 1;
             trabajador2.MetodoPagoId = 1;
             trabajador2.JornadaId = 1;
+            trabajador2.FechaInicio = new DateTime(2002, 8, 20);
+            trabajador2.Cedula = 0512199754885;
             contexto.Trabajadores.Add(trabajador2);
 
             var trabajador3 = new Trabajador();
@@ -238,6 +242,8 @@ namespace RRHH.BL
             trabajador3.CargoId = 1;
             trabajador3.MetodoPagoId = 1;
             trabajador3.JornadaId = 1;
+            trabajador3.FechaInicio = new DateTime(2007, 1, 14);
+            trabajador3.Cedula = 0512199778999;
             contexto.Trabajadores.Add(trabajador3);
 
             var trabajador4 = new Trabajador();
@@ -251,6 +257,8 @@ namespace RRHH.BL
             trabajador4.CargoId = 1;
             trabajador4.MetodoPagoId = 1;
             trabajador4.JornadaId = 1;
+            trabajador4.FechaInicio = new DateTime(2010, 11, 11);
+            trabajador4.Cedula = 0512199707899;
             contexto.Trabajadores.Add(trabajador4);
 
             var trabajador5 = new Trabajador();
@@ -264,6 +272,8 @@ namespace RRHH.BL
             trabajador5.CargoId = 2;
             trabajador5.MetodoPagoId = 1;
             trabajador5.JornadaId = 1;
+            trabajador5.FechaInicio = new DateTime(1999, 6, 16);
+            trabajador5.Cedula = 0512199499999;
             contexto.Trabajadores.Add(trabajador5);
 
             var trabajador6 = new Trabajador();
@@ -277,6 +287,8 @@ namespace RRHH.BL
             trabajador6.CargoId = 3;
             trabajador6.MetodoPagoId = 1;
             trabajador6.JornadaId = 2;
+            trabajador6.FechaInicio = new DateTime(2018, 2, 14);
+            trabajador6.Cedula = 0812199714999;
             contexto.Trabajadores.Add(trabajador6);
 
 
@@ -291,6 +303,8 @@ namespace RRHH.BL
             trabajador7.CargoId = 4;
             trabajador7.MetodoPagoId = 1;
             trabajador7.JornadaId = 2;
+            trabajador7.FechaInicio = new DateTime(2012, 7, 30);
+            trabajador7.Cedula = 0912199712989;
             contexto.Trabajadores.Add(trabajador7);
             #endregion
 

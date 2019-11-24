@@ -86,6 +86,9 @@ namespace RRHHPlanilla
                 {
                     MemoryStream ms = new MemoryStream(Program.usuario.Foto);
                     System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+
+                    
+
                     pictureBox3.Image = Image.FromStream(ms);
                 }
      
@@ -171,7 +174,8 @@ namespace RRHHPlanilla
                 }
             }
         }
-        #endregion
+        #endregion\
+
         //FORM LOAD 
         //FORM LOAD 
         //FORM LOAD 
@@ -200,7 +204,7 @@ namespace RRHHPlanilla
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-
+            
             label3.Visible = false;
             label4.Visible = false;
             usu2.Visible = false;

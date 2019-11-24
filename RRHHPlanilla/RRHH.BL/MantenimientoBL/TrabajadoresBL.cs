@@ -162,6 +162,8 @@ namespace RRHH.BL
         public Jornada Jornada { get; set; }
         public int EstadoCivilId { get; set; }
         public EstadoCivil EstadoCivil { get; set; }
+        public DateTime FechaInicio { get; set; }
+        public double Cedula { get; set; }
 
         public class Resultado
         {
