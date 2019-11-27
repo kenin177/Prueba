@@ -104,7 +104,7 @@ namespace RRHH.BL
             contexto.Cargos.Add(cargo3);
 
             var cargo4 = new Cargo();
-            cargo4.Descripcion = "Mantenimeinto";
+            cargo4.Descripcion = "Mantenimiento";
             contexto.Cargos.Add(cargo4);
             #endregion
 

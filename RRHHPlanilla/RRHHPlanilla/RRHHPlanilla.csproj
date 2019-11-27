@@ -205,6 +205,7 @@
     <None Include="Properties\DataSources\RRHH.BL.EstadoCivilBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.JornadaBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.MetodoPagoBL.datasource" />
+    <None Include="Properties\DataSources\RRHH.BL.PlanillaBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.PrivilegiosBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.SeguridadBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.SexoBL.datasource" />

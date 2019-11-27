@@ -185,11 +185,6 @@ namespace RRHH.BL
 
         public int PrivilegioId { get; set; }
         public Privilegio Privilegio { get; set; }
-
-        //public string contrasena1 { get; set; }
-        //public string contrasena2 { get; set; }
-        //If (contrasena1 == contrasena2) {
-        //contrasena = contresana1 }
     }
 
     public class Resultado3

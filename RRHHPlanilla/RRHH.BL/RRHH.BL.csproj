@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MantenimientoBL\BusquedaBL.cs" />
     <Compile Include="MantenimientoBL\CapacitacionesBL.cs" />
     <Compile Include="MantenimientoBL\Listas para Trabajadores\CargosBL.cs" />
     <Compile Include="Contexto.cs" />
@@ -58,11 +59,12 @@
     <Compile Include="IngresosBL.cs" />
     <Compile Include="MantenimientoBL\Listas para Trabajadores\JornadaBL.cs" />
     <Compile Include="MantenimientoBL\Listas para Trabajadores\MetodoPagoBL.cs" />
-    <Compile Include="PrivilegiosBL.cs" />
-    <Compile Include="SeguridadBL.cs" />
+    <Compile Include="TransaccionesBL\PlanillaBL.cs" />
+    <Compile Include="SEGURIDAD\PrivilegiosBL.cs" />
+    <Compile Include="SEGURIDAD\SeguridadBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MantenimientoBL\TrabajadoresBL.cs" />
-    <Compile Include="SexoBL.cs" />
+    <Compile Include="MantenimientoBL\Listas para Trabajadores\SexoBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -28,6 +28,11 @@ namespace RRHH.BL
             return ListaTrabajadores;
         }
 
+        public Trabajador ObtenerTrabajador(int trabajadorId)
+        {
+            return _contexto.Trabajadores.FirstOrDefault(r => r.Id == trabajadorId);
+        }
+
         public Resultado GuardarTrabajador(Trabajador trabajador)
         {           
             var resultado = Validar(trabajador);
@@ -78,6 +83,12 @@ namespace RRHH.BL
             var resultado = new Resultado();
             resultado.Exitoso = true;
             
+            if (trabajador == null)
+            {
+                resultado.Mensaje = "Agregar un trabajador";
+                resultado.Exitoso = false;
+            }
+
             if (string.IsNullOrEmpty(trabajador.Nombre) == true)
 
             {
@@ -164,6 +175,11 @@ namespace RRHH.BL
         public EstadoCivil EstadoCivil { get; set; }
         public DateTime FechaInicio { get; set; }
         public double Cedula { get; set; }
+
+        public Trabajador()
+        {
+            FechaInicio = DateTime.Now;
+        }
 
         public class Resultado
         {

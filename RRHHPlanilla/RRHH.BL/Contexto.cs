@@ -21,6 +21,7 @@ namespace RRHH.BL
             Database.SetInitializer(new DatosdeInicio());
         }
 
+        public DbSet<Planilla> Planillas { get; set; }
         public DbSet<Sexo> Sexos { get; set; }
         public DbSet<Privilegio> Privilegios { get; set; }
         public DbSet<Trabajador> Trabajadores { get; set; }
@@ -32,8 +33,6 @@ namespace RRHH.BL
         public DbSet<Jornada> Jornadas { get; set; }
         public DbSet<EstadoCivil> EstadoCiviles { get; set; }
         public DbSet<Capacitacion> Capacitaciones { get; set; }
-       // public DbSet<Planilla> Planillas { get; set; }
-
-
+       
     }
 }

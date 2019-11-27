@@ -26,6 +26,15 @@ namespace RRHH.BL
             ListaCargos = _contexto.Cargos.Local.ToBindingList();
             return ListaCargos;
         }
+
+        public BindingList<Cargo> ObtenerCargos(int cargoId)
+        {
+            var query = _contexto.Cargos.Where(r => r.Id == cargoId);
+
+            var resultado = new BindingList<Cargo>(query.ToList());
+
+            return resultado;
+        }
     }
 
     public class Cargo
