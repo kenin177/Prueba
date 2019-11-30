@@ -130,6 +130,7 @@ namespace RRHHPlanilla
             var planilla = (Planilla)listaPlanillasBindingSource.Current;
             _planillaBL.CalcularPlanilla(planilla);
 
+            //BUSQUEDA
             //var planillaDetalle = (PlanillaDetalle)planillaDetalleBindingSource.Current;
             //if (planillaDetalle != null)
             //{
@@ -179,6 +180,20 @@ namespace RRHHPlanilla
             {
                 label3.Visible = false;
             }
+        }
+
+        private void cargoIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //var planillaDetalle = (PlanillaDetalle)planillaDetalleBindingSource.Current;
+
+            //var cargo = (Cargo)listaCargosBindingSource.Current;
+
+            //    //var trabajador = _trabajoresBL.ObtenerTrabajador(planillaDetalle.TrabajadorId);
+            //var cargotra = _cargosBL.ObtenerCargo(cargo.Id);
+            //planillaDetalleBindingSource.DataSource = _cargosBL.ObtenerCargos(trabajador.CargoId);
+
+            ////listaCargosBindingSource.DataSource = _cargosBL.ObtenerCargos(trabajador.CargoId);
+            
         }
     }
 }

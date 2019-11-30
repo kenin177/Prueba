@@ -56,6 +56,7 @@ namespace RRHH.BL
             }
         }
 
+
         //CANCELAR CAMBIOS
         public void CancelarCambios()
         {
@@ -112,12 +113,16 @@ namespace RRHH.BL
                 foreach (var detalle in planilla.PlanillaDetalle)
                 {
                     var trabajador = _contexto.Trabajadores.Find(detalle.TrabajadorId);
-
+                    
                     if (trabajador != null)
                     {
-                        detalle.Id = trabajador.Id;
-                        detalle.Sueldo = trabajador.Sueldo;
-                        //detalle.Cargo = trabajador.Cargos;
+                        
+                        detalle.Sueldo = trabajador.Sueldo;                       
+                        detalle.Cargo = trabajador.CargoId;
+                        detalle.Jornada = trabajador.JornadaId;
+                        detalle.MetodoPago = trabajador.MetodoPagoId;
+                        
+
                         detalle.Cantidad = 1;
                         
 
@@ -277,8 +282,9 @@ namespace RRHH.BL
         public int TrabajadorId { get; set; }
         public Trabajador Trabajador { get; set; }
         public double Sueldo { get; set; }
-        public string Cargo { get; set; }
-        public string Jornada { get; set; }
+        public int Cargo { get; set; }
+        public int Jornada { get; set; }
+        public int MetodoPago { get; set; }
 
         //public int JornadaId { get; set; }
         //public Jornada Jornada { get; set; }

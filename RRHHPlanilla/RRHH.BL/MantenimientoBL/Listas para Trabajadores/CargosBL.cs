@@ -27,6 +27,11 @@ namespace RRHH.BL
             return ListaCargos;
         }
 
+        public Cargo ObtenerCargo(int trabajadorId)
+        {
+            return _contexto.Cargos.FirstOrDefault(r => r.Id == trabajadorId);
+        }
+
         public BindingList<Cargo> ObtenerCargos(int cargoId)
         {
             var query = _contexto.Cargos.Where(r => r.Id == cargoId);

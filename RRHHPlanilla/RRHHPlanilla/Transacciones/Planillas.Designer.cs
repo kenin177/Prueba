@@ -72,12 +72,14 @@
             this.cargoIdComboBox = new System.Windows.Forms.ComboBox();
             this.jornadaIdComboBox = new System.Windows.Forms.ComboBox();
             this.metodoPagoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.planillaDetalleDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,7 +87,7 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             activoLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -171,7 +173,7 @@
             // 
             tOTDeduccionesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             tOTDeduccionesLabel.AutoSize = true;
-            tOTDeduccionesLabel.Location = new System.Drawing.Point(889, 495);
+            tOTDeduccionesLabel.Location = new System.Drawing.Point(892, 495);
             tOTDeduccionesLabel.Name = "tOTDeduccionesLabel";
             tOTDeduccionesLabel.Size = new System.Drawing.Size(95, 13);
             tOTDeduccionesLabel.TabIndex = 36;
@@ -181,7 +183,7 @@
             // 
             tOTSalarioNetoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             tOTSalarioNetoLabel.AutoSize = true;
-            tOTSalarioNetoLabel.Location = new System.Drawing.Point(894, 522);
+            tOTSalarioNetoLabel.Location = new System.Drawing.Point(897, 522);
             tOTSalarioNetoLabel.Name = "tOTSalarioNetoLabel";
             tOTSalarioNetoLabel.Size = new System.Drawing.Size(90, 13);
             tOTSalarioNetoLabel.TabIndex = 37;
@@ -191,7 +193,7 @@
             // 
             tOTSueldoBaseLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             tOTSueldoBaseLabel.AutoSize = true;
-            tOTSueldoBaseLabel.Location = new System.Drawing.Point(892, 469);
+            tOTSueldoBaseLabel.Location = new System.Drawing.Point(895, 469);
             tOTSueldoBaseLabel.Name = "tOTSueldoBaseLabel";
             tOTSueldoBaseLabel.Size = new System.Drawing.Size(92, 13);
             tOTSueldoBaseLabel.TabIndex = 38;
@@ -201,7 +203,7 @@
             // 
             cantEmpleadosLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             cantEmpleadosLabel.AutoSize = true;
-            cantEmpleadosLabel.Location = new System.Drawing.Point(897, 443);
+            cantEmpleadosLabel.Location = new System.Drawing.Point(900, 443);
             cantEmpleadosLabel.Name = "cantEmpleadosLabel";
             cantEmpleadosLabel.Size = new System.Drawing.Size(87, 13);
             cantEmpleadosLabel.TabIndex = 39;
@@ -248,7 +250,7 @@
             this.listaPlanillasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaPlanillasBindingNavigator.Name = "listaPlanillasBindingNavigator";
             this.listaPlanillasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaPlanillasBindingNavigator.Size = new System.Drawing.Size(1102, 27);
+            this.listaPlanillasBindingNavigator.Size = new System.Drawing.Size(1115, 27);
             this.listaPlanillasBindingNavigator.TabIndex = 0;
             this.listaPlanillasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -385,7 +387,7 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(990, 132);
+            this.button1.Location = new System.Drawing.Point(992, 132);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(46, 50);
@@ -398,7 +400,7 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1049, 132);
+            this.button2.Location = new System.Drawing.Point(1057, 132);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(46, 50);
@@ -411,7 +413,7 @@
             // 
             this.tOTDeduccionesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tOTDeduccionesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaPlanillasBindingSource, "TOTDeducciones", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.tOTDeduccionesTextBox.Location = new System.Drawing.Point(990, 488);
+            this.tOTDeduccionesTextBox.Location = new System.Drawing.Point(1003, 488);
             this.tOTDeduccionesTextBox.Name = "tOTDeduccionesTextBox";
             this.tOTDeduccionesTextBox.ReadOnly = true;
             this.tOTDeduccionesTextBox.Size = new System.Drawing.Size(100, 20);
@@ -422,7 +424,7 @@
             // 
             this.tOTSalarioNetoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tOTSalarioNetoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaPlanillasBindingSource, "TOTSalarioNeto", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.tOTSalarioNetoTextBox.Location = new System.Drawing.Point(990, 515);
+            this.tOTSalarioNetoTextBox.Location = new System.Drawing.Point(1003, 515);
             this.tOTSalarioNetoTextBox.Name = "tOTSalarioNetoTextBox";
             this.tOTSalarioNetoTextBox.ReadOnly = true;
             this.tOTSalarioNetoTextBox.Size = new System.Drawing.Size(100, 20);
@@ -433,7 +435,7 @@
             // 
             this.tOTSueldoBaseTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tOTSueldoBaseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaPlanillasBindingSource, "TOTSueldoBase", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.tOTSueldoBaseTextBox.Location = new System.Drawing.Point(990, 462);
+            this.tOTSueldoBaseTextBox.Location = new System.Drawing.Point(1003, 462);
             this.tOTSueldoBaseTextBox.Name = "tOTSueldoBaseTextBox";
             this.tOTSueldoBaseTextBox.ReadOnly = true;
             this.tOTSueldoBaseTextBox.Size = new System.Drawing.Size(100, 20);
@@ -444,7 +446,7 @@
             // 
             this.cantEmpleadosTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cantEmpleadosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaPlanillasBindingSource, "CantEmpleados", true));
-            this.cantEmpleadosTextBox.Location = new System.Drawing.Point(990, 436);
+            this.cantEmpleadosTextBox.Location = new System.Drawing.Point(1003, 436);
             this.cantEmpleadosTextBox.Name = "cantEmpleadosTextBox";
             this.cantEmpleadosTextBox.ReadOnly = true;
             this.cantEmpleadosTextBox.Size = new System.Drawing.Size(100, 20);
@@ -500,6 +502,7 @@
             this.cargoIdComboBox.Size = new System.Drawing.Size(121, 21);
             this.cargoIdComboBox.TabIndex = 48;
             this.cargoIdComboBox.ValueMember = "Id";
+            this.cargoIdComboBox.SelectedIndexChanged += new System.EventHandler(this.cargoIdComboBox_SelectedIndexChanged);
             // 
             // jornadaIdComboBox
             // 
@@ -527,6 +530,19 @@
             this.metodoPagoIdComboBox.TabIndex = 50;
             this.metodoPagoIdComboBox.ValueMember = "Id";
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(918, 59);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(190, 39);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "ANULADO";
+            this.label3.Visible = false;
+            // 
             // planillaDetalleDataGridView
             // 
             this.planillaDetalleDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -535,6 +551,7 @@
             this.planillaDetalleDataGridView.AutoGenerateColumns = false;
             this.planillaDetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.planillaDetalleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
@@ -546,14 +563,23 @@
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14});
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
             this.planillaDetalleDataGridView.DataSource = this.planillaDetalleBindingSource;
-            this.planillaDetalleDataGridView.Location = new System.Drawing.Point(12, 210);
+            this.planillaDetalleDataGridView.Location = new System.Drawing.Point(23, 192);
             this.planillaDetalleDataGridView.Name = "planillaDetalleDataGridView";
-            this.planillaDetalleDataGridView.Size = new System.Drawing.Size(1078, 220);
-            this.planillaDetalleDataGridView.TabIndex = 50;
+            this.planillaDetalleDataGridView.Size = new System.Drawing.Size(1080, 220);
+            this.planillaDetalleDataGridView.TabIndex = 51;
             this.planillaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.planillaDetalleDataGridView_CellEndEdit_1);
             this.planillaDetalleDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.planillaDetalleDataGridView_DataError_1);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 41;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -576,85 +602,102 @@
             // 
             // dataGridViewTextBoxColumn5
             // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Cargo";
+            this.dataGridViewTextBoxColumn5.DataSource = this.listaCargosBindingSource;
+            this.dataGridViewTextBoxColumn5.DisplayMember = "Descripcion";
+            this.dataGridViewTextBoxColumn5.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.dataGridViewTextBoxColumn5.HeaderText = "Cargo";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn5.ValueMember = "Id";
+            this.dataGridViewTextBoxColumn5.Width = 60;
             // 
             // dataGridViewTextBoxColumn6
             // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Jornada";
+            this.dataGridViewTextBoxColumn6.DataSource = this.listaJornadasBindingSource;
+            this.dataGridViewTextBoxColumn6.DisplayMember = "Descripcion";
+            this.dataGridViewTextBoxColumn6.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.dataGridViewTextBoxColumn6.HeaderText = "Jornada";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn6.ValueMember = "Id";
+            this.dataGridViewTextBoxColumn6.Width = 70;
             // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "RAP";
-            this.dataGridViewTextBoxColumn7.HeaderText = "RAP";
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "MetodoPago";
+            this.dataGridViewTextBoxColumn7.DataSource = this.listaMetodoPagosBindingSource;
+            this.dataGridViewTextBoxColumn7.DisplayMember = "Descripcion";
+            this.dataGridViewTextBoxColumn7.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Metodo de Pago";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn7.ValueMember = "Id";
+            this.dataGridViewTextBoxColumn7.Width = 79;
             // 
             // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "IHSS";
-            this.dataGridViewTextBoxColumn8.HeaderText = "IHSS";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "RAP";
+            this.dataGridViewTextBoxColumn8.HeaderText = "RAP";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "ISR";
-            this.dataGridViewTextBoxColumn9.HeaderText = "ISR";
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "IHSS";
+            this.dataGridViewTextBoxColumn9.HeaderText = "IHSS";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
             // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Banco";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Banco";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "ISR";
+            this.dataGridViewTextBoxColumn10.HeaderText = "ISR";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // dataGridViewTextBoxColumn11
             // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Cooperativa";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Cooperativa";
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Banco";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Banco";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
             // dataGridViewTextBoxColumn12
             // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Cantidad";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Cooperativa";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Cooperativa";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
             // dataGridViewTextBoxColumn13
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Deducciones";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Deducciones";
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Cantidad";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Cantidad";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
             // dataGridViewTextBoxColumn14
             // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "PagoTotal";
-            this.dataGridViewTextBoxColumn14.HeaderText = "PagoTotal";
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Deducciones";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Deducciones";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
-            // label3
+            // dataGridViewTextBoxColumn15
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(905, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(190, 39);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "ANULADO";
-            this.label3.Visible = false;
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "PagoTotal";
+            this.dataGridViewTextBoxColumn15.HeaderText = "PagoTotal";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
             // Planillas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1102, 589);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1115, 589);
             this.Controls.Add(this.planillaDetalleDataGridView);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.metodoPagoIdComboBox);
             this.Controls.Add(this.jornadaIdComboBox);
             this.Controls.Add(this.cargoIdComboBox);
@@ -731,12 +774,14 @@
         private System.Windows.Forms.ComboBox cargoIdComboBox;
         private System.Windows.Forms.ComboBox jornadaIdComboBox;
         private System.Windows.Forms.ComboBox metodoPagoIdComboBox;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView planillaDetalleDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
@@ -744,6 +789,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
     }
 }
