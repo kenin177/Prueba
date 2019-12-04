@@ -210,5 +210,22 @@ namespace RRHHPlanilla
         {
 
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            var buscar = textBox1.Text;
+
+            if (string.IsNullOrEmpty(buscar) == true)
+            {
+                listaTrabajadoresBindingSource.DataSource = _trabajadores.ObtenerTrabajador();
+            }
+            else
+            {
+                listaTrabajadoresBindingSource.DataSource =
+                    _trabajadores.ObtenerTrabajadores(buscar);
+
+                listaTrabajadoresBindingSource.ResetBindings(false);
+            }
+        }
     }
 }

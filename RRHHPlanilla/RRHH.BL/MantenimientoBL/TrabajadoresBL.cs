@@ -20,6 +20,20 @@ namespace RRHH.BL
             ListaTrabajadores = new BindingList<Trabajador>();
         }
 
+        //BUSQUEDA
+        public BindingList<Trabajador> ObtenerTrabajadores(string buscar)
+        {
+            var query = _contexto.Trabajadores
+            .Include("Cargos")    
+            .Where(r => r.Nombre.ToLower().Contains(buscar.ToLower())==true
+            || r.Cargos.Descripcion.ToLower().Contains(buscar.ToLower())
+            ).ToList();
+
+            var resultado = new BindingList<Trabajador>(query.ToList());
+
+            return resultado;
+        }
+
         public BindingList<Trabajador> ObtenerTrabajador()
         {
             _contexto.Trabajadores.Load();
@@ -27,6 +41,7 @@ namespace RRHH.BL
             ListaTrabajadores = _contexto.Trabajadores.Local.ToBindingList();
             return ListaTrabajadores;
         }
+
 
         public Trabajador ObtenerTrabajador(int trabajadorId)
         {

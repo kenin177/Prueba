@@ -66,5 +66,23 @@ namespace RRHH.BL
             conexion.Close();
             return ds.Tables["tabla"];
         }
+
+        public DataTable Buscar3(string descripcion)
+        {
+            conexion.Open();
+            //SqlCommand cmd = new SqlCommand(string.Format("select Nombre, Apellido, Descripcion from Trabajador inner join Cargo on Trabajador.CargoId = Cargo.Id where Nombre like '%{0}%'", nombre), conexion);
+            //SqlCommand cmd2 = new SqlCommand(string.Format("select Nombre, Apellido, Descripcion from Trabajador inner join Cargo on Trabajador.CargoId = Cargo.Id where Apellido like '%{0}%'", apellido), conexion);
+            SqlCommand cmd3 = new SqlCommand(string.Format("select Nombre where Trabajador.CargoId = Cargo.Id and Cargo.Descripcion like '%{0}%'", descripcion), conexion);
+
+            //SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            //SqlDataAdapter ad2 = new SqlDataAdapter(cmd2);
+            SqlDataAdapter ad3 = new SqlDataAdapter(cmd3);
+            ds = new DataSet();
+            //ad.Fill(ds, "tabla");
+            //ad2.Fill(ds, "tabla");
+            ad3.Fill(ds, "tabla");
+            conexion.Close();
+            return ds.Tables["tabla"];
+        }
     }
 }

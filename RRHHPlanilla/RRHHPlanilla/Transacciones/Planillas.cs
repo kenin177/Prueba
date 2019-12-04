@@ -137,7 +137,7 @@ namespace RRHHPlanilla
             //    var trabajador = _trabajoresBL.ObtenerTrabajador(planillaDetalle.TrabajadorId);
             //    listaCargosBindingSource.DataSource = _cargosBL.ObtenerCargos(trabajador.CargoId);
             //}
-
+            
             listaPlanillasBindingSource.ResetBindings(false);
         }
 
@@ -182,18 +182,26 @@ namespace RRHHPlanilla
             }
         }
 
+        
         private void cargoIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //var planillaDetalle = (PlanillaDetalle)planillaDetalleBindingSource.Current;
 
-            //var cargo = (Cargo)listaCargosBindingSource.Current;
+        }
 
-            //    //var trabajador = _trabajoresBL.ObtenerTrabajador(planillaDetalle.TrabajadorId);
-            //var cargotra = _cargosBL.ObtenerCargo(cargo.Id);
-            //planillaDetalleBindingSource.DataSource = _cargosBL.ObtenerCargos(trabajador.CargoId);
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var prueba = cargoIdComboBox.Text;
+            var planillaDetalle = (PlanillaDetalle)planillaDetalleBindingSource.Current;
 
-            ////listaCargosBindingSource.DataSource = _cargosBL.ObtenerCargos(trabajador.CargoId);
-            
+            if (planillaDetalle != null || planillaDetalle == null)
+            {
+                listaTrabajadoresBindingSource.DataSource =
+                    _trabajoresBL.ObtenerTrabajadores(prueba);
+
+                var planilla = (Planilla)listaPlanillasBindingSource.Current;
+                _planillaBL.AgregarPlanillaDetalle(planilla);
+                //listaTrabajadoresBindingSource.DataSource = _cargosBL.ObtenerCargos(trabajador.CargoId);
+            }
         }
     }
 }

@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="busqueda2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busqueda2.Designer.cs">
+      <DependentUpon>busqueda2.cs</DependentUpon>
+    </Compile>
     <Compile Include="EXTRA\FrmConfigurarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     <Compile Include="Transacciones\Vacaciones.Designer.cs">
       <DependentUpon>Vacaciones.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="busqueda2.resx">
+      <DependentUpon>busqueda2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EXTRA\FrmConfigurarUsuario.resx">
       <DependentUpon>FrmConfigurarUsuario.cs</DependentUpon>
     </EmbeddedResource>
