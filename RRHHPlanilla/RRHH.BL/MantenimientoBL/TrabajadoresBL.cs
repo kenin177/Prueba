@@ -20,20 +20,6 @@ namespace RRHH.BL
             ListaTrabajadores = new BindingList<Trabajador>();
         }
 
-        //BUSQUEDA
-        public BindingList<Trabajador> ObtenerTrabajadores(string buscar)
-        {
-            var query = _contexto.Trabajadores
-            .Include("Cargos")    
-            .Where(r => r.Nombre.ToLower().Contains(buscar.ToLower())==true
-            || r.Cargos.Descripcion.ToLower().Contains(buscar.ToLower())
-            ).ToList();
-
-            var resultado = new BindingList<Trabajador>(query.ToList());
-
-            return resultado;
-        }
-
         public BindingList<Trabajador> ObtenerTrabajador()
         {
             _contexto.Trabajadores.Load();
@@ -42,11 +28,50 @@ namespace RRHH.BL
             return ListaTrabajadores;
         }
 
-
-        public Trabajador ObtenerTrabajador(int trabajadorId)
+        public BindingList<Trabajador> ObtenerTrabajador(string buscar1, string buscar2)
         {
-            return _contexto.Trabajadores.FirstOrDefault(r => r.Id == trabajadorId);
+            var query = _contexto.Trabajadores.Where(p => p.Nombre.ToLower().Contains(buscar2.ToLower()) || p.CargoId.ToString().Contains(buscar1.ToLower()) == true).ToList();
+
+            var resultado = new BindingList<Trabajador>(query);
+
+            return resultado;
         }
+
+        public BindingList<Trabajador> ObtenerTrabajadores(string buscar)
+        {
+            var query = _contexto.Trabajadores.Include("Cargos").Where(r => r.Nombre.ToLower().Contains(buscar.ToLower()) == true
+            || r.Cargos.Descripcion.ToLower().Contains(buscar.ToLower())).ToList();
+
+
+            var resultado = new BindingList<Trabajador>(query.ToList());
+            
+            return resultado;
+        }
+
+        //BUSQUEDA
+        public BindingList<Trabajador> ObtenerTrabajadores2(string cargo, string metodo, string jornada)
+        {
+            var query = _contexto.Trabajadores
+            .Include("Cargos")
+            .Include("MetodoPago")
+            .Include("Jornada")
+            .Where(r => r.Nombre.ToLower().Contains(cargo.ToLower()) == true
+            && r.Nombre.ToLower().Contains(metodo.ToLower()) == true
+            && r.Nombre.ToLower().Contains(jornada.ToLower()) == true
+            || r.Cargos.Descripcion.ToLower().Contains(cargo.ToLower())
+            && r.MetodoPago.Descripcion.ToLower().Contains(metodo.ToLower())
+            && r.Jornada.Descripcion.ToLower().Contains(jornada.ToLower())
+            ).ToList();
+
+            var resultado = new BindingList<Trabajador>(query.ToList());
+
+            return resultado;
+        }
+
+        //public Trabajador ObtenerTrabajador(int trabajadorId)
+        //{
+        //    return _contexto.Trabajadores.FirstOrDefault(r => r.Id == trabajadorId);
+        //}
 
         public Resultado GuardarTrabajador(Trabajador trabajador)
         {           
@@ -190,6 +215,12 @@ namespace RRHH.BL
         public EstadoCivil EstadoCivil { get; set; }
         public DateTime FechaInicio { get; set; }
         public double Cedula { get; set; }
+        public int DisponibleDia { get; set; }
+        public int Bono { get; set; }
+        public string Personalidad { get; set; }
+        public string Detalle { get; set; }
+
+
 
         public Trabajador()
         {

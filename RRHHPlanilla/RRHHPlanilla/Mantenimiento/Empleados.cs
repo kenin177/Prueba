@@ -29,7 +29,7 @@ namespace RRHHPlanilla
             listaSexosBindingSource.DataSource = _sexoBL.ObtenerSexos();
 
             _trabajadores = new TrabajadoresBL();
-            listaTrabajadoresBindingSource.DataSource = _trabajadores.ObtenerTrabajador();
+            listaTrabajadoresBindingSource.DataSource = _trabajadores.ListaTrabajadores;  //ObtenerTrabajador();
 
             _cargosBL = new CargosBL();
             listaCargosBindingSource.DataSource = _cargosBL.ObtenerCargos();
@@ -67,6 +67,9 @@ namespace RRHHPlanilla
                 listaTrabajadoresBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
                 DialogResult resul = MessageBox.Show("Usuario Guardado", "Exitoso...!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
+                textBox1.Text = "";
+                button3.PerformClick();
             }
             else
             {
@@ -77,11 +80,15 @@ namespace RRHHPlanilla
         //AGREGAR
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
+            //textBox1.Text = null;
+            //button3.PerformClick();
+            listaTrabajadoresBindingSource.DataSource = _trabajadores.ObtenerTrabajador();
+
             listaTrabajadoresBindingNavigatorSaveItem.Enabled = true;
             _trabajadores.AgregarTrabajador();
             listaTrabajadoresBindingSource.MoveLast();
 
-            DeshabilitarHabilitarBotones(false);
+            DeshabilitarHabilitarBotones(false);        
         }
 
 
@@ -132,18 +139,40 @@ namespace RRHHPlanilla
         //CANCELAR CAMBIOS
         private void toolStripCancelar_Click(object sender, EventArgs e)
         {
-            _trabajadores.CancelarCambios();
-            DeshabilitarHabilitarBotones(true);       
+            textBox1.Text = null;
+            button3.PerformClick();       
+            _trabajadores.CancelarCambios();            
+            DeshabilitarHabilitarBotones(true);
+
         }
-     
+
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var buscar = textBox1.Text;
+
+            if (string.IsNullOrEmpty(buscar) == true)
+            {
+                _trabajadores = new TrabajadoresBL();
+                listaTrabajadoresBindingSource.DataSource = _trabajadores.ListaTrabajadores;
+            }
+
+            if (string.IsNullOrEmpty(buscar) != true)
+            {
+                
+
+                listaTrabajadoresBindingSource.DataSource =
+                    _trabajadores.ObtenerTrabajadores(buscar);
+
+
+                listaTrabajadoresBindingSource.ResetBindings(false);
+            }
+
+  
         }
 
         private void Trabajadores_Load(object sender, EventArgs e)
         {
-            listaTrabajadoresBindingNavigatorSaveItem.Enabled = false;
+            //listaTrabajadoresBindingNavigatorSaveItem.Enabled = false;
             
         }
 
@@ -211,21 +240,20 @@ namespace RRHHPlanilla
 
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void metodoPagoIdLabel_Click(object sender, EventArgs e)
         {
-            var buscar = textBox1.Text;
 
-            if (string.IsNullOrEmpty(buscar) == true)
-            {
-                listaTrabajadoresBindingSource.DataSource = _trabajadores.ObtenerTrabajador();
-            }
-            else
-            {
-                listaTrabajadoresBindingSource.DataSource =
-                    _trabajadores.ObtenerTrabajadores(buscar);
+        }
 
-                listaTrabajadoresBindingSource.ResetBindings(false);
-            }
+        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listaTrabajadoresBindingSource.DataSource = _trabajadores.ListaTrabajadores;
+            listaTrabajadoresBindingSource.ResetBindings(false);
         }
     }
 }

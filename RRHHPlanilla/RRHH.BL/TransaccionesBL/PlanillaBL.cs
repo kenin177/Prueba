@@ -46,6 +46,21 @@ namespace RRHH.BL
             }
         }
 
+        public void AgregarPlanillaDetalle(Planilla planilla, Trabajador trabajador)
+        {
+            if (planilla != null)
+            {
+                var nuevoDetalle = new PlanillaDetalle();
+                nuevoDetalle.TrabajadorId = trabajador.Id;
+                nuevoDetalle.Cargo = trabajador.Cargos.Id;
+                nuevoDetalle.MetodoPago = trabajador.MetodoPago.Id;
+                nuevoDetalle.Sueldo = trabajador.Sueldo;
+                nuevoDetalle.Cantidad = 1;
+
+                planilla.PlanillaDetalle.Add(nuevoDetalle);
+            }
+        }
+
         public void RemoverPlanillaDetalle(Planilla planilla, PlanillaDetalle planillaDetalle)
         {
             if (planilla != null && planillaDetalle != null)
@@ -89,7 +104,7 @@ namespace RRHH.BL
             if (planilla != null)
             {
                 int cant = 0;
-
+                int id = 1;
 
                 double RAP = 0.015;
                 double IHSS = 0.025;
@@ -161,14 +176,15 @@ namespace RRHH.BL
                         TotalDeducciones = detalle.Deducciones;
                         Sueldo = detalle.Sueldo;
                         TotNeto = detalle.PagoTotal;
-                            
+
+                        planilla.CantEmpleados += cant;
+                        planilla.TOTDeducciones += TotalDeducciones;
+                        planilla.TOTSueldoBase += Sueldo;
+                        planilla.TOTSalarioNeto += TotNeto;
                     }
                 }
 
-                planilla.CantEmpleados += cant;
-                planilla.TOTDeducciones += TotalDeducciones;
-                planilla.TOTSueldoBase += Sueldo;
-                planilla.TOTSalarioNeto += TotNeto;
+                
             }
         }
 

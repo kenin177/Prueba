@@ -33,6 +33,10 @@ namespace RRHH.BL
         public DbSet<Jornada> Jornadas { get; set; }
         public DbSet<EstadoCivil> EstadoCiviles { get; set; }
         public DbSet<Capacitacion> Capacitaciones { get; set; }
-       
-    }
+        public DbSet<ExTrabajador> ExTrabajadores { get; set; }
+        public DbSet<Vacacion> Vacaciones { get; set; }
+        public DbSet<Anticipo> Anticipos { get; set; }
+        public DbSet<HoraExtra> HoraExtras { get; set; }
+
+       }
 }

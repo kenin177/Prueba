@@ -41,18 +41,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.piccerrar = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listaTrabajadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             cargoIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaCargosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cargosBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaTrabajadoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cargoIdLabel
@@ -71,7 +71,7 @@
             this.cargoIdComboBox.DisplayMember = "Descripcion";
             this.cargoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cargoIdComboBox.FormattingEnabled = true;
-            this.cargoIdComboBox.Location = new System.Drawing.Point(992, 215);
+            this.cargoIdComboBox.Location = new System.Drawing.Point(997, 219);
             this.cargoIdComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cargoIdComboBox.Name = "cargoIdComboBox";
             this.cargoIdComboBox.Size = new System.Drawing.Size(172, 24);
@@ -161,21 +161,10 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Id:";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 293);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1393, 335);
-            this.dataGridView1.TabIndex = 38;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_CellClick);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(928, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(259, 174);
             this.pictureBox1.TabIndex = 50;
@@ -187,8 +176,8 @@
             this.piccerrar.BackColor = System.Drawing.Color.Transparent;
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.close;
-            this.piccerrar.Location = new System.Drawing.Point(1752, 1);
-            this.piccerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.piccerrar.Location = new System.Drawing.Point(1788, 1);
+            this.piccerrar.Margin = new System.Windows.Forms.Padding(4);
             this.piccerrar.Name = "piccerrar";
             this.piccerrar.Size = new System.Drawing.Size(53, 44);
             this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -198,8 +187,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(544, 47);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(559, 47);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 50);
             this.button1.TabIndex = 52;
@@ -211,14 +200,24 @@
             // 
             this.listaTrabajadoresBindingSource.DataSource = typeof(RRHH.BL.Trabajador);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(31, 269);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1272, 423);
+            this.dataGridView1.TabIndex = 53;
+            // 
             // Busquedas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1807, 970);
+            this.ClientSize = new System.Drawing.Size(1843, 704);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.piccerrar);
             this.Controls.Add(this.pictureBox1);
@@ -232,7 +231,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Busquedas";
@@ -240,10 +238,10 @@
             this.Load += new System.EventHandler(this.Busquedas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listaCargosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cargosBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaTrabajadoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,12 +258,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource cargosBLBindingSource;
         private System.Windows.Forms.BindingSource listaCargosBindingSource;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox piccerrar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource listaTrabajadoresBindingSource;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

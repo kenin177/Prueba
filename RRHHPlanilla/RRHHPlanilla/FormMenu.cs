@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
+using WindowsFormsApplication1;
+using RRHHPlanilla.Transacciones.Horas_Extras;
+using Snake;
 
 namespace RRHHPlanilla
 {
@@ -62,7 +59,7 @@ namespace RRHHPlanilla
 
         #endregion
 
-        private void label1_Click(object sender, EventArgs e)
+        public void label1_Click(object sender, EventArgs e)
         {
             abrirformhija(new FrmInicio());
         }
@@ -73,6 +70,19 @@ namespace RRHHPlanilla
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
 
+            if (Program.usuario == null)
+            {
+                DialogResult result = MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (result == DialogResult.Yes)
+                {                   
+                    Application.Exit();
+                }
+
+                if (result == DialogResult.No)
+                {
+                    Login();
+                }
+            }
 
             if (Program.usuario !=null)
             {
@@ -318,7 +328,7 @@ namespace RRHHPlanilla
 
 
         //ABRIR FROMHIJA
-        private void abrirformhija(Form formhija)
+        public void abrirformhija(Form formhija)
         {
             if (this.panel5.Controls.Count > 0)
                 this.panel5.Controls.RemoveAt(0);
@@ -656,7 +666,7 @@ namespace RRHHPlanilla
         private void button22_Click(object sender, EventArgs e)
         
             {
-                Deducciones fm = new Deducciones();
+                HorasExtras fm = new HorasExtras();
                 fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
                 abrirformhija(fm);
             }
@@ -675,6 +685,48 @@ namespace RRHHPlanilla
             frm.Show();
         }
 
+        private void button23_Click(object sender, EventArgs e)
+        {
+           
+            Form3 fms = new Form3();
+            fms.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            abrirformhija(fms);
+            
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+
+            EvaluacionMenu fms = new EvaluacionMenu();
+            fms.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            abrirformhija(fms);
+
+            if (pnlmenu.Height == 105)
+            {
+                pictureBox3.Visible = false;
+                pnlUsuario.Width = 0;
+                this.tmContraerMenu.Start();
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            {
+                Form1 f4 = new Form1();
+
+                f4.Show();
+            }
+        }
+
+        /*
+       private void button25_Click(object sender, EventArgs e)
+      
+       */
         private void tmContraerMenu_Tick(object sender, EventArgs e)
         {
 

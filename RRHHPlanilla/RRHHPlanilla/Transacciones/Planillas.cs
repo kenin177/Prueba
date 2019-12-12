@@ -46,6 +46,13 @@ namespace RRHHPlanilla
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
+
+            fechaDateTimePicker.Enabled = true;
+            cargoIdComboBox.Enabled = true;
+            metodoPagoIdComboBox.Enabled = true;
+            jornadaIdComboBox.Enabled = true;
+            button3.Enabled = true;
+
             _planillaBL.AgregarPlanilla();
             listaPlanillasBindingSource.MoveLast();
 
@@ -67,6 +74,12 @@ namespace RRHHPlanilla
 
         private void listaPlanillasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
+            fechaDateTimePicker.Enabled = false;
+            cargoIdComboBox.Enabled = false;
+            metodoPagoIdComboBox.Enabled = false;
+            jornadaIdComboBox.Enabled = false;
+            button3.Enabled = false;
+
             listaPlanillasBindingSource.EndEdit();
 
             var planilla = (Planilla)listaPlanillasBindingSource.Current;
@@ -87,6 +100,12 @@ namespace RRHHPlanilla
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
+            fechaDateTimePicker.Enabled = false;
+            cargoIdComboBox.Enabled = false;
+            metodoPagoIdComboBox.Enabled = false;
+            jornadaIdComboBox.Enabled = false;
+            button3.Enabled = false;
+
             DeshabilitarHabilitarBotones(true);
             _planillaBL.CancelarCambios();
         }
@@ -145,6 +164,12 @@ namespace RRHHPlanilla
         {
             if (idTextBox1.Text != "")
             {
+                fechaDateTimePicker.Enabled = false;
+                cargoIdComboBox.Enabled = false;
+                metodoPagoIdComboBox.Enabled = false;
+                jornadaIdComboBox.Enabled = false;
+                button3.Enabled = false;
+
                 var resultado = MessageBox.Show("Desea Anular esta Planilla", "Anular", MessageBoxButtons.YesNo);
                 if ( resultado == DialogResult.Yes)
                 {
@@ -190,17 +215,45 @@ namespace RRHHPlanilla
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var prueba = cargoIdComboBox.Text;
-            var planillaDetalle = (PlanillaDetalle)planillaDetalleBindingSource.Current;
-
-            if (planillaDetalle != null || planillaDetalle == null)
+            if (cargoIdComboBox.SelectedIndex != -1 || jornadaIdComboBox.SelectedIndex != -1 ||
+                metodoPagoIdComboBox.SelectedIndex != -1)
             {
-                listaTrabajadoresBindingSource.DataSource =
-                    _trabajoresBL.ObtenerTrabajadores(prueba);
+                var cargo = cargoIdComboBox.Text;
+                var metodo = metodoPagoIdComboBox.Text;
+                var jornada = jornadaIdComboBox.Text;
 
-                var planilla = (Planilla)listaPlanillasBindingSource.Current;
-                _planillaBL.AgregarPlanillaDetalle(planilla);
-                //listaTrabajadoresBindingSource.DataSource = _cargosBL.ObtenerCargos(trabajador.CargoId);
+                var planillaDetalle = (PlanillaDetalle)planillaDetalleBindingSource.Current;
+
+                listaPlanillasBindingSource.EndEdit();
+
+                if (planillaDetalle != null || planillaDetalle == null)
+                {
+                    var trabajadores = _trabajoresBL.ObtenerTrabajadores2(cargo, metodo, jornada);
+                    listaTrabajadoresBindingSource.DataSource = trabajadores;
+
+                    var planilla = (Planilla)listaPlanillasBindingSource.Current;
+
+                    foreach (var trabajador in trabajadores)
+                    {
+                        _planillaBL.AgregarPlanillaDetalle(planilla, trabajador);
+                    }
+
+                    _planillaBL.CalcularPlanilla(planilla);
+
+                    listaPlanillasBindingSource.ResetBindings(false);
+
+                    //listaTrabajadoresBindingSource.DataSource =
+                    //    _trabajoresBL.ObtenerTrabajadores(prueba);
+
+                    //var planilla = (Planilla)listaPlanillasBindingSource.Current;
+                    //_planillaBL.AgregarPlanillaDetalle(planilla);
+                    //listaTrabajadoresBindingSource.DataSource = _cargosBL.ObtenerCargos(trabajador.CargoId);
+                }
+            }
+            if (cargoIdComboBox.SelectedIndex == -1 || jornadaIdComboBox.SelectedIndex == -1 ||
+            metodoPagoIdComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("No se permiten Campos Vacios");
             }
         }
     }

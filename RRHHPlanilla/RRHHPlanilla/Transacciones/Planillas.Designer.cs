@@ -57,8 +57,6 @@
             this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.planillaDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tOTDeduccionesTextBox = new System.Windows.Forms.TextBox();
             this.tOTSalarioNetoTextBox = new System.Windows.Forms.TextBox();
             this.tOTSueldoBaseTextBox = new System.Windows.Forms.TextBox();
@@ -331,9 +329,10 @@
             // 
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
@@ -341,9 +340,10 @@
             // 
             this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 24);
             this.bindingNavigatorDeleteItem.Text = "Anular";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -351,8 +351,9 @@
             // 
             this.listaPlanillasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.listaPlanillasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaPlanillasBindingNavigatorSaveItem.Image")));
+            this.listaPlanillasBindingNavigatorSaveItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.listaPlanillasBindingNavigatorSaveItem.Name = "listaPlanillasBindingNavigatorSaveItem";
-            this.listaPlanillasBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
+            this.listaPlanillasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 24);
             this.listaPlanillasBindingNavigatorSaveItem.Text = "Guardar datos";
             this.listaPlanillasBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaPlanillasBindingNavigatorSaveItem_Click);
             // 
@@ -372,6 +373,7 @@
             this.fechaDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaPlanillasBindingSource, "Fecha", true));
+            this.fechaDateTimePicker.Enabled = false;
             this.fechaDateTimePicker.Location = new System.Drawing.Point(154, 59);
             this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
@@ -383,32 +385,6 @@
             this.planillaDetalleBindingSource.AllowNew = false;
             this.planillaDetalleBindingSource.DataMember = "PlanillaDetalle";
             this.planillaDetalleBindingSource.DataSource = this.listaPlanillasBindingSource;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(992, 132);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 50);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1057, 132);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(46, 50);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tOTDeduccionesTextBox
             // 
@@ -497,6 +473,7 @@
             this.cargoIdComboBox.DataSource = this.listaCargosBindingSource;
             this.cargoIdComboBox.DisplayMember = "Descripcion";
             this.cargoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cargoIdComboBox.Enabled = false;
             this.cargoIdComboBox.FormattingEnabled = true;
             this.cargoIdComboBox.Location = new System.Drawing.Point(154, 85);
             this.cargoIdComboBox.Name = "cargoIdComboBox";
@@ -511,6 +488,7 @@
             this.jornadaIdComboBox.DataSource = this.listaJornadasBindingSource;
             this.jornadaIdComboBox.DisplayMember = "Descripcion";
             this.jornadaIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.jornadaIdComboBox.Enabled = false;
             this.jornadaIdComboBox.FormattingEnabled = true;
             this.jornadaIdComboBox.Location = new System.Drawing.Point(154, 135);
             this.jornadaIdComboBox.Name = "jornadaIdComboBox";
@@ -524,6 +502,7 @@
             this.metodoPagoIdComboBox.DataSource = this.listaMetodoPagosBindingSource;
             this.metodoPagoIdComboBox.DisplayMember = "Descripcion";
             this.metodoPagoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metodoPagoIdComboBox.Enabled = false;
             this.metodoPagoIdComboBox.FormattingEnabled = true;
             this.metodoPagoIdComboBox.Location = new System.Drawing.Point(154, 111);
             this.metodoPagoIdComboBox.Name = "metodoPagoIdComboBox";
@@ -537,7 +516,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(918, 59);
+            this.label3.Location = new System.Drawing.Point(913, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 39);
             this.label3.TabIndex = 51;
@@ -588,6 +567,7 @@
             this.dataGridViewTextBoxColumn3.DataPropertyName = "TrabajadorId";
             this.dataGridViewTextBoxColumn3.DataSource = this.listaTrabajadoresBindingSource;
             this.dataGridViewTextBoxColumn3.DisplayMember = "Nombre";
+            this.dataGridViewTextBoxColumn3.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.dataGridViewTextBoxColumn3.HeaderText = "Trabajador";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -693,11 +673,12 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(322, 82);
+            this.button3.Enabled = false;
+            this.button3.Location = new System.Drawing.Point(403, 135);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 52;
-            this.button3.Text = "BUSCAR";
+            this.button3.Text = "AGREGAR";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -725,8 +706,6 @@
             this.Controls.Add(tOTDeduccionesLabel);
             this.Controls.Add(this.tOTDeduccionesTextBox);
             this.Controls.Add(label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(activoLabel);
             this.Controls.Add(fechaLabel);
             this.Controls.Add(this.fechaDateTimePicker);
@@ -775,8 +754,6 @@
         private System.Windows.Forms.BindingSource listaMetodoPagosBindingSource;
         private System.Windows.Forms.BindingSource planillaDetalleBindingSource;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox tOTDeduccionesTextBox;
         private System.Windows.Forms.TextBox tOTSalarioNetoTextBox;
         private System.Windows.Forms.TextBox tOTSueldoBaseTextBox;
@@ -788,6 +765,7 @@
         private System.Windows.Forms.ComboBox metodoPagoIdComboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView planillaDetalleDataGridView;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
@@ -802,6 +780,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.Button button3;
     }
 }

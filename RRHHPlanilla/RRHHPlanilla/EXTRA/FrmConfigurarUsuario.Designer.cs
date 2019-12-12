@@ -82,11 +82,10 @@
             this.lblcamb2 = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.listaSeguridadDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.fechaInicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Privilegio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaSeguridadBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaPrivilegiosBindingSource)).BeginInit();
@@ -644,14 +643,28 @@
             this.listaSeguridadDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaSeguridadDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.Privilegio,
             this.dataGridViewTextBoxColumn7});
             this.listaSeguridadDataGridView.DataSource = this.listaSeguridadBindingSource;
             this.listaSeguridadDataGridView.Location = new System.Drawing.Point(65, 144);
             this.listaSeguridadDataGridView.Name = "listaSeguridadDataGridView";
             this.listaSeguridadDataGridView.ReadOnly = true;
-            this.listaSeguridadDataGridView.Size = new System.Drawing.Size(295, 220);
+            this.listaSeguridadDataGridView.Size = new System.Drawing.Size(194, 220);
             this.listaSeguridadDataGridView.TabIndex = 100;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "NombUsuario";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Usuario";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // label12
             // 
@@ -672,33 +685,6 @@
             this.fechaInicioDateTimePicker.Name = "fechaInicioDateTimePicker";
             this.fechaInicioDateTimePicker.Size = new System.Drawing.Size(164, 20);
             this.fechaInicioDateTimePicker.TabIndex = 103;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PrivilegioId";
-            this.dataGridViewTextBoxColumn1.DataSource = this.listaPrivilegiosBindingSource;
-            this.dataGridViewTextBoxColumn1.DisplayMember = "Descripcion";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn1.ValueMember = "Id";
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // Privilegio
-            // 
-            this.Privilegio.DataPropertyName = "Privilegio";
-            this.Privilegio.HeaderText = "Privilegio";
-            this.Privilegio.Name = "Privilegio";
-            this.Privilegio.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "NombUsuario";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Usuario";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // FrmConfirmarConf
             // 
@@ -814,11 +800,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.PictureBox fotoPictureBox;
         private System.Windows.Forms.DataGridView listaSeguridadDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.ToolStripButton toolStripLabel1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker fechaInicioDateTimePicker;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Privilegio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

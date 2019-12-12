@@ -84,8 +84,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.piccerrar = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             apellidoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             edadLabel = new System.Windows.Forms.Label();
@@ -211,6 +211,7 @@
             metodoPagoIdLabel.Size = new System.Drawing.Size(105, 17);
             metodoPagoIdLabel.TabIndex = 35;
             metodoPagoIdLabel.Text = "Metodo Pago:";
+            metodoPagoIdLabel.Click += new System.EventHandler(this.metodoPagoIdLabel_Click);
             // 
             // jornadaIdLabel
             // 
@@ -323,6 +324,7 @@
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
             // 
             // bindingNavigatorSeparator
             // 
@@ -389,6 +391,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 24);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.Visible = false;
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // listaTrabajadoresBindingNavigatorSaveItem
@@ -565,11 +568,11 @@
             this.groupBox1.Controls.Add(this.apellidoTextBox);
             this.groupBox1.Controls.Add(this.direccionTextBox);
             this.groupBox1.Controls.Add(direccionLabel);
-            this.groupBox1.Location = new System.Drawing.Point(31, 40);
+            this.groupBox1.Location = new System.Drawing.Point(31, 82);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(413, 345);
+            this.groupBox1.Size = new System.Drawing.Size(413, 349);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
@@ -659,7 +662,7 @@
             this.groupBox2.Controls.Add(jornadaIdLabel);
             this.groupBox2.Controls.Add(metodoPagoIdLabel);
             this.groupBox2.Controls.Add(this.jornadaIdComboBox);
-            this.groupBox2.Location = new System.Drawing.Point(452, 40);
+            this.groupBox2.Location = new System.Drawing.Point(452, 84);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -674,7 +677,7 @@
             this.piccerrar.BackColor = System.Drawing.Color.Transparent;
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.close;
-            this.piccerrar.Location = new System.Drawing.Point(814, 0);
+            this.piccerrar.Location = new System.Drawing.Point(804, 11);
             this.piccerrar.Name = "piccerrar";
             this.piccerrar.Size = new System.Drawing.Size(33, 34);
             this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -682,22 +685,22 @@
             this.piccerrar.TabStop = false;
             this.piccerrar.Click += new System.EventHandler(this.piccerrar_Click);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(660, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(452, 12);
+            this.textBox1.Location = new System.Drawing.Point(31, 45);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 20);
-            this.textBox1.TabIndex = 42;
+            this.textBox1.Size = new System.Drawing.Size(164, 20);
+            this.textBox1.TabIndex = 41;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(201, 43);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 42;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Empleados
             // 
@@ -706,8 +709,8 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(847, 458);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.piccerrar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -782,7 +785,7 @@
         private System.Windows.Forms.BindingSource listaSexosBindingSource;
         private System.Windows.Forms.DateTimePicker fechaInicioDateTimePicker;
         private System.Windows.Forms.TextBox cedulaTextBox;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
     }
 }
