@@ -46,7 +46,7 @@ namespace RRHH.BL
             return resultado;
         }
 
-     
+
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())
@@ -97,7 +97,7 @@ namespace RRHH.BL
                 resultado.Mensaje = "Ingrese el Nombre";
                 resultado.Exitoso = false;
             }
-            
+
 
 
             return resultado;
@@ -145,5 +145,3 @@ namespace RRHH.BL
         }
     }
 }
-
-

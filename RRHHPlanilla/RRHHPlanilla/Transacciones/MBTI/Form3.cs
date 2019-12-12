@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
         EstadoCivilBL _estadocivilBL;
         MetodoPagoBL _metodopagoBL;
         SexoBL _sexoBL;
-        
+
         public Form3()
         {
             InitializeComponent();
@@ -140,30 +140,26 @@ namespace WindowsFormsApplication1
             {
 
                 Form4 f4 = new Form4();
-                
+
                 f4.idTextBox.Text = idTextBox.Text;
                 f4.nombreTextBox.Text = nombreTextBox.Text;
                 f4.apellidoTextBox.Text = apellidoTextBox.Text;
                 f4.edadTextBox.Text = edadTextBox.Text;
                 f4.comboBox1.Text = comboBox1.Text;
-                f4.sueldoTextBox.Text = sueldoTextBox.Text;
-                f4.direccionTextBox.Text = direccionTextBox.Text;
-                f4.estadoCivilIdComboBox.Text = estadoCivilIdComboBox.Text;
-                f4.cedulaTextBox.Text = cedulaTextBox.Text;
-                f4.fechaInicioDateTimePicker.Text = fechaInicioDateTimePicker.Text;
                 f4.cargoIdComboBox.Text = cargoIdComboBox.Text;
                 f4.metodoPagoIdComboBox.Text = metodoPagoIdComboBox.Text;
                 f4.jornadaIdComboBox.Text = jornadaIdComboBox.Text;
                 f4.fotoPictureBox.Image = fotoPictureBox.Image;
+                f4.cedulaTextBox.Text = cedulaTextBox.Text;
 
                 f4.textBox17.Text = textBox17.Text;
                 f4.textBox18.Text = textBox18.Text;
                 f4.textBox19.Text = textBox19.Text;
                 f4.textBox20.Text = textBox20.Text;
-               
+
                 f4.Show();
-            }     
-           }
+            }
+        }
 
 
 
@@ -182,7 +178,7 @@ namespace WindowsFormsApplication1
 
         }
 
-               private void comboBox60_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox60_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -214,8 +210,8 @@ namespace WindowsFormsApplication1
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-             }
+
+        }
 
         private void tabPage11_Click(object sender, EventArgs e)
         {
@@ -239,7 +235,7 @@ namespace WindowsFormsApplication1
             else
             {
                 #region Suma de campos
-                
+
 
                 //PRIMERA PARTE
                 switch (comboBox3.Text)
@@ -1174,142 +1170,150 @@ namespace WindowsFormsApplication1
 
             if (textBox17.Text == "I" && textBox18.Text == "N" && textBox19.Text == "F" && textBox20.Text == "P")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "INFP";
-                
+
             }
             if (textBox17.Text == "I" && textBox18.Text == "S" && textBox19.Text == "T" && textBox20.Text == "J")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "ISTJ";
-                
+
             }
 
             if (textBox17.Text == "I" && textBox18.Text == "S" && textBox19.Text == "F" && textBox20.Text == "J")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "ISFJ";
-                
+
             }
 
             if (textBox17.Text == "I" && textBox18.Text == "N" && textBox19.Text == "F" && textBox20.Text == "J")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "INFJ";
-                
+
             }
 
             if (textBox17.Text == "I" && textBox18.Text == "N" && textBox19.Text == "T" && textBox20.Text == "J")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "INTJ";
-                
+
             }
             if (textBox17.Text == "I" && textBox18.Text == "S" && textBox19.Text == "T" && textBox20.Text == "P")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "ISTP";
-                
+
             }
             if (textBox17.Text == "I" && textBox18.Text == "S" && textBox19.Text == "F" && textBox20.Text == "P")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "ISFP";
-                
+
             }
 
             if (textBox17.Text == "I" && textBox18.Text == "N" && textBox19.Text == "T" && textBox20.Text == "P")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "INTP";
-                
+
             }
 
             if (textBox17.Text == "E" && textBox18.Text == "S" && textBox19.Text == "T" && textBox20.Text == "P")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "ESTP";
-               
+
             }
 
             if (textBox17.Text == "E" && textBox18.Text == "S" && textBox19.Text == "F" && textBox20.Text == "P")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "ESFP";
-                
+
             }
 
             if (textBox17.Text == "E" && textBox18.Text == "N" && textBox19.Text == "F" && textBox20.Text == "P")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "ENFP";
-                
+
             }
 
             if (textBox17.Text == "E" && textBox18.Text == "N" && textBox19.Text == "T" && textBox20.Text == "P")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "ENTP";
-                
+
             }
 
             if (textBox17.Text == "E" && textBox18.Text == "S" && textBox19.Text == "T" && textBox20.Text == "J")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "ESTJ";
-               
+
             }
 
             if (textBox17.Text == "E" && textBox18.Text == "S" && textBox19.Text == "F" && textBox20.Text == "J")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "ESFJ";
-                
+
             }
 
             if (textBox17.Text == "E" && textBox18.Text == "N" && textBox19.Text == "T" && textBox20.Text == "J")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
 
                 personalidad.Personalidad = "ENTJ";
-               
+
             }
 
             if (textBox17.Text == "E" && textBox18.Text == "N" && textBox19.Text == "F" && textBox20.Text == "J")
             {
-                personalidad.Sueldo = Convert.ToInt32(sueldoTextBox.Text);
+
 
                 personalidad.Personalidad = "ENFJ";
-                
+
             }
             #endregion
 
             _trabajadores.GuardarTrabajador(personalidad);
             var resultado = _trabajadores.GuardarTrabajador(personalidad);
 
-            if (resultado.Exitoso == true)
+            if (textBox20.Text == "")
             {
-                listaTrabajadoresBindingSource.ResetBindings(false);
+                MessageBox.Show("Realize el Calculo para Guardar los cambios");
 
-                DialogResult resul = MessageBox.Show("La Evaluacion del Empleado se guardado ", "Exitoso...!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
             else
             {
-                MessageBox.Show(resultado.Mensaje);
+                if (resultado.Exitoso == true)
+                {
+                    listaTrabajadoresBindingSource.ResetBindings(false);
+
+                    DialogResult resul = MessageBox.Show("La Evaluacion del Empleado se guardado ", "Exitoso...!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    MessageBox.Show(resultado.Mensaje);
+                }
             }
         }
 
@@ -1323,8 +1327,376 @@ namespace WindowsFormsApplication1
             listaTrabajadoresBindingSource.ResetBindings(false);
             comboBox2.ResetText();
             textBox3.Clear();
+
+            if (idTextBox.Text == "")
+            {
+                MessageBox.Show("Empleado no Existe Intentelo de nuevo");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (nombreTextBox.Text == "" && apellidoTextBox.Text == "")
+            {
+                tabControl1.SelectedTab = tabPage10;
+                MessageBox.Show("Busque un Empleado primero");
+            }
+
+            if (nombreTextBox.Text != "")
+            {
+                tabControl1.SelectedTab = tabPage1;
+            }
+        }
+
+        private void Siguiente_Click(object sender, EventArgs e)
+        {
+            if (comboBox3.SelectedIndex == -1 || comboBox4.SelectedIndex == -1 ||
+                comboBox5.SelectedIndex == -1 || comboBox6.SelectedIndex == -1 ||
+                comboBox7.SelectedIndex == -1 || comboBox8.SelectedIndex == -1 ||
+                comboBox9.SelectedIndex == -1 || comboBox10.SelectedIndex == -1)
+            {
+                tabControl1.SelectedTab = tabPage1;
+                MessageBox.Show("Rellene todos los campos correspondientes");
+            }
+            if (comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex != -1 &&
+                comboBox5.SelectedIndex != -1 && comboBox6.SelectedIndex != -1 &&
+                comboBox7.SelectedIndex != -1 && comboBox8.SelectedIndex != -1 &&
+                comboBox9.SelectedIndex != -1 && comboBox10.SelectedIndex != -1)
+            {
+                tabControl1.SelectedTab = tabPage2;
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (comboBox11.SelectedIndex == -1 || comboBox12.SelectedIndex == -1 ||
+               comboBox13.SelectedIndex == -1 || comboBox14.SelectedIndex == -1 ||
+               comboBox15.SelectedIndex == -1 || comboBox16.SelectedIndex == -1 ||
+               comboBox17.SelectedIndex == -1 || comboBox18.SelectedIndex == -1)
+            {
+                tabControl1.SelectedTab = tabPage2;
+                MessageBox.Show("Rellene todos los campos correspondientes");
+            }
+            if (comboBox11.SelectedIndex != -1 && comboBox12.SelectedIndex != -1 &&
+                comboBox13.SelectedIndex != -1 && comboBox14.SelectedIndex != -1 &&
+                comboBox15.SelectedIndex != -1 && comboBox16.SelectedIndex != -1 &&
+                comboBox15.SelectedIndex != -1 && comboBox18.SelectedIndex != -1)
+            {
+                tabControl1.SelectedTab = tabPage3;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (comboBox19.SelectedIndex == -1 || comboBox20.SelectedIndex == -1 ||
+               comboBox21.SelectedIndex == -1 || comboBox22.SelectedIndex == -1 || comboBox23.SelectedIndex == -1
+               || comboBox24.SelectedIndex == -1 || comboBox25.SelectedIndex == -1 || comboBox26.SelectedIndex == -1)
+            {
+                tabControl1.SelectedTab = tabPage3;
+                MessageBox.Show("Rellene todos los campos correspondientes");
+            }
+            if (comboBox19.SelectedIndex != -1 && comboBox20.SelectedIndex != -1 &&
+                comboBox21.SelectedIndex != -1 && comboBox22.SelectedIndex != -1 && comboBox23.SelectedIndex != -1
+                && comboBox24.SelectedIndex != -1 && comboBox25.SelectedIndex != -1 && comboBox26.SelectedIndex != -1)
+            {
+                tabControl1.SelectedTab = tabPage4;
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (comboBox27.SelectedIndex == -1 || comboBox28.SelectedIndex == -1 ||
+               comboBox29.SelectedIndex == -1 || comboBox30.SelectedIndex == -1 || comboBox31.SelectedIndex == -1
+               || comboBox32.SelectedIndex == -1 || comboBox33.SelectedIndex == -1 || comboBox34.SelectedIndex == -1)
+            {
+                tabControl1.SelectedTab = tabPage4;
+                MessageBox.Show("Rellene todos los campos correspondientes");
+            }
+            if (comboBox27.SelectedIndex != -1 && comboBox28.SelectedIndex != -1 &&
+                comboBox29.SelectedIndex != -1 && comboBox30.SelectedIndex != -1 && comboBox31.SelectedIndex != -1
+                && comboBox32.SelectedIndex != -1 && comboBox33.SelectedIndex != -1 && comboBox34.SelectedIndex != -1)
+            {
+                tabControl1.SelectedTab = tabPage5;
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (comboBox35.SelectedIndex == -1 || comboBox36.SelectedIndex == -1 ||
+                comboBox37.SelectedIndex == -1 || comboBox38.SelectedIndex == -1 ||
+                comboBox39.SelectedIndex == -1 || comboBox40.SelectedIndex == -1 ||
+                comboBox41.SelectedIndex == -1 || comboBox42.SelectedIndex == -1)
+            {
+                tabControl1.SelectedTab = tabPage5;
+                MessageBox.Show("Rellene todos los campos correspondientes");
+            }
+            if (comboBox35.SelectedIndex != -1 && comboBox36.SelectedIndex != -1 &&
+                comboBox37.SelectedIndex != -1 && comboBox38.SelectedIndex != -1 && comboBox39.SelectedIndex != -1
+                && comboBox40.SelectedIndex != -1 && comboBox41.SelectedIndex != -1 && comboBox42.SelectedIndex != -1)
+            {
+                tabControl1.SelectedTab = tabPage6;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (comboBox43.SelectedIndex == -1 || comboBox44.SelectedIndex == -1 ||
+                comboBox45.SelectedIndex == -1 || comboBox46.SelectedIndex == -1 ||
+                comboBox47.SelectedIndex == -1 || comboBox48.SelectedIndex == -1 ||
+                comboBox49.SelectedIndex == -1 || comboBox50.SelectedIndex == -1)
+            {
+                tabControl1.SelectedTab = tabPage6;
+                MessageBox.Show("Rellene todos los campos correspondientes");
+            }
+            if (comboBox43.SelectedIndex != -1 && comboBox44.SelectedIndex != -1 &&
+                comboBox45.SelectedIndex != -1 && comboBox46.SelectedIndex != -1 && comboBox47.SelectedIndex != -1
+                && comboBox48.SelectedIndex != -1 && comboBox49.SelectedIndex != -1 && comboBox50.SelectedIndex != -1)
+            {
+                tabControl1.SelectedTab = tabPage7;
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (comboBox51.SelectedIndex == -1 || comboBox52.SelectedIndex == -1 ||
+                comboBox53.SelectedIndex == -1 || comboBox54.SelectedIndex == -1 ||
+                comboBox55.SelectedIndex == -1 || comboBox56.SelectedIndex == -1 ||
+                comboBox57.SelectedIndex == -1 || comboBox58.SelectedIndex == -1)
+            {
+                tabControl1.SelectedTab = tabPage7;
+                MessageBox.Show("Rellene todos los campos correspondientes");
+            }
+            if (comboBox51.SelectedIndex != -1 && comboBox52.SelectedIndex != -1 &&
+                comboBox53.SelectedIndex != -1 && comboBox54.SelectedIndex != -1 && comboBox55.SelectedIndex != -1
+                && comboBox56.SelectedIndex != -1 && comboBox57.SelectedIndex != -1 && comboBox58.SelectedIndex != -1)
+            {
+                tabControl1.SelectedTab = tabPage8;
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (comboBox59.SelectedIndex == -1 || comboBox60.SelectedIndex == -1 ||
+                comboBox61.SelectedIndex == -1 || comboBox62.SelectedIndex == -1 ||
+                comboBox63.SelectedIndex == -1 || comboBox64.SelectedIndex == -1 ||
+                comboBox65.SelectedIndex == -1 || comboBox66.SelectedIndex == -1)
+            {
+                tabControl1.SelectedTab = tabPage8;
+                MessageBox.Show("Rellene todos los campos correspondientes");
+            }
+            if (comboBox59.SelectedIndex != -1 && comboBox60.SelectedIndex != -1 &&
+                comboBox61.SelectedIndex != -1 && comboBox62.SelectedIndex != -1 && comboBox63.SelectedIndex != -1
+                && comboBox64.SelectedIndex != -1 && comboBox65.SelectedIndex != -1 && comboBox66.SelectedIndex != -1)
+            {
+                tabControl1.SelectedTab = tabPage9;
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (comboBox67.SelectedIndex == -1 || comboBox68.SelectedIndex == -1 ||
+                comboBox69.SelectedIndex == -1 || comboBox70.SelectedIndex == -1 ||
+                comboBox71.SelectedIndex == -1 || comboBox72.SelectedIndex == -1)
+            {
+                tabControl1.SelectedTab = tabPage9;
+                MessageBox.Show("Rellene todos los campos correspondientes");
+            }
+            if (comboBox67.SelectedIndex != -1 && comboBox68.SelectedIndex != -1 &&
+                comboBox69.SelectedIndex != -1 && comboBox70.SelectedIndex != -1 && comboBox71.SelectedIndex != -1
+                && comboBox72.SelectedIndex != -1)
+            {
+                tabControl1.SelectedTab = tabPage11;
+            }
+        }
+
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            //DATOS PERSONALES
+            if (nombreTextBox.Text == "")
+            {
+
+                tabControl1.SelectedTab = tabPage10;
+                MessageBox.Show("Busque un Empleado primero");
+            }
+
+            //PAGINA 1
+            if (tabControl1.SelectedTab == tabPage2)
+            {
+                if (comboBox3.SelectedIndex == -1 || comboBox4.SelectedIndex == -1 ||
+                comboBox5.SelectedIndex == -1 || comboBox6.SelectedIndex == -1 ||
+                comboBox7.SelectedIndex == -1 || comboBox8.SelectedIndex == -1 ||
+                comboBox9.SelectedIndex == -1 || comboBox10.SelectedIndex == -1)
+                {
+                    tabControl1.SelectedTab = tabPage1;
+                    MessageBox.Show("Rellene todos los campos correspondientes");
+                }
+                if (comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex != -1 &&
+                    comboBox5.SelectedIndex != -1 && comboBox6.SelectedIndex != -1 &&
+                    comboBox7.SelectedIndex != -1 && comboBox8.SelectedIndex != -1 &&
+                    comboBox9.SelectedIndex != -1 && comboBox10.SelectedIndex != -1)
+                {
+                    tabControl1.SelectedTab = tabPage2;
+                }
+            }
+
+            //PAGINA 2
+            if (tabControl1.SelectedTab == tabPage3)
+            {
+                if (comboBox11.SelectedIndex == -1 || comboBox12.SelectedIndex == -1 ||
+                 comboBox13.SelectedIndex == -1 || comboBox14.SelectedIndex == -1 ||
+                 comboBox15.SelectedIndex == -1 || comboBox16.SelectedIndex == -1 ||
+                 comboBox17.SelectedIndex == -1 || comboBox18.SelectedIndex == -1)
+                {
+                    tabControl1.SelectedTab = tabPage2;
+                    MessageBox.Show("Rellene todos los campos correspondientes");
+                }
+                if (comboBox11.SelectedIndex != -1 && comboBox12.SelectedIndex != -1 &&
+                    comboBox13.SelectedIndex != -1 && comboBox14.SelectedIndex != -1 &&
+                    comboBox15.SelectedIndex != -1 && comboBox16.SelectedIndex != -1 &&
+                    comboBox15.SelectedIndex != -1 && comboBox18.SelectedIndex != -1)
+                {
+                    tabControl1.SelectedTab = tabPage3;
+                }
+            }
+
+            //PAGINA 3
+            if (tabControl1.SelectedTab == tabPage4)
+            {
+                if (comboBox19.SelectedIndex == -1 || comboBox20.SelectedIndex == -1 ||
+             comboBox21.SelectedIndex == -1 || comboBox22.SelectedIndex == -1 || comboBox23.SelectedIndex == -1
+             || comboBox24.SelectedIndex == -1 || comboBox25.SelectedIndex == -1 || comboBox26.SelectedIndex == -1)
+                {
+                    tabControl1.SelectedTab = tabPage3;
+                    MessageBox.Show("Rellene todos los campos correspondientes");
+                }
+                if (comboBox19.SelectedIndex != -1 && comboBox20.SelectedIndex != -1 &&
+                    comboBox21.SelectedIndex != -1 && comboBox22.SelectedIndex != -1 && comboBox23.SelectedIndex != -1
+                    && comboBox24.SelectedIndex != -1 && comboBox25.SelectedIndex != -1 && comboBox26.SelectedIndex != -1)
+                {
+                    tabControl1.SelectedTab = tabPage4;
+                }
+            }
+
+
+            //PAGINA 4
+            if (tabControl1.SelectedTab == tabPage5)
+            {
+                if (comboBox27.SelectedIndex == -1 || comboBox28.SelectedIndex == -1 ||
+                 comboBox29.SelectedIndex == -1 || comboBox30.SelectedIndex == -1 || comboBox31.SelectedIndex == -1
+                 || comboBox32.SelectedIndex == -1 || comboBox33.SelectedIndex == -1 || comboBox34.SelectedIndex == -1)
+                {
+                    tabControl1.SelectedTab = tabPage4;
+                    MessageBox.Show("Rellene todos los campos correspondientes");
+                }
+                if (comboBox27.SelectedIndex != -1 && comboBox28.SelectedIndex != -1 &&
+                    comboBox29.SelectedIndex != -1 && comboBox30.SelectedIndex != -1 && comboBox31.SelectedIndex != -1
+                    && comboBox32.SelectedIndex != -1 && comboBox33.SelectedIndex != -1 && comboBox34.SelectedIndex != -1)
+                {
+                    tabControl1.SelectedTab = tabPage5;
+                }
+            }
+
+
+            //PAGINA 5
+            if (tabControl1.SelectedTab == tabPage6)
+            {
+                if (comboBox35.SelectedIndex == -1 || comboBox36.SelectedIndex == -1 ||
+              comboBox37.SelectedIndex == -1 || comboBox38.SelectedIndex == -1 ||
+              comboBox39.SelectedIndex == -1 || comboBox40.SelectedIndex == -1 ||
+              comboBox41.SelectedIndex == -1 || comboBox42.SelectedIndex == -1)
+                {
+                    tabControl1.SelectedTab = tabPage5;
+                    MessageBox.Show("Rellene todos los campos correspondientes");
+                }
+                if (comboBox35.SelectedIndex != -1 && comboBox36.SelectedIndex != -1 &&
+                    comboBox37.SelectedIndex != -1 && comboBox38.SelectedIndex != -1 && comboBox39.SelectedIndex != -1
+                    && comboBox40.SelectedIndex != -1 && comboBox41.SelectedIndex != -1 && comboBox42.SelectedIndex != -1)
+                {
+                    tabControl1.SelectedTab = tabPage6;
+                }
+            }
+
+            //PAGINA 6
+            if (tabControl1.SelectedTab == tabPage7)
+            {
+                if (comboBox43.SelectedIndex == -1 || comboBox44.SelectedIndex == -1 ||
+                  comboBox45.SelectedIndex == -1 || comboBox46.SelectedIndex == -1 ||
+                  comboBox47.SelectedIndex == -1 || comboBox48.SelectedIndex == -1 ||
+                  comboBox49.SelectedIndex == -1 || comboBox50.SelectedIndex == -1)
+                {
+                    tabControl1.SelectedTab = tabPage6;
+                    MessageBox.Show("Rellene todos los campos correspondientes");
+                }
+                if (comboBox43.SelectedIndex != -1 && comboBox44.SelectedIndex != -1 &&
+                    comboBox45.SelectedIndex != -1 && comboBox46.SelectedIndex != -1 && comboBox47.SelectedIndex != -1
+                    && comboBox48.SelectedIndex != -1 && comboBox49.SelectedIndex != -1 && comboBox50.SelectedIndex != -1)
+                {
+                    tabControl1.SelectedTab = tabPage7;
+                }
+            }
+
+            //PAGINA 7
+            if (tabControl1.SelectedTab == tabPage8)
+            {
+                if (comboBox51.SelectedIndex == -1 || comboBox52.SelectedIndex == -1 ||
+               comboBox53.SelectedIndex == -1 || comboBox54.SelectedIndex == -1 ||
+               comboBox55.SelectedIndex == -1 || comboBox56.SelectedIndex == -1 ||
+               comboBox57.SelectedIndex == -1 || comboBox58.SelectedIndex == -1)
+                {
+                    tabControl1.SelectedTab = tabPage7;
+                    MessageBox.Show("Rellene todos los campos correspondientes");
+                }
+                if (comboBox51.SelectedIndex != -1 && comboBox52.SelectedIndex != -1 &&
+                    comboBox53.SelectedIndex != -1 && comboBox54.SelectedIndex != -1 && comboBox55.SelectedIndex != -1
+                    && comboBox56.SelectedIndex != -1 && comboBox57.SelectedIndex != -1 && comboBox58.SelectedIndex != -1)
+                {
+                    tabControl1.SelectedTab = tabPage8;
+                }
+            }
+
+
+            //PAGINA 8
+            if (tabControl1.SelectedTab == tabPage9)
+            {
+                if (comboBox59.SelectedIndex == -1 || comboBox60.SelectedIndex == -1 ||
+                  comboBox61.SelectedIndex == -1 || comboBox62.SelectedIndex == -1 ||
+                  comboBox63.SelectedIndex == -1 || comboBox64.SelectedIndex == -1 ||
+                  comboBox65.SelectedIndex == -1 || comboBox66.SelectedIndex == -1)
+                {
+                    tabControl1.SelectedTab = tabPage8;
+                    MessageBox.Show("Rellene todos los campos correspondientes");
+                }
+                if (comboBox59.SelectedIndex != -1 && comboBox60.SelectedIndex != -1 &&
+                    comboBox61.SelectedIndex != -1 && comboBox62.SelectedIndex != -1 && comboBox63.SelectedIndex != -1
+                    && comboBox64.SelectedIndex != -1 && comboBox65.SelectedIndex != -1 && comboBox66.SelectedIndex != -1)
+                {
+                    tabControl1.SelectedTab = tabPage9;
+                }
+            }
+
+            //PAGINA 9
+            if (tabControl1.SelectedTab == tabPage11)
+            {
+                if (comboBox67.SelectedIndex == -1 || comboBox68.SelectedIndex == -1 ||
+                 comboBox69.SelectedIndex == -1 || comboBox70.SelectedIndex == -1 ||
+                 comboBox71.SelectedIndex == -1 || comboBox72.SelectedIndex == -1)
+                {
+                    tabControl1.SelectedTab = tabPage9;
+                    MessageBox.Show("Rellene todos los campos correspondientes");
+                }
+                if (comboBox67.SelectedIndex != -1 && comboBox68.SelectedIndex != -1 &&
+                    comboBox69.SelectedIndex != -1 && comboBox70.SelectedIndex != -1 && comboBox71.SelectedIndex != -1
+                    && comboBox72.SelectedIndex != -1)
+                {
+                    tabControl1.SelectedTab = tabPage11;
+                }
+            }
+
         }
     }
-    }
+}
+    
+    
     
 

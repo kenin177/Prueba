@@ -40,11 +40,8 @@
             this.pues2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblfecha = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -52,6 +49,9 @@
             this.tmContraerMenu = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button10 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.Interrogacion = new System.Windows.Forms.PictureBox();
             this.pnlayuda = new MZControls.MZSombraPanel();
@@ -66,8 +66,10 @@
             this.lblinicio = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -87,6 +89,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.pnlmenu.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -122,6 +125,7 @@
             // pnlmenu
             // 
             this.pnlmenu.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlmenu.Controls.Add(this.button9);
             this.pnlmenu.Controls.Add(this.usu2);
             this.pnlmenu.Controls.Add(this.pnlUsuario);
             this.pnlmenu.Controls.Add(this.pues2);
@@ -265,22 +269,6 @@
             this.label4.TabIndex = 38;
             this.label4.Text = "00:00:00";
             // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImage = global::RRHHPlanilla.Properties.Resources.Flecha_redimensionada;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button10.Location = new System.Drawing.Point(139, 74);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(38, 23);
-            this.button10.TabIndex = 1;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -306,27 +294,6 @@
             this.label1.Size = new System.Drawing.Size(52, 14);
             this.label1.TabIndex = 36;
             this.label1.Text = "Usuario";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::RRHHPlanilla.Properties.Resources.male_close_up_silhouette_with_tie1;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(79, 94);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 35;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::RRHHPlanilla.Properties.Resources.MENU;
-            this.pictureBox4.Location = new System.Drawing.Point(788, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(38, 29);
-            this.pictureBox4.TabIndex = 34;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // lblfecha
             // 
@@ -380,6 +347,43 @@
             // backgroundWorker1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.BackgroundImage = global::RRHHPlanilla.Properties.Resources.Flecha_redimensionada;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button10.Location = new System.Drawing.Point(139, 74);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(38, 23);
+            this.button10.TabIndex = 1;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::RRHHPlanilla.Properties.Resources.male_close_up_silhouette_with_tie1;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 11);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(79, 94);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::RRHHPlanilla.Properties.Resources.MENU;
+            this.pictureBox4.Location = new System.Drawing.Point(788, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(38, 29);
+            this.pictureBox4.TabIndex = 34;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // panel7
             // 
@@ -580,54 +584,96 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.button20);
-            this.panel3.Controls.Add(this.button9);
+            this.panel3.Controls.Add(this.button26);
+            this.panel3.Controls.Add(this.button25);
+            this.panel3.Controls.Add(this.button27);
+            this.panel3.Controls.Add(this.button28);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.button8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 535);
+            this.panel3.Location = new System.Drawing.Point(0, 310);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.MinimumSize = new System.Drawing.Size(150, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(215, 54);
+            this.panel3.Size = new System.Drawing.Size(215, 298);
             this.panel3.TabIndex = 2;
             // 
-            // button20
+            // button26
             // 
-            this.button20.BackColor = System.Drawing.Color.Transparent;
-            this.button20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button20.FlatAppearance.BorderSize = 0;
-            this.button20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button20.Location = new System.Drawing.Point(0, 129);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(215, 10);
-            this.button20.TabIndex = 16;
-            this.button20.Text = "Reporte de Anticipo";
-            this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button20.UseVisualStyleBackColor = false;
+            this.button26.BackColor = System.Drawing.Color.Transparent;
+            this.button26.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button26.FlatAppearance.BorderSize = 0;
+            this.button26.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button26.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button26.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button26.Location = new System.Drawing.Point(0, 203);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(215, 28);
+            this.button26.TabIndex = 26;
+            this.button26.Text = "Reporte de MBTI";
+            this.button26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
-            // button9
+            // button25
             // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(0, 101);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(215, 28);
-            this.button9.TabIndex = 15;
-            this.button9.Text = "Reportes de Vacaciones";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.UseVisualStyleBackColor = false;
+            this.button25.BackColor = System.Drawing.Color.Transparent;
+            this.button25.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button25.FlatAppearance.BorderSize = 0;
+            this.button25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button25.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button25.Location = new System.Drawing.Point(0, 157);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(215, 46);
+            this.button25.TabIndex = 25;
+            this.button25.Text = "Reportes de Evaluacion Personal";
+            this.button25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
+            // 
+            // button27
+            // 
+            this.button27.BackColor = System.Drawing.Color.Transparent;
+            this.button27.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button27.FlatAppearance.BorderSize = 0;
+            this.button27.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button27.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button27.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button27.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button27.Location = new System.Drawing.Point(0, 129);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(215, 28);
+            this.button27.TabIndex = 24;
+            this.button27.Text = "Reporte de Empleados";
+            this.button27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button27.UseVisualStyleBackColor = false;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
+            // 
+            // button28
+            // 
+            this.button28.BackColor = System.Drawing.Color.Transparent;
+            this.button28.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button28.FlatAppearance.BorderSize = 0;
+            this.button28.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button28.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button28.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button28.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button28.Location = new System.Drawing.Point(0, 101);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(215, 28);
+            this.button28.TabIndex = 21;
+            this.button28.Text = "Reportes de Prestaciones";
+            this.button28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // button6
             // 
@@ -701,7 +747,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.MinimumSize = new System.Drawing.Size(150, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(215, 272);
+            this.panel2.Size = new System.Drawing.Size(215, 47);
             this.panel2.TabIndex = 1;
             // 
             // button24
@@ -891,6 +937,7 @@
             this.button21.Text = "Reclutamiento";
             this.button21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Visible = false;
             // 
             // button16
             // 
@@ -987,6 +1034,23 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave_1);
             // 
+            // button9
+            // 
+            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button9.Location = new System.Drawing.Point(751, 82);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(71, 20);
+            this.button9.TabIndex = 46;
+            this.button9.Text = "Aistencia";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1004,7 +1068,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMenu";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Menú Principal";
@@ -1050,7 +1114,6 @@
         private System.Windows.Forms.Label lblinicio;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
@@ -1090,10 +1153,14 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button button9;
     }
 }

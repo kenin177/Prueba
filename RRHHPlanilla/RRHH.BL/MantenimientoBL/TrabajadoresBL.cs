@@ -37,10 +37,22 @@ namespace RRHH.BL
             return resultado;
         }
 
+        public BindingList<Trabajador> ObtenerTrabajador2(string buscar1, string buscar2)
+        {
+            var query = _contexto.Trabajadores.
+                
+                Where(p => p.Nombre.ToLower().Contains(buscar1.ToLower()) == true
+                && p.Apellido.ToLower().Contains(buscar2.ToLower()) == true).ToList();
+
+            var resultado = new BindingList<Trabajador>(query);
+
+            return resultado;
+        }
+
         public BindingList<Trabajador> ObtenerTrabajadores(string buscar)
         {
             var query = _contexto.Trabajadores.Include("Cargos").Where(r => r.Nombre.ToLower().Contains(buscar.ToLower()) == true
-            || r.Cargos.Descripcion.ToLower().Contains(buscar.ToLower())).ToList();
+            || r.Cedula.ToString().Contains(buscar) == true || r.Cargos.Descripcion.ToLower().Contains(buscar.ToLower())).ToList();
 
 
             var resultado = new BindingList<Trabajador>(query.ToList());
@@ -169,25 +181,37 @@ namespace RRHH.BL
             if (trabajador.CargoId <= 0)
             {
                 resultado.Exitoso = false;
-                resultado.Mensaje = "Ingrese el sueldo";
+                resultado.Mensaje = "Ingrese un Cargo";
             }
 
             if (trabajador.MetodoPagoId <= 0)
             {
                 resultado.Exitoso = false;
-                resultado.Mensaje = "Ingrese el sueldo";
+                resultado.Mensaje = "Ingrese un Metodo de Pago";
             }
 
             if (trabajador.JornadaId <= 0)
             {
                 resultado.Exitoso = false;
-                resultado.Mensaje = "Ingrese el sueldo";
+                resultado.Mensaje = "Ingrese una Jornada";
             }
 
             if (trabajador.EstadoCivilId <= 0)
             {
                 resultado.Exitoso = false;
-                resultado.Mensaje = "Ingrese el sueldo";
+                resultado.Mensaje = "Ingrese un Estado Civil";
+            }
+
+            if (trabajador.Cedula < 13)
+            {
+                resultado.Exitoso = false;
+                resultado.Mensaje = "Ingrese un Numero de Cedula Valido";
+            }
+
+            if (trabajador.Edad < 18)
+            {
+                resultado.Exitoso = false;
+                resultado.Mensaje = "Ingrese una Edad Valida";
             }
 
             return resultado;
@@ -219,8 +243,9 @@ namespace RRHH.BL
         public int Bono { get; set; }
         public string Personalidad { get; set; }
         public string Detalle { get; set; }
+        
 
-
+        public byte[] CodigoBarras { get; set; }
 
         public Trabajador()
         {

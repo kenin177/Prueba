@@ -64,6 +64,14 @@ namespace RRHHPlanilla
             abrirformhija(new FrmInicio());
         }
 
+        public byte[] imageToByteArray(Image ImageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            ImageIn.Save(ms, ImageIn.RawFormat);
+
+            return ms.ToArray();
+        }
+
         #region LOGIN
         private void Login()
         {
@@ -85,7 +93,7 @@ namespace RRHHPlanilla
             }
 
             if (Program.usuario !=null)
-            {
+            {             
                 label1.Text = Program.usuario.Nombre + " " + Program.usuario.Apellido;
                 label2.Text = Program.usuario.Privilegio.Descripcion;
 
@@ -96,9 +104,7 @@ namespace RRHHPlanilla
                 {
                     MemoryStream ms = new MemoryStream(Program.usuario.Foto);
                     System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
-
-                    
-
+                  
                     pictureBox3.Image = Image.FromStream(ms);
                 }
      
@@ -150,7 +156,7 @@ namespace RRHHPlanilla
 
                     //REPORTE
                     button7.Visible = false;
-                    button9.Visible = false;
+                    //button9.Visible = false;
 
 
                     //USUARIO
@@ -177,7 +183,7 @@ namespace RRHHPlanilla
 
                     //REPORTE
                     button7.Visible = true;
-                    button9.Visible = true;
+                    //button9.Visible = true;
 
                     //USUARIO
                     button13.Visible = true;
@@ -718,9 +724,47 @@ namespace RRHHPlanilla
         {
             {
                 Form1 f4 = new Form1();
+                //Asistencia f4 = new Asistencia();
 
                 f4.Show();
             }
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+
+            ReportPrestaciones fms = new ReportPrestaciones();
+            fms.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            abrirformhija(fms);
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            ReportEmpleado fms = new ReportEmpleado();
+            fms.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            abrirformhija(fms);
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            ReportEvalPersonal fms = new ReportEvalPersonal();
+            fms.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            abrirformhija(fms);
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            ReportMBTI fms = new ReportMBTI();
+            fms.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            abrirformhija(fms);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //Form1 f4 = new Form1();
+            Asistencia f4 = new Asistencia();
+
+            f4.Show();
         }
 
         /*

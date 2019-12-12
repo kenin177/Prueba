@@ -137,8 +137,14 @@ namespace RRHHPlanilla
             int obtenidos2;
             
             obtenidos2 = Convert.ToInt32(obtenidos);
+            dias = dias + 1;
 
-            if (dias <= obtenidos2)
+            if (dias < 0)
+            {
+                MessageBox.Show("Las fecha ingresada  no es valida, Ingrese Valores Correctos");
+            }
+
+            else if (dias <= obtenidos2)
             {
                 obtenidoTextBox.Text = dias.ToString();
                 //variables de para fechas de inicio, final, actual y antiguedad
@@ -259,29 +265,29 @@ namespace RRHHPlanilla
                 pagoTextBox.Text = Convert.ToString(Pago);
 
                 //Desabilitacion de boton calcular
-                if (pagoTextBox.Text != "0")
+                if (disponibleDiaTextBox.Text != "0")
                 {
-                    //button2.Enabled = false;
+                    button1.Enabled = true;
 
                 }
 
             }
+            
             else
+
             {
                 MessageBox.Show("El numero de dias que solicita excede el permitido");
                 
                 
             }
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (disponibleDiaTextBox.Text == "0")
+            if (disponibleDiaTextBox.Text == "0" || obtenidoTextBox.Text == null)
             {
-                MessageBox.Show("Error al Guardar. Ya no hay dias disponibles");
+                MessageBox.Show("Ya no hay Vacaciones disponibles");
                 button1.Enabled = false;
             }
             else
@@ -290,9 +296,11 @@ namespace RRHHPlanilla
 
             }
 
+
+
             _vacacionesBL.AgregarVacacion();
             listaVacacionesBindingSource.MoveLast();
-            
+
             //Guardando datos en tabla vacaciones
             listaVacacionesBindingSource.EndEdit();
 
@@ -317,13 +325,13 @@ namespace RRHHPlanilla
             if (resultado.Exitoso == true)
             {
                 listaVacacionesBindingSource.ResetBindings(false);
-                
+
                 DialogResult resul = MessageBox.Show("Vacaciones del Empleado guardado ", "Exitoso...!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 button1.Enabled = false;
                 button2.Enabled = false;
 
-               
+
             }
             else
             {
@@ -331,6 +339,14 @@ namespace RRHHPlanilla
             }
 
             obtenidoTextBox.Clear();
+            listaTrabajadoresBindingSource.Clear();
+            textBox19.Clear();
+            textBox20.Clear();
+            textBox21.Clear();
+            pagoTextBox.Clear();
+
+            button2.Enabled = false;
+
         }
 
         private void bindingNavigatorMoveNextItem_Click_1(object sender, EventArgs e)
@@ -364,7 +380,7 @@ namespace RRHHPlanilla
 
         private void button4_Click(object sender, EventArgs e)
         {
-            button1.Enabled = true;
+            
             ResultadoVacaciones f4 = new ResultadoVacaciones();
 
                 f4.Show();
@@ -396,7 +412,19 @@ namespace RRHHPlanilla
                 button1.Enabled = false;
                 button2.Enabled = false;
             }
-          
+
+            if (idTextBox.Text == "")
+            {
+                MessageBox.Show("Empleado no Encontrado intentelo de nuevo");
+            }
+
+            button1.Enabled = false;
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

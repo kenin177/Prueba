@@ -4,6 +4,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Drawing;
 
 namespace RRHH.BL
 {
@@ -11,6 +13,10 @@ namespace RRHH.BL
     {
         protected override void Seed(Contexto contexto)
         {
+            //RUTA
+            string ruta = @"C:\Users\Kenin\Desktop\Prueba Proyecto L3\RRHHPlanilla\CODIGO DE BARRAS\";
+
+
             #region SEXO
 
             var sexo1 = new Sexo();
@@ -213,10 +219,15 @@ namespace RRHH.BL
             trabajador1.CargoId = 1;
             trabajador1.MetodoPagoId = 1;
             trabajador1.JornadaId = 1;
-            trabajador1.FechaInicio = new DateTime(2002, 4, 21);
+            trabajador1.FechaInicio = new DateTime(2002, 4, 21) ;
             trabajador1.Cedula = 0512199700999;
             trabajador1.DisponibleDia = 20;
+
+            var imagen1 = Image.FromFile(ruta + "1.png");
+            trabajador1.CodigoBarras = imageToByteArray(imagen1);
+
             contexto.Trabajadores.Add(trabajador1);
+
 
             var trabajador2 = new Trabajador();
             trabajador2.Nombre = "German";
@@ -232,6 +243,10 @@ namespace RRHH.BL
             trabajador2.FechaInicio = new DateTime(2002, 8, 20);
             trabajador2.Cedula = 0512199754885;
             trabajador2.DisponibleDia = 20;
+
+            var imagen2 = Image.FromFile(ruta + "2.png");
+            trabajador2.CodigoBarras = imageToByteArray(imagen2);
+
             contexto.Trabajadores.Add(trabajador2);
 
             var trabajador3 = new Trabajador();
@@ -248,6 +263,10 @@ namespace RRHH.BL
             trabajador3.FechaInicio = new DateTime(2007, 1, 14);
             trabajador3.Cedula = 0512199778999;
             trabajador3.DisponibleDia = 20;
+
+            var imagen3 = Image.FromFile(ruta + "3.png");
+            trabajador3.CodigoBarras = imageToByteArray(imagen3);
+
             contexto.Trabajadores.Add(trabajador3);
 
             var trabajador4 = new Trabajador();
@@ -264,6 +283,10 @@ namespace RRHH.BL
             trabajador4.FechaInicio = new DateTime(2010, 11, 11);
             trabajador4.Cedula = 0512199707899;
             trabajador4.DisponibleDia = 20;
+
+            var imagen4 = Image.FromFile(ruta + "4.png");
+            trabajador4.CodigoBarras = imageToByteArray(imagen4);
+
             contexto.Trabajadores.Add(trabajador4);
 
             var trabajador5 = new Trabajador();
@@ -280,6 +303,10 @@ namespace RRHH.BL
             trabajador5.FechaInicio = new DateTime(1999, 6, 16);
             trabajador5.Cedula = 0512199499999;
             trabajador5.DisponibleDia = 20;
+
+            var imagen5 = Image.FromFile(ruta + "5.png");
+            trabajador5.CodigoBarras = imageToByteArray(imagen5);
+
             contexto.Trabajadores.Add(trabajador5);
 
             var trabajador6 = new Trabajador();
@@ -296,6 +323,10 @@ namespace RRHH.BL
             trabajador6.FechaInicio = new DateTime(2018, 2, 14);
             trabajador6.Cedula = 0812199714999;
             trabajador6.DisponibleDia = 10;
+
+            var imagen6 = Image.FromFile(ruta + "6.png");
+            trabajador6.CodigoBarras = imageToByteArray(imagen6);
+
             contexto.Trabajadores.Add(trabajador6);
 
 
@@ -313,6 +344,10 @@ namespace RRHH.BL
             trabajador7.FechaInicio = new DateTime(2012, 7, 30);
             trabajador7.Cedula = 0912199712989;
             trabajador7.DisponibleDia = 20;
+
+            var imagen7 = Image.FromFile(ruta + "7.png");
+            trabajador7.CodigoBarras = imageToByteArray(imagen7);
+
             contexto.Trabajadores.Add(trabajador7);
 
 
@@ -518,6 +553,14 @@ namespace RRHH.BL
           
     
             base.Seed(contexto);
+        }
+
+        public byte[] imageToByteArray(Image ImageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            ImageIn.Save(ms, ImageIn.RawFormat);
+
+            return ms.ToArray();
         }
     }
 }

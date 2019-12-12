@@ -241,10 +241,9 @@
             // 
             cargoIdLabel.AutoSize = true;
             cargoIdLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cargoIdLabel.Location = new System.Drawing.Point(59, 125);
-            cargoIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            cargoIdLabel.Location = new System.Drawing.Point(79, 154);
             cargoIdLabel.Name = "cargoIdLabel";
-            cargoIdLabel.Size = new System.Drawing.Size(55, 17);
+            cargoIdLabel.Size = new System.Drawing.Size(66, 21);
             cargoIdLabel.TabIndex = 34;
             cargoIdLabel.Text = "Cargo:";
             // 
@@ -252,10 +251,9 @@
             // 
             jornadaIdLabel.AutoSize = true;
             jornadaIdLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            jornadaIdLabel.Location = new System.Drawing.Point(45, 195);
-            jornadaIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            jornadaIdLabel.Location = new System.Drawing.Point(60, 240);
             jornadaIdLabel.Name = "jornadaIdLabel";
-            jornadaIdLabel.Size = new System.Drawing.Size(69, 17);
+            jornadaIdLabel.Size = new System.Drawing.Size(85, 21);
             jornadaIdLabel.TabIndex = 36;
             jornadaIdLabel.Text = "Jornada:";
             // 
@@ -263,10 +261,9 @@
             // 
             metodoPagoIdLabel.AutoSize = true;
             metodoPagoIdLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            metodoPagoIdLabel.Location = new System.Drawing.Point(12, 156);
-            metodoPagoIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            metodoPagoIdLabel.Location = new System.Drawing.Point(16, 192);
             metodoPagoIdLabel.Name = "metodoPagoIdLabel";
-            metodoPagoIdLabel.Size = new System.Drawing.Size(105, 17);
+            metodoPagoIdLabel.Size = new System.Drawing.Size(129, 21);
             metodoPagoIdLabel.TabIndex = 35;
             metodoPagoIdLabel.Text = "Metodo Pago:";
             // 
@@ -274,10 +271,9 @@
             // 
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label7.Location = new System.Drawing.Point(384, 59);
-            label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label7.Location = new System.Drawing.Point(211, 188);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(60, 17);
+            label7.Size = new System.Drawing.Size(74, 21);
             label7.TabIndex = 41;
             label7.Text = "Cedula:";
             // 
@@ -285,10 +281,9 @@
             // 
             sueldoLabel.AutoSize = true;
             sueldoLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sueldoLabel.Location = new System.Drawing.Point(40, 136);
-            sueldoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            sueldoLabel.Location = new System.Drawing.Point(217, 151);
             sueldoLabel.Name = "sueldoLabel";
-            sueldoLabel.Size = new System.Drawing.Size(60, 17);
+            sueldoLabel.Size = new System.Drawing.Size(75, 21);
             sueldoLabel.TabIndex = 33;
             sueldoLabel.Text = "Sueldo:";
             // 
@@ -296,10 +291,9 @@
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(35, 90);
-            nombreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            nombreLabel.Location = new System.Drawing.Point(211, 79);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(69, 17);
+            nombreLabel.Size = new System.Drawing.Size(84, 21);
             nombreLabel.TabIndex = 29;
             nombreLabel.Text = "Nombre:";
             // 
@@ -307,10 +301,9 @@
             // 
             idLabel.AutoSize = true;
             idLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(72, 67);
-            idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            idLabel.Location = new System.Drawing.Point(260, 42);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(29, 17);
+            idLabel.Size = new System.Drawing.Size(35, 21);
             idLabel.TabIndex = 27;
             idLabel.Text = "Id:";
             // 
@@ -318,10 +311,9 @@
             // 
             apellidoLabel.AutoSize = true;
             apellidoLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            apellidoLabel.Location = new System.Drawing.Point(35, 112);
-            apellidoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            apellidoLabel.Location = new System.Drawing.Point(211, 114);
             apellidoLabel.Name = "apellidoLabel";
-            apellidoLabel.Size = new System.Drawing.Size(67, 17);
+            apellidoLabel.Size = new System.Drawing.Size(86, 21);
             apellidoLabel.TabIndex = 19;
             apellidoLabel.Text = "Apellido:";
             // 
@@ -329,10 +321,9 @@
             // 
             disponibleLabel.AutoSize = true;
             disponibleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            disponibleLabel.Location = new System.Drawing.Point(88, 156);
-            disponibleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            disponibleLabel.Location = new System.Drawing.Point(117, 192);
             disponibleLabel.Name = "disponibleLabel";
-            disponibleLabel.Size = new System.Drawing.Size(89, 17);
+            disponibleLabel.Size = new System.Drawing.Size(104, 20);
             disponibleLabel.TabIndex = 53;
             disponibleLabel.Text = "Disponible:";
             // 
@@ -340,10 +331,9 @@
             // 
             finalizavacacionLabel.AutoSize = true;
             finalizavacacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            finalizavacacionLabel.Location = new System.Drawing.Point(432, 75);
-            finalizavacacionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            finalizavacacionLabel.Location = new System.Drawing.Point(576, 92);
             finalizavacacionLabel.Name = "finalizavacacionLabel";
-            finalizavacacionLabel.Size = new System.Drawing.Size(193, 17);
+            finalizavacacionLabel.Size = new System.Drawing.Size(225, 20);
             finalizavacacionLabel.TabIndex = 55;
             finalizavacacionLabel.Text = "Finalizacion de Vacacion:";
             // 
@@ -351,10 +341,9 @@
             // 
             iniciavacacionLabel.AutoSize = true;
             iniciavacacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iniciavacacionLabel.Location = new System.Drawing.Point(474, 37);
-            iniciavacacionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            iniciavacacionLabel.Location = new System.Drawing.Point(632, 46);
             iniciavacacionLabel.Name = "iniciavacacionLabel";
-            iniciavacacionLabel.Size = new System.Drawing.Size(145, 17);
+            iniciavacacionLabel.Size = new System.Drawing.Size(169, 20);
             iniciavacacionLabel.TabIndex = 59;
             iniciavacacionLabel.Text = "Inicia de Vacacion:";
             // 
@@ -362,10 +351,9 @@
             // 
             obtenidoLabel.AutoSize = true;
             obtenidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            obtenidoLabel.Location = new System.Drawing.Point(95, 201);
-            obtenidoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            obtenidoLabel.Location = new System.Drawing.Point(127, 247);
             obtenidoLabel.Name = "obtenidoLabel";
-            obtenidoLabel.Size = new System.Drawing.Size(79, 17);
+            obtenidoLabel.Size = new System.Drawing.Size(90, 20);
             obtenidoLabel.TabIndex = 61;
             obtenidoLabel.Text = "Obtenido:";
             // 
@@ -373,10 +361,9 @@
             // 
             pagoLabel.AutoSize = true;
             pagoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pagoLabel.Location = new System.Drawing.Point(556, 113);
-            pagoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            pagoLabel.Location = new System.Drawing.Point(741, 139);
             pagoLabel.Name = "pagoLabel";
-            pagoLabel.Size = new System.Drawing.Size(50, 17);
+            pagoLabel.Size = new System.Drawing.Size(57, 20);
             pagoLabel.TabIndex = 63;
             pagoLabel.Text = "Pago:";
             // 
@@ -384,10 +371,9 @@
             // 
             label26.AutoSize = true;
             label26.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label26.Location = new System.Drawing.Point(346, 89);
-            label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label26.Location = new System.Drawing.Point(461, 110);
             label26.Name = "label26";
-            label26.Size = new System.Drawing.Size(36, 17);
+            label26.Size = new System.Drawing.Size(44, 21);
             label26.TabIndex = 99;
             label26.Text = "Año";
             // 
@@ -395,10 +381,9 @@
             // 
             label25.AutoSize = true;
             label25.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label25.Location = new System.Drawing.Point(277, 89);
-            label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label25.Location = new System.Drawing.Point(369, 110);
             label25.Name = "label25";
-            label25.Size = new System.Drawing.Size(35, 17);
+            label25.Size = new System.Drawing.Size(44, 21);
             label25.TabIndex = 98;
             label25.Text = "Mes";
             // 
@@ -406,10 +391,9 @@
             // 
             label24.AutoSize = true;
             label24.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label24.Location = new System.Drawing.Point(213, 89);
-            label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label24.Location = new System.Drawing.Point(284, 110);
             label24.Name = "label24";
-            label24.Size = new System.Drawing.Size(29, 17);
+            label24.Size = new System.Drawing.Size(38, 21);
             label24.TabIndex = 97;
             label24.Text = "Dia";
             // 
@@ -417,10 +401,9 @@
             // 
             label23.AutoSize = true;
             label23.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label23.Location = new System.Drawing.Point(77, 110);
-            label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label23.Location = new System.Drawing.Point(103, 135);
             label23.Name = "label23";
-            label23.Size = new System.Drawing.Size(93, 17);
+            label23.Size = new System.Drawing.Size(115, 21);
             label23.TabIndex = 93;
             label23.Text = "Antiguedad:";
             // 
@@ -428,10 +411,9 @@
             // 
             label11.AutoSize = true;
             label11.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label11.Location = new System.Drawing.Point(44, 36);
-            label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label11.Location = new System.Drawing.Point(59, 44);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(133, 17);
+            label11.Size = new System.Drawing.Size(164, 21);
             label11.TabIndex = 89;
             label11.Text = "Fecha de Ingreso:";
             // 
@@ -439,10 +421,9 @@
             // 
             label12.AutoSize = true;
             label12.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label12.Location = new System.Drawing.Point(73, 66);
-            label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label12.Location = new System.Drawing.Point(97, 81);
             label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(100, 17);
+            label12.Size = new System.Drawing.Size(125, 21);
             label12.TabIndex = 87;
             label12.Text = "Fecha Actual:";
             // 
@@ -450,10 +431,9 @@
             // 
             idLabel1.AutoSize = true;
             idLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel1.Location = new System.Drawing.Point(578, 152);
-            idLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            idLabel1.Location = new System.Drawing.Point(771, 187);
             idLabel1.Name = "idLabel1";
-            idLabel1.Size = new System.Drawing.Size(26, 17);
+            idLabel1.Size = new System.Drawing.Size(30, 20);
             idLabel1.TabIndex = 99;
             idLabel1.Text = "Id:";
             // 
@@ -461,10 +441,9 @@
             // 
             label13.AutoSize = true;
             label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label13.Location = new System.Drawing.Point(42, 15);
-            label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label13.Location = new System.Drawing.Point(56, 18);
             label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(179, 17);
+            label13.Size = new System.Drawing.Size(206, 20);
             label13.TabIndex = 61;
             label13.Text = "Busqueda de Empleado";
             // 
@@ -472,10 +451,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(335, 88);
-            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label2.Location = new System.Drawing.Point(146, 231);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(116, 17);
+            label2.Size = new System.Drawing.Size(146, 21);
             label2.TabIndex = 42;
             label2.Text = "Fecha de Inicio:";
             // 
@@ -485,7 +463,7 @@
             this.textBox1.Location = new System.Drawing.Point(253, 82);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 20);
+            this.textBox1.Size = new System.Drawing.Size(255, 22);
             this.textBox1.TabIndex = 43;
             // 
             // groupBox3
@@ -518,21 +496,21 @@
             this.groupBox3.Controls.Add(iniciavacacionLabel);
             this.groupBox3.Controls.Add(obtenidoLabel);
             this.groupBox3.Controls.Add(this.iniciavacacionDateTimePicker);
-            this.groupBox3.Location = new System.Drawing.Point(29, 283);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(39, 348);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(882, 243);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(1176, 299);
             this.groupBox3.TabIndex = 51;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Calcular Vacaciones";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(652, 183);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(869, 225);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(105, 44);
+            this.button4.Size = new System.Drawing.Size(140, 54);
             this.button4.TabIndex = 101;
             this.button4.Text = "Ver";
             this.button4.UseVisualStyleBackColor = true;
@@ -542,10 +520,10 @@
             // 
             this.disponibleDiaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "DisponibleDia", true));
             this.disponibleDiaTextBox.Enabled = false;
-            this.disponibleDiaTextBox.Location = new System.Drawing.Point(194, 156);
-            this.disponibleDiaTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.disponibleDiaTextBox.Location = new System.Drawing.Point(259, 192);
+            this.disponibleDiaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.disponibleDiaTextBox.Name = "disponibleDiaTextBox";
-            this.disponibleDiaTextBox.Size = new System.Drawing.Size(193, 20);
+            this.disponibleDiaTextBox.Size = new System.Drawing.Size(256, 22);
             this.disponibleDiaTextBox.TabIndex = 54;
             // 
             // listaTrabajadoresBindingSource
@@ -556,10 +534,10 @@
             // 
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaVacacionesBindingSource, "Id", true));
             this.idTextBox1.Enabled = false;
-            this.idTextBox1.Location = new System.Drawing.Point(640, 152);
-            this.idTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.idTextBox1.Location = new System.Drawing.Point(853, 187);
+            this.idTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idTextBox1.Name = "idTextBox1";
-            this.idTextBox1.Size = new System.Drawing.Size(151, 20);
+            this.idTextBox1.Size = new System.Drawing.Size(200, 22);
             this.idTextBox1.TabIndex = 100;
             // 
             // listaVacacionesBindingSource
@@ -570,10 +548,10 @@
             // 
             this.textBox19.Enabled = false;
             this.textBox19.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox19.Location = new System.Drawing.Point(201, 108);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox19.Location = new System.Drawing.Point(268, 133);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(56, 20);
+            this.textBox19.Size = new System.Drawing.Size(73, 22);
             this.textBox19.TabIndex = 96;
             this.textBox19.Text = "DIA";
             // 
@@ -581,10 +559,10 @@
             // 
             this.textBox20.Enabled = false;
             this.textBox20.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox20.Location = new System.Drawing.Point(268, 108);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox20.Location = new System.Drawing.Point(357, 133);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(56, 20);
+            this.textBox20.Size = new System.Drawing.Size(73, 22);
             this.textBox20.TabIndex = 95;
             this.textBox20.Text = "MES";
             // 
@@ -592,10 +570,10 @@
             // 
             this.textBox21.Enabled = false;
             this.textBox21.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox21.Location = new System.Drawing.Point(334, 108);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox21.Location = new System.Drawing.Point(445, 133);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(56, 20);
+            this.textBox21.Size = new System.Drawing.Size(73, 22);
             this.textBox21.TabIndex = 94;
             this.textBox21.Text = "AÑO";
             // 
@@ -603,10 +581,10 @@
             // 
             this.textBox9.Enabled = false;
             this.textBox9.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox9.Location = new System.Drawing.Point(201, 34);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox9.Location = new System.Drawing.Point(268, 42);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(56, 20);
+            this.textBox9.Size = new System.Drawing.Size(73, 22);
             this.textBox9.TabIndex = 92;
             this.textBox9.Text = "DIA";
             // 
@@ -614,10 +592,10 @@
             // 
             this.textBox10.Enabled = false;
             this.textBox10.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox10.Location = new System.Drawing.Point(268, 35);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox10.Location = new System.Drawing.Point(357, 43);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(56, 20);
+            this.textBox10.Size = new System.Drawing.Size(73, 22);
             this.textBox10.TabIndex = 91;
             this.textBox10.Text = "MES";
             // 
@@ -625,10 +603,10 @@
             // 
             this.textBox11.Enabled = false;
             this.textBox11.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox11.Location = new System.Drawing.Point(334, 34);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox11.Location = new System.Drawing.Point(445, 42);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(56, 20);
+            this.textBox11.Size = new System.Drawing.Size(73, 22);
             this.textBox11.TabIndex = 90;
             this.textBox11.Text = "AÑO";
             // 
@@ -636,19 +614,19 @@
             // 
             this.dateTimePicker3.Enabled = false;
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(199, 65);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker3.Location = new System.Drawing.Point(265, 80);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(192, 20);
+            this.dateTimePicker3.Size = new System.Drawing.Size(255, 22);
             this.dateTimePicker3.TabIndex = 88;
             // 
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(762, 183);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(1016, 225);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 44);
+            this.button1.Size = new System.Drawing.Size(140, 54);
             this.button1.TabIndex = 82;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
@@ -657,10 +635,10 @@
             // button2
             // 
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(543, 183);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(724, 225);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 44);
+            this.button2.Size = new System.Drawing.Size(140, 54);
             this.button2.TabIndex = 80;
             this.button2.Text = "Calcular";
             this.button2.UseVisualStyleBackColor = true;
@@ -670,38 +648,38 @@
             // 
             this.finalizavacacionDateTimePicker.Enabled = false;
             this.finalizavacacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.finalizavacacionDateTimePicker.Location = new System.Drawing.Point(640, 75);
-            this.finalizavacacionDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.finalizavacacionDateTimePicker.Location = new System.Drawing.Point(853, 92);
+            this.finalizavacacionDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.finalizavacacionDateTimePicker.Name = "finalizavacacionDateTimePicker";
-            this.finalizavacacionDateTimePicker.Size = new System.Drawing.Size(151, 20);
+            this.finalizavacacionDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.finalizavacacionDateTimePicker.TabIndex = 56;
             // 
             // pagoTextBox
             // 
             this.pagoTextBox.Enabled = false;
-            this.pagoTextBox.Location = new System.Drawing.Point(640, 111);
-            this.pagoTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.pagoTextBox.Location = new System.Drawing.Point(853, 137);
+            this.pagoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pagoTextBox.Name = "pagoTextBox";
-            this.pagoTextBox.Size = new System.Drawing.Size(151, 20);
+            this.pagoTextBox.Size = new System.Drawing.Size(200, 22);
             this.pagoTextBox.TabIndex = 64;
             // 
             // obtenidoTextBox
             // 
             this.obtenidoTextBox.Enabled = false;
-            this.obtenidoTextBox.Location = new System.Drawing.Point(195, 199);
-            this.obtenidoTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.obtenidoTextBox.Location = new System.Drawing.Point(260, 245);
+            this.obtenidoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.obtenidoTextBox.Name = "obtenidoTextBox";
-            this.obtenidoTextBox.Size = new System.Drawing.Size(193, 20);
+            this.obtenidoTextBox.Size = new System.Drawing.Size(256, 22);
             this.obtenidoTextBox.TabIndex = 62;
             // 
             // iniciavacacionDateTimePicker
             // 
             this.iniciavacacionDateTimePicker.Enabled = false;
             this.iniciavacacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.iniciavacacionDateTimePicker.Location = new System.Drawing.Point(640, 32);
-            this.iniciavacacionDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.iniciavacacionDateTimePicker.Location = new System.Drawing.Point(853, 39);
+            this.iniciavacacionDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iniciavacacionDateTimePicker.Name = "iniciavacacionDateTimePicker";
-            this.iniciavacacionDateTimePicker.Size = new System.Drawing.Size(151, 20);
+            this.iniciavacacionDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.iniciavacacionDateTimePicker.TabIndex = 60;
             // 
             // textBox7
@@ -710,7 +688,7 @@
             this.textBox7.Location = new System.Drawing.Point(764, 84);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(255, 20);
+            this.textBox7.Size = new System.Drawing.Size(255, 22);
             this.textBox7.TabIndex = 71;
             // 
             // textBox8
@@ -719,7 +697,7 @@
             this.textBox8.Location = new System.Drawing.Point(764, 44);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(255, 20);
+            this.textBox8.Size = new System.Drawing.Size(255, 22);
             this.textBox8.TabIndex = 69;
             // 
             // textBox6
@@ -728,7 +706,7 @@
             this.textBox6.Location = new System.Drawing.Point(765, 127);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(255, 20);
+            this.textBox6.Size = new System.Drawing.Size(255, 22);
             this.textBox6.TabIndex = 57;
             // 
             // textBox5
@@ -738,7 +716,7 @@
             this.textBox5.Location = new System.Drawing.Point(434, 44);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(74, 20);
+            this.textBox5.Size = new System.Drawing.Size(74, 22);
             this.textBox5.TabIndex = 56;
             this.textBox5.Text = "DIA";
             // 
@@ -749,7 +727,7 @@
             this.textBox4.Location = new System.Drawing.Point(342, 45);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(74, 20);
+            this.textBox4.Size = new System.Drawing.Size(74, 22);
             this.textBox4.TabIndex = 55;
             this.textBox4.Text = "MES";
             // 
@@ -760,7 +738,7 @@
             this.textBox3.Location = new System.Drawing.Point(251, 45);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(74, 20);
+            this.textBox3.Size = new System.Drawing.Size(74, 22);
             this.textBox3.TabIndex = 54;
             this.textBox3.Text = "AÑO";
             // 
@@ -777,14 +755,14 @@
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(253, 214);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(255, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(255, 22);
             this.dateTimePicker2.TabIndex = 50;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(253, 172);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(255, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(255, 22);
             this.dateTimePicker1.TabIndex = 48;
             // 
             // textBox2
@@ -792,7 +770,7 @@
             this.textBox2.Location = new System.Drawing.Point(253, 127);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(255, 20);
+            this.textBox2.Size = new System.Drawing.Size(255, 22);
             this.textBox2.TabIndex = 45;
             // 
             // piccerrar
@@ -801,10 +779,10 @@
             this.piccerrar.BackColor = System.Drawing.Color.Transparent;
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.close;
-            this.piccerrar.Location = new System.Drawing.Point(925, 10);
-            this.piccerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.piccerrar.Location = new System.Drawing.Point(1233, 12);
+            this.piccerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.piccerrar.Name = "piccerrar";
-            this.piccerrar.Size = new System.Drawing.Size(30, 29);
+            this.piccerrar.Size = new System.Drawing.Size(40, 36);
             this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.piccerrar.TabIndex = 49;
             this.piccerrar.TabStop = false;
@@ -843,11 +821,11 @@
             this.groupBox2.Controls.Add(jornadaIdLabel);
             this.groupBox2.Controls.Add(metodoPagoIdLabel);
             this.groupBox2.Controls.Add(this.jornadaIdComboBox);
-            this.groupBox2.Location = new System.Drawing.Point(656, 41);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(875, 50);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(254, 238);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(339, 293);
             this.groupBox2.TabIndex = 52;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Perfil";
@@ -857,10 +835,10 @@
             this.fotoPictureBox.BackColor = System.Drawing.SystemColors.Control;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaTrabajadoresBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.fotoPictureBox.Image = global::RRHHPlanilla.Properties.Resources.male_close_up_silhouette_with_tie1;
-            this.fotoPictureBox.Location = new System.Drawing.Point(128, 17);
-            this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.fotoPictureBox.Location = new System.Drawing.Point(110, 19);
+            this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(103, 101);
+            this.fotoPictureBox.Size = new System.Drawing.Size(137, 124);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPictureBox.TabIndex = 38;
             this.fotoPictureBox.TabStop = false;
@@ -873,10 +851,10 @@
             this.cargoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cargoIdComboBox.Enabled = false;
             this.cargoIdComboBox.FormattingEnabled = true;
-            this.cargoIdComboBox.Location = new System.Drawing.Point(117, 122);
-            this.cargoIdComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.cargoIdComboBox.Location = new System.Drawing.Point(156, 150);
+            this.cargoIdComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cargoIdComboBox.Name = "cargoIdComboBox";
-            this.cargoIdComboBox.Size = new System.Drawing.Size(130, 20);
+            this.cargoIdComboBox.Size = new System.Drawing.Size(172, 24);
             this.cargoIdComboBox.TabIndex = 10;
             this.cargoIdComboBox.ValueMember = "Id";
             // 
@@ -888,10 +866,10 @@
             this.metodoPagoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.metodoPagoIdComboBox.Enabled = false;
             this.metodoPagoIdComboBox.FormattingEnabled = true;
-            this.metodoPagoIdComboBox.Location = new System.Drawing.Point(117, 157);
-            this.metodoPagoIdComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.metodoPagoIdComboBox.Location = new System.Drawing.Point(156, 193);
+            this.metodoPagoIdComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metodoPagoIdComboBox.Name = "metodoPagoIdComboBox";
-            this.metodoPagoIdComboBox.Size = new System.Drawing.Size(130, 20);
+            this.metodoPagoIdComboBox.Size = new System.Drawing.Size(172, 24);
             this.metodoPagoIdComboBox.TabIndex = 11;
             this.metodoPagoIdComboBox.ValueMember = "Id";
             // 
@@ -903,10 +881,10 @@
             this.jornadaIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.jornadaIdComboBox.Enabled = false;
             this.jornadaIdComboBox.FormattingEnabled = true;
-            this.jornadaIdComboBox.Location = new System.Drawing.Point(117, 193);
-            this.jornadaIdComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.jornadaIdComboBox.Location = new System.Drawing.Point(156, 238);
+            this.jornadaIdComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.jornadaIdComboBox.Name = "jornadaIdComboBox";
-            this.jornadaIdComboBox.Size = new System.Drawing.Size(130, 20);
+            this.jornadaIdComboBox.Size = new System.Drawing.Size(172, 24);
             this.jornadaIdComboBox.TabIndex = 12;
             this.jornadaIdComboBox.ValueMember = "Id";
             // 
@@ -924,11 +902,11 @@
             this.groupBox1.Controls.Add(idLabel);
             this.groupBox1.Controls.Add(apellidoLabel);
             this.groupBox1.Controls.Add(this.apellidoTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(29, 41);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(39, 50);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(625, 238);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(833, 294);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
@@ -938,58 +916,60 @@
             this.fechaInicioDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaTrabajadoresBindingSource, "FechaInicio", true));
             this.fechaInicioDateTimePicker.Enabled = false;
             this.fechaInicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaInicioDateTimePicker.Location = new System.Drawing.Point(477, 88);
+            this.fechaInicioDateTimePicker.Location = new System.Drawing.Point(335, 231);
+            this.fechaInicioDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.fechaInicioDateTimePicker.Name = "fechaInicioDateTimePicker";
-            this.fechaInicioDateTimePicker.Size = new System.Drawing.Size(102, 20);
+            this.fechaInicioDateTimePicker.Size = new System.Drawing.Size(255, 22);
             this.fechaInicioDateTimePicker.TabIndex = 9;
             // 
             // cedulaTextBox
             // 
             this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Cedula", true));
             this.cedulaTextBox.Enabled = false;
-            this.cedulaTextBox.Location = new System.Drawing.Point(477, 59);
+            this.cedulaTextBox.Location = new System.Drawing.Point(335, 188);
+            this.cedulaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cedulaTextBox.Name = "cedulaTextBox";
-            this.cedulaTextBox.Size = new System.Drawing.Size(102, 20);
+            this.cedulaTextBox.Size = new System.Drawing.Size(255, 22);
             this.cedulaTextBox.TabIndex = 8;
             // 
             // sueldoTextBox
             // 
             this.sueldoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Sueldo", true));
             this.sueldoTextBox.Enabled = false;
-            this.sueldoTextBox.Location = new System.Drawing.Point(128, 136);
-            this.sueldoTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.sueldoTextBox.Location = new System.Drawing.Point(335, 151);
+            this.sueldoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sueldoTextBox.Name = "sueldoTextBox";
-            this.sueldoTextBox.Size = new System.Drawing.Size(192, 20);
+            this.sueldoTextBox.Size = new System.Drawing.Size(255, 22);
             this.sueldoTextBox.TabIndex = 5;
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Nombre", true));
             this.nombreTextBox.Enabled = false;
-            this.nombreTextBox.Location = new System.Drawing.Point(128, 90);
-            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.nombreTextBox.Location = new System.Drawing.Point(335, 79);
+            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(192, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(255, 22);
             this.nombreTextBox.TabIndex = 1;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Id", true));
             this.idTextBox.Enabled = false;
-            this.idTextBox.Location = new System.Drawing.Point(128, 67);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.idTextBox.Location = new System.Drawing.Point(335, 42);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(192, 20);
+            this.idTextBox.Size = new System.Drawing.Size(255, 22);
             this.idTextBox.TabIndex = 28;
             // 
             // apellidoTextBox
             // 
             this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Apellido", true));
             this.apellidoTextBox.Enabled = false;
-            this.apellidoTextBox.Location = new System.Drawing.Point(128, 112);
-            this.apellidoTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.apellidoTextBox.Location = new System.Drawing.Point(335, 114);
+            this.apellidoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.apellidoTextBox.Name = "apellidoTextBox";
-            this.apellidoTextBox.Size = new System.Drawing.Size(192, 20);
+            this.apellidoTextBox.Size = new System.Drawing.Size(255, 22);
             this.apellidoTextBox.TabIndex = 2;
             // 
             // groupBox4
@@ -998,27 +978,28 @@
             this.groupBox4.Controls.Add(label13);
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.comboBox2);
-            this.groupBox4.Location = new System.Drawing.Point(29, -2);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Location = new System.Drawing.Point(39, -2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(882, 41);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(1176, 50);
             this.groupBox4.TabIndex = 63;
             this.groupBox4.TabStop = false;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(564, 14);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox12.Location = new System.Drawing.Point(752, 17);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(226, 20);
+            this.textBox12.Size = new System.Drawing.Size(300, 22);
             this.textBox12.TabIndex = 69;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(794, 11);
+            this.button5.Location = new System.Drawing.Point(1059, 14);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(100, 28);
             this.button5.TabIndex = 57;
             this.button5.Text = "Busqueda";
             this.button5.UseVisualStyleBackColor = true;
@@ -1034,25 +1015,25 @@
             "Supervisor",
             "Operario",
             "Mantenimiento"});
-            this.comboBox2.Location = new System.Drawing.Point(430, 14);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox2.Location = new System.Drawing.Point(573, 17);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(130, 21);
+            this.comboBox2.Size = new System.Drawing.Size(172, 24);
             this.comboBox2.TabIndex = 60;
             // 
             // Vacaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(964, 640);
+            this.ClientSize = new System.Drawing.Size(1285, 788);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.piccerrar);
             this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Vacaciones";
             this.Text = "Vacaciones";
             this.Load += new System.EventHandler(this.Vacaciones_Load);

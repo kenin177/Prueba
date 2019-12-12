@@ -542,7 +542,7 @@ namespace Snake
 
             if (snakeLength < 20) //aumenta la velocidad del movimiento de la serpiente en función de su longitud(shorter timer interval = faster speed)
             {
-                timer1.Interval = 500 - snakeLength * 15;
+                timer1.Interval = 200 - snakeLength * 15;
             }
             
             for (int i = 99; i >= 1; i--) // hace que el cuerpo de la serpiente siga el camino de la cabeza de la Serpiente

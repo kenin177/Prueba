@@ -42,6 +42,7 @@
             System.Windows.Forms.Label estadoCivilIdLabel;
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label codigoBarrasLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
             this.listaTrabajadoresBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listaTrabajadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -74,6 +75,7 @@
             this.estadoCivilIdComboBox = new System.Windows.Forms.ComboBox();
             this.listaEstadoCivilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.codigoBarrasPictureBox = new System.Windows.Forms.PictureBox();
             this.fechaInicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -99,6 +101,7 @@
             estadoCivilIdLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
+            codigoBarrasLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaTrabajadoresBindingNavigator)).BeginInit();
             this.listaTrabajadoresBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaTrabajadoresBindingSource)).BeginInit();
@@ -107,6 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaJornadasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaEstadoCivilesBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.codigoBarrasPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaSexosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -256,6 +260,16 @@
             label2.Size = new System.Drawing.Size(116, 17);
             label2.TabIndex = 42;
             label2.Text = "Fecha de Inicio:";
+            // 
+            // codigoBarrasLabel
+            // 
+            codigoBarrasLabel.AutoSize = true;
+            codigoBarrasLabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            codigoBarrasLabel.Location = new System.Drawing.Point(16, 334);
+            codigoBarrasLabel.Name = "codigoBarrasLabel";
+            codigoBarrasLabel.Size = new System.Drawing.Size(103, 16);
+            codigoBarrasLabel.TabIndex = 44;
+            codigoBarrasLabel.Text = "Codigo Barras:";
             // 
             // listaTrabajadoresBindingNavigator
             // 
@@ -464,6 +478,7 @@
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(192, 20);
             this.nombreTextBox.TabIndex = 1;
+            this.nombreTextBox.Leave += new System.EventHandler(this.nombreTextBox_Leave);
             // 
             // sueldoTextBox
             // 
@@ -548,6 +563,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(codigoBarrasLabel);
+            this.groupBox1.Controls.Add(this.codigoBarrasPictureBox);
             this.groupBox1.Controls.Add(label2);
             this.groupBox1.Controls.Add(label1);
             this.groupBox1.Controls.Add(this.fechaInicioDateTimePicker);
@@ -572,11 +589,21 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(413, 349);
+            this.groupBox1.Size = new System.Drawing.Size(413, 419);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // codigoBarrasPictureBox
+            // 
+            this.codigoBarrasPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaTrabajadoresBindingSource, "CodigoBarras", true));
+            this.codigoBarrasPictureBox.Location = new System.Drawing.Point(135, 334);
+            this.codigoBarrasPictureBox.Name = "codigoBarrasPictureBox";
+            this.codigoBarrasPictureBox.Size = new System.Drawing.Size(245, 67);
+            this.codigoBarrasPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.codigoBarrasPictureBox.TabIndex = 45;
+            this.codigoBarrasPictureBox.TabStop = false;
             // 
             // fechaInicioDateTimePicker
             // 
@@ -590,7 +617,7 @@
             // cedulaTextBox
             // 
             this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaTrabajadoresBindingSource, "Cedula", true));
-            this.cedulaTextBox.Location = new System.Drawing.Point(146, 268);
+            this.cedulaTextBox.Location = new System.Drawing.Point(147, 268);
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(192, 20);
             this.cedulaTextBox.TabIndex = 8;
@@ -666,7 +693,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(283, 345);
+            this.groupBox2.Size = new System.Drawing.Size(283, 417);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Perfil";
@@ -677,7 +704,7 @@
             this.piccerrar.BackColor = System.Drawing.Color.Transparent;
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.close;
-            this.piccerrar.Location = new System.Drawing.Point(804, 11);
+            this.piccerrar.Location = new System.Drawing.Point(1041, 0);
             this.piccerrar.Name = "piccerrar";
             this.piccerrar.Size = new System.Drawing.Size(33, 34);
             this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -708,7 +735,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(847, 458);
+            this.ClientSize = new System.Drawing.Size(1074, 552);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.piccerrar);
@@ -731,6 +758,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaEstadoCivilesBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.codigoBarrasPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaSexosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -787,5 +815,6 @@
         private System.Windows.Forms.TextBox cedulaTextBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox codigoBarrasPictureBox;
     }
 }
