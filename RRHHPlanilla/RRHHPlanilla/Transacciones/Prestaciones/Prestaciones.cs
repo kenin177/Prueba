@@ -108,7 +108,6 @@ namespace RRHHPlanilla
 
         private void Prestaciones_Load(object sender, EventArgs e)
         {
-            //listaTrabajadoresBindingSource.Clear();
         }
 
 
@@ -171,7 +170,8 @@ namespace RRHHPlanilla
             string finaldia, finalmes, finalaño;
             int antidia, antimes, antiaño;
             int sueldo = 0, mensual = 0, diario = 0, preaviso = 0, cesantia = 0, cesantiapro = 0, vacacion = 0, total_prestaciones = 0;
-            int cantidadDia = 0;
+
+
             //Capturando Fechas inicio , final, actual  convertiendo a string
             dia = dateTimePicker1.Value.Date.ToString("dd");
             mes = dateTimePicker1.Value.Date.ToString("MM");
@@ -199,16 +199,11 @@ namespace RRHHPlanilla
                 antidia = Convert.ToInt32(finaldia) - Convert.ToInt32(dia);
             }
 
-            
+
             //Calculos de Prestaciones
             sueldo = Convert.ToInt32(textBox13.Text);
             mensual = (sueldo * 14) / 12;
             diario = mensual / 30;
-
-            //calculos de vacaciones
-            cantidadDia = Convert.ToInt32(disponibleDiaTextBox.Text);
-            vacacion = cantidadDia * diario;
-
             //Preaviso
             if (antiaño > 0)
             {
@@ -276,6 +271,7 @@ namespace RRHHPlanilla
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             _ExTrabajadoresBL.AgregarExTrabajador();
             listaExTrabajadoresBindingSource.MoveLast();
             DeshabilitarHabilitarBotones(false);
@@ -366,9 +362,8 @@ namespace RRHHPlanilla
                 pago = 4;
             }
             #endregion
-           
-      
-
+            //var extrabajador = new ExTrabajador();
+            
             if (pictureBox2.Image != null)
             {
                 extrabajador.Foto = Program.imageToByteArray(pictureBox2.Image);
@@ -401,12 +396,11 @@ namespace RRHHPlanilla
             _ExTrabajadoresBL.GuardarExTrabajador(extrabajador);
 
             var resultado = _ExTrabajadoresBL.GuardarExTrabajador(extrabajador);
-
             if (resultado.Exitoso == true)
             {
                 listaExTrabajadoresBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
-                //DialogResult resul = MessageBox.Show("Empleado Removido", "Exitoso...!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DialogResult resul = MessageBox.Show("Empleado Removido", "Exitoso...!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -421,36 +415,38 @@ namespace RRHHPlanilla
                 {
                     var id = Convert.ToInt32(textBox15.Text);
                     Eliminar(id);
-                    MessageBox.Show("Empleado eliminado satisfactoriamente");
+
+                    _trabajadores = new TrabajadoresBL();
+                    listaTrabajadoresBindingSource.DataSource = _trabajadores.ListaTrabajadores;
+
+                    //Reorganizar
+                    //Fecha Ingreso
+                    textBox5.Text = "DIA";
+                    textBox4.Text = "MES";
+                    textBox3.Text = "AÑO";
+
+                    textBox19.Text = "DIA";
+                    textBox20.Text = "MES";
+                    textBox21.Text = "AÑO";
+
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox6.Text = "";
+
+                    textBox7.Text = "";
+                    textBox8.Text = "";
+                    textBox9.Text = "";
+
+                    textBox10.Text = "";
+                    textBox11.Text = "";
+
+                    button3.Enabled = false;
+                    button1.Enabled = false;
+                    textBox1.Enabled = false;
 
                 }
 
             }
-
-         
-            textBox15.Clear();
-            textBox14.Clear();
-            textBox17.Clear();
-            //textBox16.Clear();
-            textBox13.Clear();
-            //textBox18.Clear();
-            disponibleDiaTextBox.Clear();
-            textBox5.Clear();
-            textBox4.Clear();
-            textBox3.Clear();
-            textBox19.Clear();
-            textBox20.Clear();
-            textBox21.Clear();
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox6.Clear();
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox10.Clear();
-            textBox9.Clear();
-            textBox11.Clear();
-            
-
         }
 
         private void listaTrabajadoresBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
@@ -484,11 +480,6 @@ namespace RRHHPlanilla
                 button1.Enabled = false;
                 button3.Enabled = false;
             }          
-
-            if (textBox15.Text =="")
-            {
-                MessageBox.Show("Empleado no Encontrado intentelo de nuevo ");
-            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

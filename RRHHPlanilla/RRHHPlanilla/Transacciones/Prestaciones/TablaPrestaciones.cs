@@ -62,10 +62,5 @@ namespace RRHHPlanilla.Transacciones.Prestaciones
         {
 
         }
-
-        private void listaExTrabajadoresDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

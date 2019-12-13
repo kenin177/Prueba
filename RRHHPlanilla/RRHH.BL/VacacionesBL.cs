@@ -86,17 +86,17 @@ namespace RRHH.BL
 
             if (vacacion == null)
             {
-                resultado.Mensaje = "Agregar una Vacacion";
+                resultado.Mensaje = "Agregar un Vacacion";
                 resultado.Exitoso = false;
             }
-            
+
             if (vacacion.Disponible == 0)
 
             {
                 resultado.Mensaje = "Ingrese vacaciones disponibles";
                 resultado.Exitoso = false;
             }
-            
+
             return resultado;
         }
     }
@@ -113,7 +113,6 @@ namespace RRHH.BL
         public int Pago { get; set; }
         public int TrabajadorId { get; set; }
         public Trabajador Trabajador { get; set; }
- 
 
 
         public class Resultado

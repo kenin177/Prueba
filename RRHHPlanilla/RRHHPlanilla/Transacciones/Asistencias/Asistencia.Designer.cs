@@ -50,7 +50,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.listaAsistenciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nombreTextBox1 = new System.Windows.Forms.TextBox();
             apellidoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             cedulaLabel = new System.Windows.Forms.Label();
@@ -218,7 +217,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dateTimePicker1
             // 
@@ -250,23 +248,14 @@
             // 
             // listaAsistenciaBindingSource
             // 
-            this.listaAsistenciaBindingSource.DataSource = typeof(RRHH.BL.Asistencia2);
-            // 
-            // nombreTextBox1
-            // 
-            this.nombreTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaAsistenciaBindingSource, "Nombre", true));
-            this.nombreTextBox1.Location = new System.Drawing.Point(417, 204);
-            this.nombreTextBox1.Name = "nombreTextBox1";
-            this.nombreTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.nombreTextBox1.TabIndex = 7;
+            this.listaAsistenciaBindingSource.DataSource = typeof(RRHH.BL.Asistencia);
             // 
             // Asistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(665, 501);
-            this.Controls.Add(this.nombreTextBox1);
+            this.ClientSize = new System.Drawing.Size(342, 501);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.dateTimePicker1);
@@ -306,6 +295,5 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.BindingSource listaAsistenciaBindingSource;
-        private System.Windows.Forms.TextBox nombreTextBox1;
     }
 }

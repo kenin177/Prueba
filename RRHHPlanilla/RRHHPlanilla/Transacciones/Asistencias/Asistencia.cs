@@ -24,7 +24,7 @@ namespace RRHHPlanilla
             InitializeComponent();
 
             _asistenciaBL = new AsistenciaBL();
-            listaAsistenciaBindingSource.DataSource = _asistenciaBL.ListaAsistencia;
+            listaAsistenciaBindingSource.DataSource = _asistenciaBL.ObtenerAsistencia();
 
             _trabajadores = new TrabajadoresBL();
             listaTrabajadoresBindingSource.DataSource = _trabajadores.ListaTrabajadores;  //ObtenerTrabajador();
@@ -42,75 +42,11 @@ namespace RRHHPlanilla
             {
                 SendKeys.Send("{BACKSPACE}");
                 SendKeys.Send("{TAB}");
-            }
+            }        
         }
 
         private void capturar()
         {
-          
-            if (nombreTextBox.Text != " ")
-            {
-
-
-                _asistenciaBL.AgregarAsistencia();
-                listaAsistenciaBindingSource.MoveLast();
-
-
-                listaAsistenciaBindingSource.EndEdit();
-                var asistencia = (Asistencia2)listaAsistenciaBindingSource.Current;
-
-                asistencia.Nombre = nombreTextBox.Text; 
-                asistencia.Cedula = cedulaTextBox.Text;
-                asistencia.Cargo = comboBox1.Text;
-                asistencia.Jornada = comboBox2.Text;
-
-                if (nombreTextBox1.Text != " ")
-                {
-                    asistencia.FechaEntrada = dateTimePicker1.Value;
-                }
-                else
-                {
-                    asistencia.FechaSalida = dateTimePicker1.Value;
-                }
-
-                _asistenciaBL.GuardaAsistencias(asistencia);
-
-                var resultado = _asistenciaBL.GuardaAsistencias(asistencia);
-                if (resultado.Exitoso == true)
-                {
-                    listaAsistenciaBindingSource.ResetBindings(false);
-
-                    DialogResult resul = MessageBox.Show("Vacaciones del Empleado guardado ", "Exitoso...!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    MessageBox.Show(resultado.Mensaje);
-                }
-
-            }
-
-        }
-
-        private void busqueda()
-        {
-            //BUSQUEDA
-            var buscar = textBox1.Text;
-
-            if (string.IsNullOrEmpty(buscar) == true)
-            {
-                _asistenciaBL = new AsistenciaBL();
-                listaAsistenciaBindingSource.DataSource = _asistenciaBL.ListaAsistencia;
-            }
-
-            if (string.IsNullOrEmpty(buscar) != true)
-            {
-
-                listaAsistenciaBindingSource.DataSource =
-                    _asistenciaBL.ObtenerAsistencia2(buscar);
-
-                listaAsistenciaBindingSource.ResetBindings(false);
-            }
-
             #region //PRUEBA
             //string dia, mes, año, hora;
 
@@ -133,26 +69,16 @@ namespace RRHHPlanilla
             //}
             #endregion
 
-            //_asistenciaBL.AgregarAsistencia();
-            //listaAsistenciaBindingSource.MoveLast();
+            _asistenciaBL.AgregarAsistencia();
+            listaAsistenciaBindingSource.MoveLast();
 
 
-            //listaAsistenciaBindingSource.EndEdit();
-            //var asistencia = (Asistencia2)listaAsistenciaBindingSource.Current;
+            listaAsistenciaBindingSource.EndEdit();
+            var asistencia = (Asistencia)listaAsistenciaBindingSource.Current;
 
-            //asistencia.Nombre = nombreTextBox.Text;
-            //asistencia.Cedula = cedulaTextBox.Text;
-            //asistencia.Cargo = comboBox1.Text;
-            //asistencia.Jornada = comboBox2.Text;
+            
 
-            //if (nombreTextBox1.Text != " ")
-            //{
-            //    asistencia.FechaEntrada = dateTimePicker1.Value;
-            //}
-            //else
-            //{
-            //    asistencia.FechaSalida = dateTimePicker1.Value;
-            //}
+            
 
         }
 
@@ -171,19 +97,18 @@ namespace RRHHPlanilla
             if (string.IsNullOrEmpty(buscar) != true)
             {
                 listaTrabajadoresBindingSource.DataSource =
-                    _trabajadores.ObtenerTrabajador2(buscar, buscar2);
+                    _trabajadores.ObtenerTrabajador2(buscar,buscar2);
 
                 listaTrabajadoresBindingSource.ResetBindings(false);
 
-                busqueda();
-                capturar();
+
 
                 //TIMER
                 contador = 50;
                 this.label3.Text = Convert.ToInt32(contador).ToString();
                 this.timer1.Enabled = true;
 
-            }
+            }       
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -207,10 +132,7 @@ namespace RRHHPlanilla
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-          
-        }
+
+
     }
- 
-}
+    }

@@ -41,7 +41,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnticiposBL.cs" />
+    <Compile Include="AsistenciaBL.cs" />
     <Compile Include="HorasExtrasBL.cs" />
     <Compile Include="TransaccionesBL\ExTrabajadoresBL.cs" />
     <Compile Include="MantenimientoBL\BusquedaBL.cs" />

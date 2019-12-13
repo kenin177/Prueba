@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Imaging;
 
 namespace RRHHPlanilla
 {
@@ -49,22 +48,10 @@ namespace RRHHPlanilla
         //GUARDAR
         private void listaTrabajadoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            if (codigoBarrasPictureBox.Image == null && nombreTextBox.Text != "" || nombreTextBox.Text != "")
-            {
-                BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
-                Codigo.IncludeLabel = true;
-                codigoBarrasPictureBox.Image = Codigo.Encode(BarcodeLib.TYPE.CODE128, nombreTextBox.Text + apellidoTextBox.Text, Color.Black, Color.White, 400, 100);
-            }
-            else
-            {
-
-            }
-
-
             listaTrabajadoresBindingSource.EndEdit();
             var trabajador = (Trabajador)listaTrabajadoresBindingSource.Current;
 
-            if (fotoPictureBox.Image != null )
+            if (fotoPictureBox.Image != null)
             {
                 trabajador.Foto = Program.imageToByteArray(fotoPictureBox.Image);
             }
@@ -72,17 +59,6 @@ namespace RRHHPlanilla
             {
                 trabajador.Foto = null;
             }
-
-
-            if (codigoBarrasPictureBox.Image != null)
-            {               
-                trabajador.CodigoBarras = Program.imageToByteArray(codigoBarrasPictureBox.Image);
-            }
-            else
-            {              
-                trabajador.CodigoBarras = null;
-            }
-
             var resultado = _trabajadores.GuardarTrabajador(trabajador);
 
            
@@ -94,7 +70,6 @@ namespace RRHHPlanilla
                 
                 textBox1.Text = "";
                 button3.PerformClick();
-               
             }
             else
             {
@@ -280,10 +255,5 @@ namespace RRHHPlanilla
             listaTrabajadoresBindingSource.DataSource = _trabajadores.ListaTrabajadores;
             listaTrabajadoresBindingSource.ResetBindings(false);
         }
-
-        private void nombreTextBox_Leave(object sender, EventArgs e)
-        {
-
-        }       
     }
 }

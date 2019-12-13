@@ -38,10 +38,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\AlphaBlendTextBox\AlphaBlendTextBox.dll</HintPath>
     </Reference>
-    <Reference Include="BarcodeLib, Version=1.2.0.0, Culture=neutral, PublicKeyToken=5f09bda868cc39e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\BarcodeLib.1.2.0.0\lib\net20\BarcodeLib.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -72,7 +68,7 @@
     <Compile Include="Asistencia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Asistencia.Designer.cs">
+    <Compile Include="Asistencia.designer.cs">
       <DependentUpon>Asistencia.cs</DependentUpon>
     </Compile>
     <Compile Include="EXTRA\Form1.cs">
@@ -92,30 +88,6 @@
     </Compile>
     <Compile Include="EXTRA\reglas.Designer.cs">
       <DependentUpon>reglas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\ReportEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\ReportEmpleado.Designer.cs">
-      <DependentUpon>ReportEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\ReportEvalPersonal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\ReportEvalPersonal.Designer.cs">
-      <DependentUpon>ReportEvalPersonal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\ReportMBTI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\ReportMBTI.Designer.cs">
-      <DependentUpon>ReportMBTI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\ReportPrestaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\ReportPrestaciones.Designer.cs">
-      <DependentUpon>ReportPrestaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Transacciones\Anticipo\ResultadoAnticipo.cs">
       <SubType>Form</SubType>
@@ -371,18 +343,6 @@
     <EmbeddedResource Include="Mantenimiento\Capacitaciones.resx">
       <DependentUpon>Capacitaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReportEmpleado.resx">
-      <DependentUpon>ReportEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReportEvalPersonal.resx">
-      <DependentUpon>ReportEvalPersonal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReportMBTI.resx">
-      <DependentUpon>ReportMBTI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReportPrestaciones.resx">
-      <DependentUpon>ReportPrestaciones.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Transacciones\Anticipo\ResultadoAnticipo.resx">
       <DependentUpon>ResultadoAnticipo.cs</DependentUpon>
     </EmbeddedResource>
@@ -507,6 +467,7 @@
     <None Include="EXTRA\app.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\RRHH.BL.AnticiposBL.datasource" />
+    <None Include="Properties\DataSources\RRHH.BL.AsistenciaBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.CapacitacionesBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.CargosBL.datasource" />
     <None Include="Properties\DataSources\RRHH.BL.EstadoCivilBL.datasource" />
@@ -657,7 +618,9 @@
   <ItemGroup>
     <None Include="Resources\kisspng-question-mark-royalty-free-illustration-vector-gra-preguntas-ms-frecuentes-psicologa-5c00b264119d82.1938272815435495400722.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ojo2.png" />
   </ItemGroup>

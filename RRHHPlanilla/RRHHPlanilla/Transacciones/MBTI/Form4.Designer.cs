@@ -28,16 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label cargoIdLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.Windows.Forms.Label cargoIdLabel;
             System.Windows.Forms.Label jornadaIdLabel;
             System.Windows.Forms.Label metodoPagoIdLabel;
+            System.Windows.Forms.Label label66;
             System.Windows.Forms.Label label67;
             System.Windows.Forms.Label edadLabel;
+            System.Windows.Forms.Label estadoCivilIdLabel;
+            System.Windows.Forms.Label sueldoLabel;
             System.Windows.Forms.Label sexoLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label apellidoLabel;
+            System.Windows.Forms.Label direccionLabel;
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -53,72 +57,35 @@
             this.metodoPagoIdComboBox = new System.Windows.Forms.ComboBox();
             this.jornadaIdComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.fechaInicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.estadoCivilIdComboBox = new System.Windows.Forms.ComboBox();
+            this.sueldoTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.edadTextBox = new System.Windows.Forms.TextBox();
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
+            this.direccionTextBox = new System.Windows.Forms.TextBox();
             cargoIdLabel = new System.Windows.Forms.Label();
             jornadaIdLabel = new System.Windows.Forms.Label();
             metodoPagoIdLabel = new System.Windows.Forms.Label();
+            label66 = new System.Windows.Forms.Label();
             label67 = new System.Windows.Forms.Label();
             edadLabel = new System.Windows.Forms.Label();
+            estadoCivilIdLabel = new System.Windows.Forms.Label();
+            sueldoLabel = new System.Windows.Forms.Label();
             sexoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
+            direccionLabel = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cargoIdLabel
-            // 
-            resources.ApplyResources(cargoIdLabel, "cargoIdLabel");
-            cargoIdLabel.Name = "cargoIdLabel";
-            // 
-            // jornadaIdLabel
-            // 
-            resources.ApplyResources(jornadaIdLabel, "jornadaIdLabel");
-            jornadaIdLabel.Name = "jornadaIdLabel";
-            // 
-            // metodoPagoIdLabel
-            // 
-            resources.ApplyResources(metodoPagoIdLabel, "metodoPagoIdLabel");
-            metodoPagoIdLabel.Name = "metodoPagoIdLabel";
-            // 
-            // label67
-            // 
-            resources.ApplyResources(label67, "label67");
-            label67.Name = "label67";
-            // 
-            // edadLabel
-            // 
-            resources.ApplyResources(edadLabel, "edadLabel");
-            edadLabel.Name = "edadLabel";
-            // 
-            // sexoLabel
-            // 
-            resources.ApplyResources(sexoLabel, "sexoLabel");
-            sexoLabel.Name = "sexoLabel";
-            // 
-            // nombreLabel
-            // 
-            resources.ApplyResources(nombreLabel, "nombreLabel");
-            nombreLabel.Name = "nombreLabel";
-            // 
-            // idLabel
-            // 
-            resources.ApplyResources(idLabel, "idLabel");
-            idLabel.Name = "idLabel";
-            // 
-            // apellidoLabel
-            // 
-            resources.ApplyResources(apellidoLabel, "apellidoLabel");
-            apellidoLabel.Name = "apellidoLabel";
             // 
             // groupBox3
             // 
@@ -203,6 +170,11 @@
             this.fotoPictureBox.Name = "fotoPictureBox";
             this.fotoPictureBox.TabStop = false;
             // 
+            // cargoIdLabel
+            // 
+            resources.ApplyResources(cargoIdLabel, "cargoIdLabel");
+            cargoIdLabel.Name = "cargoIdLabel";
+            // 
             // cargoIdComboBox
             // 
             this.cargoIdComboBox.DisplayMember = "Descripcion";
@@ -221,6 +193,16 @@
             this.metodoPagoIdComboBox.Name = "metodoPagoIdComboBox";
             this.metodoPagoIdComboBox.ValueMember = "Id";
             // 
+            // jornadaIdLabel
+            // 
+            resources.ApplyResources(jornadaIdLabel, "jornadaIdLabel");
+            jornadaIdLabel.Name = "jornadaIdLabel";
+            // 
+            // metodoPagoIdLabel
+            // 
+            resources.ApplyResources(metodoPagoIdLabel, "metodoPagoIdLabel");
+            metodoPagoIdLabel.Name = "metodoPagoIdLabel";
+            // 
             // jornadaIdComboBox
             // 
             this.jornadaIdComboBox.DisplayMember = "Descripcion";
@@ -232,10 +214,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(label66);
             this.groupBox1.Controls.Add(label67);
+            this.groupBox1.Controls.Add(this.fechaInicioDateTimePicker);
             this.groupBox1.Controls.Add(this.cedulaTextBox);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(edadLabel);
+            this.groupBox1.Controls.Add(this.estadoCivilIdComboBox);
+            this.groupBox1.Controls.Add(estadoCivilIdLabel);
+            this.groupBox1.Controls.Add(this.sueldoTextBox);
+            this.groupBox1.Controls.Add(sueldoLabel);
             this.groupBox1.Controls.Add(sexoLabel);
             this.groupBox1.Controls.Add(this.nombreTextBox);
             this.groupBox1.Controls.Add(nombreLabel);
@@ -244,9 +232,27 @@
             this.groupBox1.Controls.Add(apellidoLabel);
             this.groupBox1.Controls.Add(this.edadTextBox);
             this.groupBox1.Controls.Add(this.apellidoTextBox);
+            this.groupBox1.Controls.Add(this.direccionTextBox);
+            this.groupBox1.Controls.Add(direccionLabel);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // label66
+            // 
+            resources.ApplyResources(label66, "label66");
+            label66.Name = "label66";
+            // 
+            // label67
+            // 
+            resources.ApplyResources(label67, "label67");
+            label67.Name = "label67";
+            // 
+            // fechaInicioDateTimePicker
+            // 
+            resources.ApplyResources(this.fechaInicioDateTimePicker, "fechaInicioDateTimePicker");
+            this.fechaInicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaInicioDateTimePicker.Name = "fechaInicioDateTimePicker";
             // 
             // cedulaTextBox
             // 
@@ -262,15 +268,65 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.ValueMember = "Id";
             // 
+            // edadLabel
+            // 
+            resources.ApplyResources(edadLabel, "edadLabel");
+            edadLabel.Name = "edadLabel";
+            // 
+            // estadoCivilIdComboBox
+            // 
+            this.estadoCivilIdComboBox.DisplayMember = "Descripcion";
+            this.estadoCivilIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            resources.ApplyResources(this.estadoCivilIdComboBox, "estadoCivilIdComboBox");
+            this.estadoCivilIdComboBox.FormattingEnabled = true;
+            this.estadoCivilIdComboBox.Name = "estadoCivilIdComboBox";
+            this.estadoCivilIdComboBox.ValueMember = "Id";
+            // 
+            // estadoCivilIdLabel
+            // 
+            resources.ApplyResources(estadoCivilIdLabel, "estadoCivilIdLabel");
+            estadoCivilIdLabel.Name = "estadoCivilIdLabel";
+            // 
+            // sueldoTextBox
+            // 
+            resources.ApplyResources(this.sueldoTextBox, "sueldoTextBox");
+            this.sueldoTextBox.Name = "sueldoTextBox";
+            this.sueldoTextBox.TextChanged += new System.EventHandler(this.sueldoTextBox_TextChanged);
+            // 
+            // sueldoLabel
+            // 
+            resources.ApplyResources(sueldoLabel, "sueldoLabel");
+            sueldoLabel.Name = "sueldoLabel";
+            // 
+            // sexoLabel
+            // 
+            resources.ApplyResources(sexoLabel, "sexoLabel");
+            sexoLabel.Name = "sexoLabel";
+            // 
             // nombreTextBox
             // 
             resources.ApplyResources(this.nombreTextBox, "nombreTextBox");
             this.nombreTextBox.Name = "nombreTextBox";
             // 
+            // nombreLabel
+            // 
+            resources.ApplyResources(nombreLabel, "nombreLabel");
+            nombreLabel.Name = "nombreLabel";
+            // 
             // idTextBox
             // 
             resources.ApplyResources(this.idTextBox, "idTextBox");
             this.idTextBox.Name = "idTextBox";
+            // 
+            // idLabel
+            // 
+            resources.ApplyResources(idLabel, "idLabel");
+            idLabel.Name = "idLabel";
+            // 
+            // apellidoLabel
+            // 
+            resources.ApplyResources(apellidoLabel, "apellidoLabel");
+            apellidoLabel.Name = "apellidoLabel";
             // 
             // edadTextBox
             // 
@@ -282,11 +338,21 @@
             resources.ApplyResources(this.apellidoTextBox, "apellidoTextBox");
             this.apellidoTextBox.Name = "apellidoTextBox";
             // 
+            // direccionTextBox
+            // 
+            resources.ApplyResources(this.direccionTextBox, "direccionTextBox");
+            this.direccionTextBox.Name = "direccionTextBox";
+            // 
+            // direccionLabel
+            // 
+            resources.ApplyResources(direccionLabel, "direccionLabel");
+            direccionLabel.Name = "direccionLabel";
+            // 
             // Form4
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
@@ -324,11 +390,15 @@
         public System.Windows.Forms.ComboBox cargoIdComboBox;
         public System.Windows.Forms.ComboBox metodoPagoIdComboBox;
         public System.Windows.Forms.ComboBox jornadaIdComboBox;
+        public System.Windows.Forms.DateTimePicker fechaInicioDateTimePicker;
         public System.Windows.Forms.TextBox cedulaTextBox;
         public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox estadoCivilIdComboBox;
+        public System.Windows.Forms.TextBox sueldoTextBox;
         public System.Windows.Forms.TextBox nombreTextBox;
         public System.Windows.Forms.TextBox idTextBox;
         public System.Windows.Forms.TextBox apellidoTextBox;
+        public System.Windows.Forms.TextBox direccionTextBox;
         public System.Windows.Forms.TextBox edadTextBox;
     }
 }

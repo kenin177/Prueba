@@ -34,13 +34,6 @@
             this.listaVacacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vacacionesBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaVacacionesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listaTrabajadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaCargosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaEstadoCivilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,6 +41,13 @@
             this.listaJornadasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaSexosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaExTrabajadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaVacacionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacacionesBLBindingSource)).BeginInit();
@@ -67,10 +67,10 @@
             this.piccerrar.BackColor = System.Drawing.Color.Transparent;
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.piccerrar.Image = global::RRHHPlanilla.Properties.Resources.close;
-            this.piccerrar.Location = new System.Drawing.Point(817, 12);
-            this.piccerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.piccerrar.Location = new System.Drawing.Point(613, 10);
+            this.piccerrar.Margin = new System.Windows.Forms.Padding(2);
             this.piccerrar.Name = "piccerrar";
-            this.piccerrar.Size = new System.Drawing.Size(40, 36);
+            this.piccerrar.Size = new System.Drawing.Size(30, 29);
             this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.piccerrar.TabIndex = 50;
             this.piccerrar.TabStop = false;
@@ -80,9 +80,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(125, 22);
+            this.label1.Location = new System.Drawing.Point(94, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(577, 40);
+            this.label1.Size = new System.Drawing.Size(471, 33);
             this.label1.TabIndex = 51;
             this.label1.Text = "Sistema de Control de Vacaciones";
             // 
@@ -108,12 +109,40 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.listaVacacionesDataGridView.DataSource = this.listaVacacionesBindingSource;
-            this.listaVacacionesDataGridView.Location = new System.Drawing.Point(12, 76);
-            this.listaVacacionesDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listaVacacionesDataGridView.Location = new System.Drawing.Point(9, 62);
+            this.listaVacacionesDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.listaVacacionesDataGridView.Name = "listaVacacionesDataGridView";
             this.listaVacacionesDataGridView.RowTemplate.Height = 24;
-            this.listaVacacionesDataGridView.Size = new System.Drawing.Size(851, 343);
+            this.listaVacacionesDataGridView.Size = new System.Drawing.Size(638, 279);
             this.listaVacacionesDataGridView.TabIndex = 51;
+            // 
+            // listaTrabajadoresBindingSource
+            // 
+            this.listaTrabajadoresBindingSource.DataSource = typeof(RRHH.BL.Trabajador);
+            // 
+            // listaCargosBindingSource
+            // 
+            this.listaCargosBindingSource.DataSource = typeof(RRHH.BL.Cargo);
+            // 
+            // listaEstadoCivilesBindingSource
+            // 
+            this.listaEstadoCivilesBindingSource.DataSource = typeof(RRHH.BL.EstadoCivil);
+            // 
+            // listaMetodoPagosBindingSource
+            // 
+            this.listaMetodoPagosBindingSource.DataSource = typeof(RRHH.BL.MetodoPago);
+            // 
+            // listaJornadasBindingSource
+            // 
+            this.listaJornadasBindingSource.DataSource = typeof(RRHH.BL.Jornada);
+            // 
+            // listaSexosBindingSource
+            // 
+            this.listaSexosBindingSource.DataSource = typeof(RRHH.BL.Sexo);
+            // 
+            // listaExTrabajadoresBindingSource
+            // 
+            this.listaExTrabajadoresBindingSource.DataSource = typeof(RRHH.BL.ExTrabajador);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -157,45 +186,17 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Pago";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // listaTrabajadoresBindingSource
-            // 
-            this.listaTrabajadoresBindingSource.DataSource = typeof(RRHH.BL.Trabajador);
-            // 
-            // listaCargosBindingSource
-            // 
-            this.listaCargosBindingSource.DataSource = typeof(RRHH.BL.Cargo);
-            // 
-            // listaEstadoCivilesBindingSource
-            // 
-            this.listaEstadoCivilesBindingSource.DataSource = typeof(RRHH.BL.EstadoCivil);
-            // 
-            // listaMetodoPagosBindingSource
-            // 
-            this.listaMetodoPagosBindingSource.DataSource = typeof(RRHH.BL.MetodoPago);
-            // 
-            // listaJornadasBindingSource
-            // 
-            this.listaJornadasBindingSource.DataSource = typeof(RRHH.BL.Jornada);
-            // 
-            // listaSexosBindingSource
-            // 
-            this.listaSexosBindingSource.DataSource = typeof(RRHH.BL.Sexo);
-            // 
-            // listaExTrabajadoresBindingSource
-            // 
-            this.listaExTrabajadoresBindingSource.DataSource = typeof(RRHH.BL.ExTrabajador);
-            // 
             // ResultadoVacaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(869, 431);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(652, 350);
             this.Controls.Add(this.listaVacacionesDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.piccerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ResultadoVacaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResultadoVacaciones";
